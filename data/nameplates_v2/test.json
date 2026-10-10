@@ -1,0 +1,3002 @@
+[
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"DK-3010\",\"电压\":null,\"功率\":\"750W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-010-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"QS-3041\",\"电压\":\"208V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-041-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"220V\",\"功率\":\"200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-018-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"DK-3013\",\"电压\":null,\"功率\":\"45W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-013-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"QS-3022\",\"电压\":\"12V\",\"功率\":\"1200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-022-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"KR-3008\",\"电压\":\"380V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-008-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"24V\",\"功率\":\"1200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-012-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"DK-3017\",\"电压\":\"127V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-017-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"DK-3003\",\"电压\":\"208V\",\"功率\":\"850W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-003-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"36V\",\"功率\":\"1200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-000-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"KR-3043\",\"电压\":null,\"功率\":\"850W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-043-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"QS-3023\",\"电压\":\"15V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-023-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"KR-3004\",\"电压\":null,\"功率\":\"1200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-004-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"450V\",\"功率\":\"125W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-039-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"SV-3005\",\"电压\":\"277V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-005-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"QS-3022\",\"电压\":null,\"功率\":\"1200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-022-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"QS-3007\",\"电压\":null,\"功率\":\"420W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-007-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"QS-3038\",\"电压\":\"220V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-038-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"277V\",\"功率\":\"850W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-015-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"30V\",\"功率\":\"85W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-021-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"220V\",\"功率\":\"200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-018-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"CX-3018\",\"电压\":\"220V\",\"功率\":\"200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-018-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"AB-3002\",\"电压\":\"380V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-002-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"AB-3021\",\"电压\":\"30V\",\"功率\":\"85W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-021-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"KR-3029\",\"电压\":\"6V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-029-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"DK-3013\",\"电压\":null,\"功率\":\"45W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-013-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"QS-3001\",\"电压\":null,\"功率\":\"7W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-001-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"AB-3025\",\"电压\":null,\"功率\":\"2500W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-025-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"AB-3014\",\"电压\":\"24V\",\"功率\":\"5500W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-014-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"SV-3035\",\"电压\":\"450V\",\"功率\":\"7W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-035-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"SV-3047\",\"电压\":\"450V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-047-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"QS-3023\",\"电压\":\"15V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-023-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"DK-3013\",\"电压\":\"127V\",\"功率\":\"45W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-013-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"DK-3012\",\"电压\":\"24V\",\"功率\":\"1200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-012-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"110V\",\"功率\":\"75W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-024-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"SV-3042\",\"电压\":\"110V\",\"功率\":\"1200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-042-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"KR-3037\",\"电压\":null,\"功率\":\"45W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-037-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"30V\",\"功率\":\"85W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-021-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"CX-3044\",\"电压\":\"36V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-044-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"QS-3006\",\"电压\":\"48V\",\"功率\":\"1000W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-006-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"QS-3041\",\"电压\":\"208V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-041-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"AB-3025\",\"电压\":null,\"功率\":\"2500W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-025-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"48V\",\"功率\":\"1000W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-006-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"SV-3035\",\"电压\":\"450V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-035-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"QS-3015\",\"电压\":\"277V\",\"功率\":\"850W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-015-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"DK-3010\",\"电压\":null,\"功率\":\"750W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-010-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"36V\",\"功率\":\"1200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-000-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"24V\",\"功率\":\"1500W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-048-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"AB-3048\",\"电压\":\"24V\",\"功率\":\"1500W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-048-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"AB-3002\",\"电压\":\"380V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-002-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"SV-3030\",\"电压\":\"48V\",\"功率\":\"5W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-030-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"DK-3046\",\"电压\":null,\"功率\":\"1200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-046-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"QS-3020\",\"电压\":\"110V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-020-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"30V\",\"功率\":\"85W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-009-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"CX-3031\",\"电压\":null,\"功率\":\"85W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-031-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"CX-3019\",\"电压\":null,\"功率\":\"85W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-019-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"KR-3004\",\"电压\":null,\"功率\":\"1200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-004-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"SV-3036\",\"电压\":\"220V\",\"功率\":\"40W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-036-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"KR-3008\",\"电压\":\"380V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-008-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"SV-3005\",\"电压\":\"277V\",\"功率\":\"420W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-005-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"36V\",\"功率\":\"1200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-000-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"220V\",\"功率\":\"40W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-036-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"AB-3014\",\"电压\":\"24V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-014-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"208V\",\"功率\":\"850W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-003-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"SV-3026\",\"电压\":\"12V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-026-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"DK-3040\",\"电压\":null,\"功率\":\"18W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-040-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"KR-3029\",\"电压\":\"6V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-029-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"CX-3019\",\"电压\":null,\"功率\":\"85W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-019-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"AB-3033\",\"电压\":\"60V\",\"功率\":\"850W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-033-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"DK-3049\",\"电压\":null,\"功率\":\"85W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-049-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"AB-3028\",\"电压\":null,\"功率\":\"1200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-028-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"KR-3029\",\"电压\":\"6V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-029-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"QS-3007\",\"电压\":null,\"功率\":\"420W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-007-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"CX-3031\",\"电压\":null,\"功率\":\"85W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-031-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"110V\",\"功率\":\"75W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-024-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"QS-3007\",\"电压\":null,\"功率\":\"420W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-007-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"QS-3038\",\"电压\":\"220V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-038-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"QS-3001\",\"电压\":null,\"功率\":\"7W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-001-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"CX-3032\",\"电压\":\"12V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-032-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"DK-3049\",\"电压\":null,\"功率\":\"85W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-049-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"CX-3031\",\"电压\":\"30V\",\"功率\":\"85W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-031-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"QS-3007\",\"电压\":\"15V\",\"功率\":\"420W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-007-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"24V\",\"功率\":\"1200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-012-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"QS-3038\",\"电压\":\"220V\",\"功率\":\"1000W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-038-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"60V\",\"功率\":\"7W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-045-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"AB-3045\",\"电压\":\"60V\",\"功率\":\"7W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-045-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"220V\",\"功率\":\"200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-018-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"KR-3037\",\"电压\":\"208V\",\"功率\":\"45W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-037-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"SV-3005\",\"电压\":\"277V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-005-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"DK-3040\",\"电压\":null,\"功率\":\"18W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-040-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"30V\",\"功率\":\"85W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-009-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"AB-3002\",\"电压\":\"380V\",\"功率\":\"5500W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-002-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"SV-3047\",\"电压\":\"450V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-047-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"DK-3017\",\"电压\":\"127V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-017-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"KR-3043\",\"电压\":null,\"功率\":\"850W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-043-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"SV-3026\",\"电压\":\"12V\",\"功率\":\"18W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-026-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"QS-3020\",\"电压\":\"110V\",\"功率\":\"100W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-020-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"QS-3038\",\"电压\":\"220V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-038-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"DK-3040\",\"电压\":null,\"功率\":\"18W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-040-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"SV-3035\",\"电压\":\"450V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-035-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"450V\",\"功率\":\"125W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-039-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"CX-3011\",\"电压\":\"60V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-011-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"CX-3011\",\"电压\":\"60V\",\"功率\":\"4200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-011-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"SV-3026\",\"电压\":\"12V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-026-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"DK-3034\",\"电压\":null,\"功率\":\"750W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-034-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"QS-3022\",\"电压\":null,\"功率\":\"1200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-022-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"SV-3016\",\"电压\":null,\"功率\":\"750W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-016-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"DK-3010\",\"电压\":\"230V\",\"功率\":\"750W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-010-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"KR-3008\",\"电压\":\"380V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-008-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"277V\",\"功率\":\"850W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-015-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"DK-3040\",\"电压\":\"12V\",\"功率\":\"18W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-040-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"CX-3032\",\"电压\":\"12V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-032-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"KR-3043\",\"电压\":\"208V\",\"功率\":\"850W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-043-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"110V\",\"功率\":\"1200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-042-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"110V\",\"功率\":\"1200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-042-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"48V\",\"功率\":\"5W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-030-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"AB-3028\",\"电压\":null,\"功率\":\"1200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-028-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"277V\",\"功率\":\"850W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-015-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"30V\",\"功率\":\"85W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-021-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"AB-3002\",\"电压\":\"380V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-002-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"AB-3000\",\"电压\":\"36V\",\"功率\":\"1200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-000-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"DK-3034\",\"电压\":null,\"功率\":\"750W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-034-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"208V\",\"功率\":\"850W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-003-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"SV-3047\",\"电压\":\"450V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-047-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"CX-3019\",\"电压\":null,\"功率\":\"85W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-019-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"CX-3011\",\"电压\":\"60V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-011-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"AB-3014\",\"电压\":\"24V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-014-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"60V\",\"功率\":\"7W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-045-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"SV-3016\",\"电压\":\"12V\",\"功率\":\"750W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-016-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"60V\",\"功率\":\"850W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-033-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"QS-3001\",\"电压\":null,\"功率\":\"7W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-001-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"48V\",\"功率\":\"5W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-030-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"KR-3039\",\"电压\":\"450V\",\"功率\":\"125W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-039-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"60V\",\"功率\":\"7W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-045-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"KR-3024\",\"电压\":\"110V\",\"功率\":\"75W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-024-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"KR-3043\",\"电压\":null,\"功率\":\"850W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-043-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"SV-3026\",\"电压\":\"12V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-026-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"24V\",\"功率\":\"1500W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-048-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"QS-3022\",\"电压\":null,\"功率\":\"1200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-022-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"208V\",\"功率\":\"4200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-027-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"450V\",\"功率\":\"125W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-039-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"208V\",\"功率\":\"4200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-027-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"60V\",\"功率\":\"850W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-033-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"DK-3046\",\"电压\":null,\"功率\":\"1200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-046-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"DK-3034\",\"电压\":\"110V\",\"功率\":\"750W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-034-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"DK-3046\",\"电压\":\"230V\",\"功率\":\"1200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-046-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"CX-3019\",\"电压\":\"60V\",\"功率\":\"85W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-019-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"24V\",\"功率\":\"1500W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-048-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"110V\",\"功率\":\"75W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-024-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"QS-3041\",\"电压\":\"208V\",\"功率\":\"85W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-041-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"24V\",\"功率\":\"1200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-012-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"CX-3044\",\"电压\":\"36V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-044-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"QS-3023\",\"电压\":\"15V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-023-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"DK-3049\",\"电压\":\"450V\",\"功率\":\"85W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-049-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"CX-3044\",\"电压\":\"36V\",\"功率\":\"100W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-044-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"DK-3046\",\"电压\":null,\"功率\":\"1200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-046-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"SV-3005\",\"电压\":\"277V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-005-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"CX-3011\",\"电压\":\"60V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-011-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"AB-3009\",\"电压\":\"30V\",\"功率\":\"85W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-009-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"KR-3004\",\"电压\":null,\"功率\":\"1200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-004-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"220V\",\"功率\":\"40W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-036-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"KR-3037\",\"电压\":null,\"功率\":\"45W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-037-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"AB-3014\",\"电压\":\"24V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-014-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"AB-3025\",\"电压\":\"208V\",\"功率\":\"2500W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-025-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"DK-3017\",\"电压\":\"127V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-017-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"DK-3017\",\"电压\":\"127V\",\"功率\":\"420W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-017-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"60V\",\"功率\":\"850W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-033-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"SV-3047\",\"电压\":\"450V\",\"功率\":\"7W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-047-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"208V\",\"功率\":\"850W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-003-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"CX-3032\",\"电压\":\"12V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-032-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"CX-3027\",\"电压\":\"208V\",\"功率\":\"4200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-027-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"CX-3044\",\"电压\":\"36V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-044-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"DK-3049\",\"电压\":null,\"功率\":\"85W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-049-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"48V\",\"功率\":\"5W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-030-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"QS-3041\",\"电压\":\"208V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-041-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"DK-3010\",\"电压\":null,\"功率\":\"750W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-010-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"QS-3020\",\"电压\":\"110V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-020-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"QS-3001\",\"电压\":\"6V\",\"功率\":\"7W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-001-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"AB-3028\",\"电压\":\"36V\",\"功率\":\"1200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-028-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"QS-3020\",\"电压\":\"110V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-020-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"QS-3023\",\"电压\":\"15V\",\"功率\":\"850W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-023-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"CX-3032\",\"电压\":\"12V\",\"功率\":\"1500W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-032-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"KR-3008\",\"电压\":\"380V\",\"功率\":\"200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-008-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"48V\",\"功率\":\"1000W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-006-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"AB-3025\",\"电压\":null,\"功率\":\"2500W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-025-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"208V\",\"功率\":\"4200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-027-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"CX-3031\",\"电压\":null,\"功率\":\"85W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-031-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"DK-3034\",\"电压\":null,\"功率\":\"750W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-034-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"SV-3016\",\"电压\":null,\"功率\":\"750W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-016-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"KR-3029\",\"电压\":\"6V\",\"功率\":\"850W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-029-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"SV-3035\",\"电压\":\"450V\",\"功率\":null}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-035-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"220V\",\"功率\":\"40W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-036-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"KR-3004\",\"电压\":\"220V\",\"功率\":\"1200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-004-evaluation-0.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"30V\",\"功率\":\"85W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-009-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"KR-3037\",\"电压\":null,\"功率\":\"45W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-037-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"DK-3013\",\"电压\":null,\"功率\":\"45W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-013-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"SV-3016\",\"电压\":null,\"功率\":\"750W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-016-evaluation-2.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"48V\",\"功率\":\"1000W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-006-evaluation-1.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":\"AB-3028\",\"电压\":null,\"功率\":\"1200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-028-evaluation-3.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"型号\":null,\"电压\":\"110V\",\"功率\":\"1200W\"}"
+      }
+    ],
+    "images": [
+      "nameplates_v2/images/v2-test-042-evaluation-1.png"
+    ]
+  }
+]

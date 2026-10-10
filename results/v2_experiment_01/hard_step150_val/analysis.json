@@ -1,0 +1,46 @@
+{
+  "sample_count": 200,
+  "counts": {
+    "strict_format": 200,
+    "strict_exact_match": 198,
+    "fence_only_exact_match": 198,
+    "normalized_exact_match": 198
+  },
+  "rates": {
+    "strict_format": 1.0,
+    "strict_exact_match": 0.99,
+    "fence_only_exact_match": 0.99,
+    "normalized_exact_match": 0.99
+  },
+  "normalized_field_accuracy": {
+    "型号": 1.0,
+    "电压": 0.99,
+    "功率": 0.995
+  },
+  "null_metrics_fence_only": {
+    "tp": 148,
+    "fp": 1,
+    "fn": 2,
+    "target_null_count": 150,
+    "target_present_count": 450,
+    "spurious_value_count": 2,
+    "unparseable_or_missing_key_count": 0,
+    "precision": 0.9932885906040269,
+    "recall": 0.9866666666666667,
+    "spurious_value_rate": 0.013333333333333334,
+    "false_null_rate": 0.0022222222222222222
+  },
+  "null_metrics_normalized": {
+    "tp": 148,
+    "fp": 1,
+    "fn": 2,
+    "target_null_count": 150,
+    "target_present_count": 450,
+    "spurious_value_count": 2,
+    "unparseable_or_missing_key_count": 0,
+    "precision": 0.9932885906040269,
+    "recall": 0.9866666666666667,
+    "spurious_value_rate": 0.013333333333333334,
+    "false_null_rate": 0.0022222222222222222
+  }
+}

@@ -18,3 +18,4 @@ __pycache__/
 /data/*
 !/data/dataset_info.json
 !/data/nameplates_v1/
+!/data/nameplates_v2/

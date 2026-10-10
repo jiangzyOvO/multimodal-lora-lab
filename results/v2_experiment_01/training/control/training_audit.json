@@ -1,0 +1,769 @@
+{
+  "trainable_parameters": 544768,
+  "trainable_tensors": 112,
+  "all_trainable_are_language_lora": true,
+  "parameter_dtypes": [
+    "torch.bfloat16",
+    "torch.float32"
+  ],
+  "parameter_devices": [
+    "mps:0"
+  ],
+  "precision": "bf16",
+  "steps": [
+    {
+      "step": 1,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 8.297
+    },
+    {
+      "step": 2,
+      "mps_allocated_gib": 4.178,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 3,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 4,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 5,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 6,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 7,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 8,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.344
+    },
+    {
+      "step": 9,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.338
+    },
+    {
+      "step": 10,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.338
+    },
+    {
+      "step": 11,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.338
+    },
+    {
+      "step": 12,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 13,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.301
+    },
+    {
+      "step": 14,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.336
+    },
+    {
+      "step": 15,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.441
+    },
+    {
+      "step": 16,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.303
+    },
+    {
+      "step": 17,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.303
+    },
+    {
+      "step": 18,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 19,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 20,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.313
+    },
+    {
+      "step": 21,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 22,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.313
+    },
+    {
+      "step": 23,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 24,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 25,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 26,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 27,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 28,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 29,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 30,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.348
+    },
+    {
+      "step": 31,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 32,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 33,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 34,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 35,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.338
+    },
+    {
+      "step": 36,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.301
+    },
+    {
+      "step": 37,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.303
+    },
+    {
+      "step": 38,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.303
+    },
+    {
+      "step": 39,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.303
+    },
+    {
+      "step": 40,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 41,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 42,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 43,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 44,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 45,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 46,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 47,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 48,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.348
+    },
+    {
+      "step": 49,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.348
+    },
+    {
+      "step": 50,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 51,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 52,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 53,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 54,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 55,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.313
+    },
+    {
+      "step": 56,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 57,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 58,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 59,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 60,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 61,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 62,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 63,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 64,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 65,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 66,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 67,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 68,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 69,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 70,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 71,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 72,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 73,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 74,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 75,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 76,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 77,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 78,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 79,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 80,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 81,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 82,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 83,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 84,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 85,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 86,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 87,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 88,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 89,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 90,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 91,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 92,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 93,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 94,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 95,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 96,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 97,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 98,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.313
+    },
+    {
+      "step": 99,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.313
+    },
+    {
+      "step": 100,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.313
+    },
+    {
+      "step": 101,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 102,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 103,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 104,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 105,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 106,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 107,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 108,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 109,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 110,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 111,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 112,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 113,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 114,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 115,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.313
+    },
+    {
+      "step": 116,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.313
+    },
+    {
+      "step": 117,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.313
+    },
+    {
+      "step": 118,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 119,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 120,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 121,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.463
+    },
+    {
+      "step": 122,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.313
+    },
+    {
+      "step": 123,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.463
+    },
+    {
+      "step": 124,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.348
+    },
+    {
+      "step": 125,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.348
+    },
+    {
+      "step": 126,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.348
+    },
+    {
+      "step": 127,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.348
+    },
+    {
+      "step": 128,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.348
+    },
+    {
+      "step": 129,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.313
+    },
+    {
+      "step": 130,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 131,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 132,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 133,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 134,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 135,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 136,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 137,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 138,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 139,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 140,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 141,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 142,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 143,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.313
+    },
+    {
+      "step": 144,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 145,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 146,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.315
+    },
+    {
+      "step": 147,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 148,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 149,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 9.35
+    },
+    {
+      "step": 150,
+      "mps_allocated_gib": 4.177,
+      "mps_driver_gib": 9.311
+    }
+  ],
+  "completed_steps": 150,
+  "changed_tensors": 112,
+  "max_parameter_change": 0.007784657180309296,
+  "all_adapter_values_finite": true
+}

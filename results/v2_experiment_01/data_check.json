@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "images_checked": 1200,
+  "sizes": {
+    "train_control_extra": 400,
+    "train_hard_extra": 400,
+    "val": 200,
+    "test": 200,
+    "train_control": 800,
+    "train_hard": 800
+  },
+  "groups": {
+    "train": 100,
+    "val": 50,
+    "test": 50
+  },
+  "cross_split_leakage": 0,
+  "label_check": "rendered text annotations; not independent human OCR of all pixels",
+  "verifier_sha256": "bfb61eab7147aac705620826e5897196ba6c3ced0caa29b7a65bae127bb4de12",
+  "manifest_sha256": "1d60ee217659b44fa68ea3fc65104577dc256df1b48cea21389feaf0768cf2c5"
+}

@@ -1,0 +1,34 @@
+{
+  "files": [
+    {
+      "source": "outputs/v2_experiment_01/merged_v1_test/analysis.json",
+      "published": "results/v2_merged_v1_test_01/analysis.json",
+      "source_sha256": "76f0c74b10b82bbb2f1c6463d9511c00a9cd4194e6738af528440ee82abd83b3",
+      "published_sha256": "76f0c74b10b82bbb2f1c6463d9511c00a9cd4194e6738af528440ee82abd83b3"
+    },
+    {
+      "source": "outputs/v2_experiment_01/merged_v1_test/comparison.json",
+      "published": "results/v2_merged_v1_test_01/comparison.json",
+      "source_sha256": "537dee1f30e4e9744434814d4f025f28782c86a01a90b86f16f7804b7d9903fb",
+      "published_sha256": "537dee1f30e4e9744434814d4f025f28782c86a01a90b86f16f7804b7d9903fb"
+    },
+    {
+      "source": "outputs/v2_experiment_01/merged_v1_test/predictions.jsonl",
+      "published": "results/v2_merged_v1_test_01/predictions.jsonl",
+      "source_sha256": "77986ffd958fc5fade6f2df17fbdee00fe57c72601bde6e9fea1ac5af96fb23b",
+      "published_sha256": "77986ffd958fc5fade6f2df17fbdee00fe57c72601bde6e9fea1ac5af96fb23b"
+    },
+    {
+      "source": "outputs/v2_experiment_01/merged_v1_test/run.json",
+      "published": "results/v2_merged_v1_test_01/run.json",
+      "source_sha256": "a4fa9548ea018198ee76df55bb3cb9da3f2dd06ec404d40c6cb0cdf2a2f143fb",
+      "published_sha256": "9e7665c1683f909b999f9602257c4fa19727f4893c51d4fe7274313e291628d3"
+    },
+    {
+      "source": "outputs/v2_experiment_01/merged_v1_test/summary.json",
+      "published": "results/v2_merged_v1_test_01/summary.json",
+      "source_sha256": "d5815b238523bdfc4728a9e20920e5be698c8e7655be571c641bb9e55e2c6f66",
+      "published_sha256": "d5815b238523bdfc4728a9e20920e5be698c8e7655be571c641bb9e55e2c6f66"
+    }
+  ]
+}

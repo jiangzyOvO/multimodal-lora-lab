@@ -1,0 +1,49 @@
+{
+  "frozen_at": "2026-10-10T03:09:42.986257+00:00",
+  "seed": 42,
+  "arms": [
+    "control",
+    "hard"
+  ],
+  "samples_per_arm": 800,
+  "optimizer_steps": 150,
+  "candidate_steps": [
+    50,
+    100,
+    150
+  ],
+  "batch_size": 1,
+  "gradient_accumulation": 8,
+  "selection": [
+    "maximize v2 validation strict exact count",
+    "minimize missing-field non-null count",
+    "minimize present-field null count",
+    "prefer earlier checkpoint"
+  ],
+  "final_test_policy": "Freeze both selected checkpoint hashes before any v2 test inference.",
+  "normalization": "nameplate_normalization_v1, frozen before v2 inference",
+  "uncertainty": "50 correlated groups per eval split; report counts and group-level paired bootstrap.",
+  "interpretation": "Single training seed; compares the complete paired-missing-data recipe. Synthetic performance is not real-photo performance.",
+  "sha256": {
+    "scripts/run_nameplate_v2_experiment.py": "7ab10db6e49d87d2a49ccce733999bd44859625dcebda90a6538b805f620b579",
+    "scripts/evaluate_nameplates_v2.py": "fcddf746f8ee32fcdd4cd69218f76bc07a6a61b5650e1fc332d08ba1e6e708b8",
+    "scripts/evaluate_nameplates.py": "94118f258c867188f5082a3bae451bdcd0d72939c5faddcd50f54a61a56f2a4a",
+    "scripts/analyze_nameplate_predictions.py": "742259b75e7a862c5530e99bfbb8bf22e1cf2c903e6715c438e541bca3e2e213",
+    "scripts/generate_nameplates_v2.py": "d00f42ab598538e8f44da6762ef0be2389b80b996c904c1876a605ccd5aaafc2",
+    "scripts/verify_nameplates_v2.py": "bfb61eab7147aac705620826e5897196ba6c3ced0caa29b7a65bae127bb4de12",
+    "scripts/train.py": "21fce83119158b48a70256189a1ea709b96e4b9d2674f870345677f889961efe",
+    "scripts/check_tokens.py": "33fd7a15a7988731ac7ee335723aa67b65ec8df7e9ae60bea0c0ab9470abbcc4",
+    "configs/train_nameplates_v2_control_mps.yaml": "04db88b47e8af43c70a3e274cb33fc34773a5c93bb743eeb763aecf03a9d9423",
+    "configs/train_nameplates_v2_hard_mps.yaml": "14427a815a09c32eddb4d0de6f48fef60a4a754567400ffb661f1a1399ad8644",
+    "data/nameplates_v2/manifest.json": "1d60ee217659b44fa68ea3fc65104577dc256df1b48cea21389feaf0768cf2c5",
+    "data/nameplates_v1/train.json": "4e2428feeb2d98f4d22ef217e2bb8ccc22aa48b63e0dda6c51507695b212e2f0",
+    "data/nameplates_v2/dataset_info.json": "3fd1c217a58922bddb67e4f59187e2a0a5f4407a991cf38e85a2638a77247f09",
+    "data/nameplates_v2/metadata.jsonl": "c698cdd16c3bf9cbb6d4d9c830b084f3b41319e2c8be585c105d203c6dbe1a7a",
+    "data/nameplates_v2/test.json": "65981723f429ed1d91b7b5b5db976ceb89eae48379afa12504b43ba0a8dccea8",
+    "data/nameplates_v2/train_control.json": "ca0987b5d81b1464561694a94be630dca9733d1256d6ceb3b243f78d0406227e",
+    "data/nameplates_v2/train_control_extra.json": "5a1bcd7c5cdb5a5b9b3efba43cde765556d4001194b86fcc266580fb3d765af1",
+    "data/nameplates_v2/train_hard.json": "b98f7a69c661dae6b4ec36ac8dbadf225e2b234ee8235b61e2f3bd466a1271f7",
+    "data/nameplates_v2/train_hard_extra.json": "f151cbb0db6e159f89cc55323c65de14364f22705b78832f3f1f209ce0678de0",
+    "data/nameplates_v2/val.json": "bf368703cb21cf5f0dddcfb2f12449794db6f86eab019840a96029c23fd1934f"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "sample_count": 200,
+  "fence_removed_count": 0,
+  "raw_json_object_rate": 1.0,
+  "strict_format_rate": 0.99,
+  "strict_exact_match_rate": 0.96,
+  "diagnostic_exact_match_rate": 0.96,
+  "diagnostic_field_accuracy": {
+    "型号": 1.0,
+    "电压": 0.96,
+    "功率": 1.0
+  },
+  "missing_field_count": 150,
+  "diagnostic_missing_value_accuracy": 0.9533333333333334,
+  "generated_tokens_limit_count": 0
+}

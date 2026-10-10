@@ -1,0 +1,4778 @@
+{
+  "schema_version": 1,
+  "split": "test",
+  "policy": {
+    "id": "nameplate_normalization_v1",
+    "status": "post_hoc_exploratory_on_nameplates_v1",
+    "rules": [
+      "Remove at most one code fence enclosing the entire response.",
+      "Parse the entire JSON object; reject duplicate keys and NaN/Infinity.",
+      "Map string null (case-insensitive), --, N/A and whitespace-only strings to null.",
+      "Remove whitespace from voltage and power strings; remove AC/DC from voltage.",
+      "Preserve model identifiers verbatim except the explicit null markers above.",
+      "Do not repair numbers, append units, fill missing keys or drop extra keys."
+    ],
+    "limitations": [
+      "This diagnostic does not replace strict raw-output accuracy.",
+      "The v1 test set has been inspected; future tuning needs a new final holdout.",
+      "Normalization accuracy is not an OCR-only metric.",
+      "Timing comes from historical runs, not a controlled performance benchmark."
+    ]
+  },
+  "source_sha256": {
+    "data/nameplates_v2/test.json": "65981723f429ed1d91b7b5b5db976ceb89eae48379afa12504b43ba0a8dccea8",
+    "data/nameplates_v2/metadata.jsonl": "c698cdd16c3bf9cbb6d4d9c830b084f3b41319e2c8be585c105d203c6dbe1a7a",
+    "scripts/analyze_nameplate_predictions.py": "742259b75e7a862c5530e99bfbb8bf22e1cf2c903e6715c438e541bca3e2e213",
+    "scripts/evaluate_nameplates.py": "94118f258c867188f5082a3bae451bdcd0d72939c5faddcd50f54a61a56f2a4a",
+    "outputs/v2_experiment_01/base_test/run.json": "b1358769746bdaf1ee41da48bd5759d878abcc92bedbb3de46bc0ef4563df69c",
+    "outputs/v2_experiment_01/base_test/predictions.jsonl": "0e7484d871e34cb8b32c02637699784683035696d0715f9c9d9996e9b960037a",
+    "outputs/v2_experiment_01/hard_test/run.json": "c1aab9b426a56016c05fc2388c5f26ae8b2e968fdc2834c66094c5264948ed92",
+    "outputs/v2_experiment_01/hard_test/predictions.jsonl": "11113037cd6fdf2b43320d2329cc4ebeb667af347e964ee891d08ee9a5f34e99"
+  },
+  "overall": {
+    "base": {
+      "sample_count": 200,
+      "counts": {
+        "strict_format": 0,
+        "strict_exact_match": 0,
+        "fence_only_exact_match": 0,
+        "normalized_exact_match": 90
+      },
+      "rates": {
+        "strict_format": 0.0,
+        "strict_exact_match": 0.0,
+        "fence_only_exact_match": 0.0,
+        "normalized_exact_match": 0.45
+      },
+      "normalized_field_accuracy": {
+        "型号": 0.81,
+        "电压": 0.78,
+        "功率": 0.845
+      },
+      "null_metrics_fence_only": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 143,
+        "target_null_count": 150,
+        "target_present_count": 450,
+        "spurious_value_count": 143,
+        "unparseable_or_missing_key_count": 0,
+        "precision": 1.0,
+        "recall": 0.04666666666666667,
+        "spurious_value_rate": 0.9533333333333334,
+        "false_null_rate": 0.0
+      },
+      "null_metrics_normalized": {
+        "tp": 42,
+        "fp": 1,
+        "fn": 108,
+        "target_null_count": 150,
+        "target_present_count": 450,
+        "spurious_value_count": 108,
+        "unparseable_or_missing_key_count": 0,
+        "precision": 0.9767441860465116,
+        "recall": 0.28,
+        "spurious_value_rate": 0.72,
+        "false_null_rate": 0.0022222222222222222
+      }
+    },
+    "lora": {
+      "sample_count": 200,
+      "counts": {
+        "strict_format": 199,
+        "strict_exact_match": 198,
+        "fence_only_exact_match": 198,
+        "normalized_exact_match": 199
+      },
+      "rates": {
+        "strict_format": 0.995,
+        "strict_exact_match": 0.99,
+        "fence_only_exact_match": 0.99,
+        "normalized_exact_match": 0.995
+      },
+      "normalized_field_accuracy": {
+        "型号": 1.0,
+        "电压": 0.995,
+        "功率": 1.0
+      },
+      "null_metrics_fence_only": {
+        "tp": 148,
+        "fp": 0,
+        "fn": 2,
+        "target_null_count": 150,
+        "target_present_count": 450,
+        "spurious_value_count": 2,
+        "unparseable_or_missing_key_count": 0,
+        "precision": 1.0,
+        "recall": 0.9866666666666667,
+        "spurious_value_rate": 0.013333333333333334,
+        "false_null_rate": 0.0
+      },
+      "null_metrics_normalized": {
+        "tp": 149,
+        "fp": 0,
+        "fn": 1,
+        "target_null_count": 150,
+        "target_present_count": 450,
+        "spurious_value_count": 1,
+        "unparseable_or_missing_key_count": 0,
+        "precision": 1.0,
+        "recall": 0.9933333333333333,
+        "spurious_value_rate": 0.006666666666666667,
+        "false_null_rate": 0.0
+      }
+    }
+  },
+  "slices": {
+    "completeness": {
+      "complete": {
+        "base": {
+          "sample_count": 50,
+          "counts": {
+            "strict_format": 0,
+            "strict_exact_match": 0,
+            "fence_only_exact_match": 0,
+            "normalized_exact_match": 50
+          },
+          "rates": {
+            "strict_format": 0.0,
+            "strict_exact_match": 0.0,
+            "fence_only_exact_match": 0.0,
+            "normalized_exact_match": 1.0
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 1.0,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 0,
+            "target_present_count": 150,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": null,
+            "recall": null,
+            "spurious_value_rate": null,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 0,
+            "target_present_count": 150,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": null,
+            "recall": null,
+            "spurious_value_rate": null,
+            "false_null_rate": 0.0
+          }
+        },
+        "lora": {
+          "sample_count": 50,
+          "counts": {
+            "strict_format": 50,
+            "strict_exact_match": 50,
+            "fence_only_exact_match": 50,
+            "normalized_exact_match": 50
+          },
+          "rates": {
+            "strict_format": 1.0,
+            "strict_exact_match": 1.0,
+            "fence_only_exact_match": 1.0,
+            "normalized_exact_match": 1.0
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 1.0,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 0,
+            "target_present_count": 150,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": null,
+            "recall": null,
+            "spurious_value_rate": null,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 0,
+            "target_present_count": 150,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": null,
+            "recall": null,
+            "spurious_value_rate": null,
+            "false_null_rate": 0.0
+          }
+        }
+      },
+      "missing": {
+        "base": {
+          "sample_count": 150,
+          "counts": {
+            "strict_format": 0,
+            "strict_exact_match": 0,
+            "fence_only_exact_match": 0,
+            "normalized_exact_match": 40
+          },
+          "rates": {
+            "strict_format": 0.0,
+            "strict_exact_match": 0.0,
+            "fence_only_exact_match": 0.0,
+            "normalized_exact_match": 0.26666666666666666
+          },
+          "normalized_field_accuracy": {
+            "型号": 0.7466666666666667,
+            "电压": 0.7066666666666667,
+            "功率": 0.7933333333333333
+          },
+          "null_metrics_fence_only": {
+            "tp": 7,
+            "fp": 0,
+            "fn": 143,
+            "target_null_count": 150,
+            "target_present_count": 300,
+            "spurious_value_count": 143,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.04666666666666667,
+            "spurious_value_rate": 0.9533333333333334,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 42,
+            "fp": 1,
+            "fn": 108,
+            "target_null_count": 150,
+            "target_present_count": 300,
+            "spurious_value_count": 108,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 0.9767441860465116,
+            "recall": 0.28,
+            "spurious_value_rate": 0.72,
+            "false_null_rate": 0.0033333333333333335
+          }
+        },
+        "lora": {
+          "sample_count": 150,
+          "counts": {
+            "strict_format": 149,
+            "strict_exact_match": 148,
+            "fence_only_exact_match": 148,
+            "normalized_exact_match": 149
+          },
+          "rates": {
+            "strict_format": 0.9933333333333333,
+            "strict_exact_match": 0.9866666666666667,
+            "fence_only_exact_match": 0.9866666666666667,
+            "normalized_exact_match": 0.9933333333333333
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 0.9933333333333333,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 148,
+            "fp": 0,
+            "fn": 2,
+            "target_null_count": 150,
+            "target_present_count": 300,
+            "spurious_value_count": 2,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.9866666666666667,
+            "spurious_value_rate": 0.013333333333333334,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 149,
+            "fp": 0,
+            "fn": 1,
+            "target_null_count": 150,
+            "target_present_count": 300,
+            "spurious_value_count": 1,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.9933333333333333,
+            "spurious_value_rate": 0.006666666666666667,
+            "false_null_rate": 0.0
+          }
+        }
+      }
+    },
+    "template": {
+      "E201": {
+        "base": {
+          "sample_count": 56,
+          "counts": {
+            "strict_format": 0,
+            "strict_exact_match": 0,
+            "fence_only_exact_match": 0,
+            "normalized_exact_match": 26
+          },
+          "rates": {
+            "strict_format": 0.0,
+            "strict_exact_match": 0.0,
+            "fence_only_exact_match": 0.0,
+            "normalized_exact_match": 0.4642857142857143
+          },
+          "normalized_field_accuracy": {
+            "型号": 0.8214285714285714,
+            "电压": 0.7678571428571429,
+            "功率": 0.8571428571428571
+          },
+          "null_metrics_fence_only": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 40,
+            "target_null_count": 42,
+            "target_present_count": 126,
+            "spurious_value_count": 40,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.047619047619047616,
+            "spurious_value_rate": 0.9523809523809523,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 12,
+            "fp": 0,
+            "fn": 30,
+            "target_null_count": 42,
+            "target_present_count": 126,
+            "spurious_value_count": 30,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.2857142857142857,
+            "spurious_value_rate": 0.7142857142857143,
+            "false_null_rate": 0.0
+          }
+        },
+        "lora": {
+          "sample_count": 56,
+          "counts": {
+            "strict_format": 56,
+            "strict_exact_match": 56,
+            "fence_only_exact_match": 56,
+            "normalized_exact_match": 56
+          },
+          "rates": {
+            "strict_format": 1.0,
+            "strict_exact_match": 1.0,
+            "fence_only_exact_match": 1.0,
+            "normalized_exact_match": 1.0
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 1.0,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 42,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 42,
+            "target_present_count": 126,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 42,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 42,
+            "target_present_count": 126,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          }
+        }
+      },
+      "E202": {
+        "base": {
+          "sample_count": 48,
+          "counts": {
+            "strict_format": 0,
+            "strict_exact_match": 0,
+            "fence_only_exact_match": 0,
+            "normalized_exact_match": 22
+          },
+          "rates": {
+            "strict_format": 0.0,
+            "strict_exact_match": 0.0,
+            "fence_only_exact_match": 0.0,
+            "normalized_exact_match": 0.4583333333333333
+          },
+          "normalized_field_accuracy": {
+            "型号": 0.8125,
+            "电压": 0.8125,
+            "功率": 0.8333333333333334
+          },
+          "null_metrics_fence_only": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 35,
+            "target_null_count": 36,
+            "target_present_count": 108,
+            "spurious_value_count": 35,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.027777777777777776,
+            "spurious_value_rate": 0.9722222222222222,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 10,
+            "fp": 0,
+            "fn": 26,
+            "target_null_count": 36,
+            "target_present_count": 108,
+            "spurious_value_count": 26,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.2777777777777778,
+            "spurious_value_rate": 0.7222222222222222,
+            "false_null_rate": 0.0
+          }
+        },
+        "lora": {
+          "sample_count": 48,
+          "counts": {
+            "strict_format": 48,
+            "strict_exact_match": 48,
+            "fence_only_exact_match": 48,
+            "normalized_exact_match": 48
+          },
+          "rates": {
+            "strict_format": 1.0,
+            "strict_exact_match": 1.0,
+            "fence_only_exact_match": 1.0,
+            "normalized_exact_match": 1.0
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 1.0,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 36,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 36,
+            "target_present_count": 108,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 36,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 36,
+            "target_present_count": 108,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          }
+        }
+      },
+      "E203": {
+        "base": {
+          "sample_count": 48,
+          "counts": {
+            "strict_format": 0,
+            "strict_exact_match": 0,
+            "fence_only_exact_match": 0,
+            "normalized_exact_match": 22
+          },
+          "rates": {
+            "strict_format": 0.0,
+            "strict_exact_match": 0.0,
+            "fence_only_exact_match": 0.0,
+            "normalized_exact_match": 0.4583333333333333
+          },
+          "normalized_field_accuracy": {
+            "型号": 0.8333333333333334,
+            "电压": 0.7708333333333334,
+            "功率": 0.8541666666666666
+          },
+          "null_metrics_fence_only": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 33,
+            "target_null_count": 36,
+            "target_present_count": 108,
+            "spurious_value_count": 33,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.08333333333333333,
+            "spurious_value_rate": 0.9166666666666666,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 11,
+            "fp": 1,
+            "fn": 25,
+            "target_null_count": 36,
+            "target_present_count": 108,
+            "spurious_value_count": 25,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 0.9166666666666666,
+            "recall": 0.3055555555555556,
+            "spurious_value_rate": 0.6944444444444444,
+            "false_null_rate": 0.009259259259259259
+          }
+        },
+        "lora": {
+          "sample_count": 48,
+          "counts": {
+            "strict_format": 48,
+            "strict_exact_match": 47,
+            "fence_only_exact_match": 47,
+            "normalized_exact_match": 47
+          },
+          "rates": {
+            "strict_format": 1.0,
+            "strict_exact_match": 0.9791666666666666,
+            "fence_only_exact_match": 0.9791666666666666,
+            "normalized_exact_match": 0.9791666666666666
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 0.9791666666666666,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 35,
+            "fp": 0,
+            "fn": 1,
+            "target_null_count": 36,
+            "target_present_count": 108,
+            "spurious_value_count": 1,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.9722222222222222,
+            "spurious_value_rate": 0.027777777777777776,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 35,
+            "fp": 0,
+            "fn": 1,
+            "target_null_count": 36,
+            "target_present_count": 108,
+            "spurious_value_count": 1,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.9722222222222222,
+            "spurious_value_rate": 0.027777777777777776,
+            "false_null_rate": 0.0
+          }
+        }
+      },
+      "E204": {
+        "base": {
+          "sample_count": 48,
+          "counts": {
+            "strict_format": 0,
+            "strict_exact_match": 0,
+            "fence_only_exact_match": 0,
+            "normalized_exact_match": 20
+          },
+          "rates": {
+            "strict_format": 0.0,
+            "strict_exact_match": 0.0,
+            "fence_only_exact_match": 0.0,
+            "normalized_exact_match": 0.4166666666666667
+          },
+          "normalized_field_accuracy": {
+            "型号": 0.7708333333333334,
+            "电压": 0.7708333333333334,
+            "功率": 0.8333333333333334
+          },
+          "null_metrics_fence_only": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 35,
+            "target_null_count": 36,
+            "target_present_count": 108,
+            "spurious_value_count": 35,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.027777777777777776,
+            "spurious_value_rate": 0.9722222222222222,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 9,
+            "fp": 0,
+            "fn": 27,
+            "target_null_count": 36,
+            "target_present_count": 108,
+            "spurious_value_count": 27,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.25,
+            "spurious_value_rate": 0.75,
+            "false_null_rate": 0.0
+          }
+        },
+        "lora": {
+          "sample_count": 48,
+          "counts": {
+            "strict_format": 47,
+            "strict_exact_match": 47,
+            "fence_only_exact_match": 47,
+            "normalized_exact_match": 48
+          },
+          "rates": {
+            "strict_format": 0.9791666666666666,
+            "strict_exact_match": 0.9791666666666666,
+            "fence_only_exact_match": 0.9791666666666666,
+            "normalized_exact_match": 1.0
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 1.0,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 35,
+            "fp": 0,
+            "fn": 1,
+            "target_null_count": 36,
+            "target_present_count": 108,
+            "spurious_value_count": 1,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.9722222222222222,
+            "spurious_value_rate": 0.027777777777777776,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 36,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 36,
+            "target_present_count": 108,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          }
+        }
+      }
+    },
+    "font": {
+      "Arial Unicode.ttf": {
+        "base": {
+          "sample_count": 96,
+          "counts": {
+            "strict_format": 0,
+            "strict_exact_match": 0,
+            "fence_only_exact_match": 0,
+            "normalized_exact_match": 43
+          },
+          "rates": {
+            "strict_format": 0.0,
+            "strict_exact_match": 0.0,
+            "fence_only_exact_match": 0.0,
+            "normalized_exact_match": 0.4479166666666667
+          },
+          "normalized_field_accuracy": {
+            "型号": 0.8229166666666666,
+            "电压": 0.78125,
+            "功率": 0.84375
+          },
+          "null_metrics_fence_only": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 69,
+            "target_null_count": 72,
+            "target_present_count": 216,
+            "spurious_value_count": 69,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.041666666666666664,
+            "spurious_value_rate": 0.9583333333333334,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 19,
+            "fp": 0,
+            "fn": 53,
+            "target_null_count": 72,
+            "target_present_count": 216,
+            "spurious_value_count": 53,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.2638888888888889,
+            "spurious_value_rate": 0.7361111111111112,
+            "false_null_rate": 0.0
+          }
+        },
+        "lora": {
+          "sample_count": 96,
+          "counts": {
+            "strict_format": 95,
+            "strict_exact_match": 94,
+            "fence_only_exact_match": 94,
+            "normalized_exact_match": 95
+          },
+          "rates": {
+            "strict_format": 0.9895833333333334,
+            "strict_exact_match": 0.9791666666666666,
+            "fence_only_exact_match": 0.9791666666666666,
+            "normalized_exact_match": 0.9895833333333334
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 0.9895833333333334,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 70,
+            "fp": 0,
+            "fn": 2,
+            "target_null_count": 72,
+            "target_present_count": 216,
+            "spurious_value_count": 2,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.9722222222222222,
+            "spurious_value_rate": 0.027777777777777776,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 71,
+            "fp": 0,
+            "fn": 1,
+            "target_null_count": 72,
+            "target_present_count": 216,
+            "spurious_value_count": 1,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.9861111111111112,
+            "spurious_value_rate": 0.013888888888888888,
+            "false_null_rate": 0.0
+          }
+        }
+      },
+      "Hiragino Sans GB.ttc": {
+        "base": {
+          "sample_count": 52,
+          "counts": {
+            "strict_format": 0,
+            "strict_exact_match": 0,
+            "fence_only_exact_match": 0,
+            "normalized_exact_match": 25
+          },
+          "rates": {
+            "strict_format": 0.0,
+            "strict_exact_match": 0.0,
+            "fence_only_exact_match": 0.0,
+            "normalized_exact_match": 0.4807692307692308
+          },
+          "normalized_field_accuracy": {
+            "型号": 0.7884615384615384,
+            "电压": 0.7884615384615384,
+            "功率": 0.8846153846153846
+          },
+          "null_metrics_fence_only": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 39,
+            "target_null_count": 39,
+            "target_present_count": 117,
+            "spurious_value_count": 39,
+            "unparseable_or_missing_key_count": 0,
+            "precision": null,
+            "recall": 0.0,
+            "spurious_value_rate": 1.0,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 14,
+            "fp": 1,
+            "fn": 25,
+            "target_null_count": 39,
+            "target_present_count": 117,
+            "spurious_value_count": 25,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 0.9333333333333333,
+            "recall": 0.358974358974359,
+            "spurious_value_rate": 0.6410256410256411,
+            "false_null_rate": 0.008547008547008548
+          }
+        },
+        "lora": {
+          "sample_count": 52,
+          "counts": {
+            "strict_format": 52,
+            "strict_exact_match": 52,
+            "fence_only_exact_match": 52,
+            "normalized_exact_match": 52
+          },
+          "rates": {
+            "strict_format": 1.0,
+            "strict_exact_match": 1.0,
+            "fence_only_exact_match": 1.0,
+            "normalized_exact_match": 1.0
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 1.0,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 39,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 39,
+            "target_present_count": 117,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 39,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 39,
+            "target_present_count": 117,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          }
+        }
+      },
+      "PingFang.ttc": {
+        "base": {
+          "sample_count": 52,
+          "counts": {
+            "strict_format": 0,
+            "strict_exact_match": 0,
+            "fence_only_exact_match": 0,
+            "normalized_exact_match": 22
+          },
+          "rates": {
+            "strict_format": 0.0,
+            "strict_exact_match": 0.0,
+            "fence_only_exact_match": 0.0,
+            "normalized_exact_match": 0.4230769230769231
+          },
+          "normalized_field_accuracy": {
+            "型号": 0.8076923076923077,
+            "电压": 0.7692307692307693,
+            "功率": 0.8076923076923077
+          },
+          "null_metrics_fence_only": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 35,
+            "target_null_count": 39,
+            "target_present_count": 117,
+            "spurious_value_count": 35,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.10256410256410256,
+            "spurious_value_rate": 0.8974358974358975,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 9,
+            "fp": 0,
+            "fn": 30,
+            "target_null_count": 39,
+            "target_present_count": 117,
+            "spurious_value_count": 30,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.23076923076923078,
+            "spurious_value_rate": 0.7692307692307693,
+            "false_null_rate": 0.0
+          }
+        },
+        "lora": {
+          "sample_count": 52,
+          "counts": {
+            "strict_format": 52,
+            "strict_exact_match": 52,
+            "fence_only_exact_match": 52,
+            "normalized_exact_match": 52
+          },
+          "rates": {
+            "strict_format": 1.0,
+            "strict_exact_match": 1.0,
+            "fence_only_exact_match": 1.0,
+            "normalized_exact_match": 1.0
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 1.0,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 39,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 39,
+            "target_present_count": 117,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 39,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 39,
+            "target_present_count": 117,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          }
+        }
+      }
+    },
+    "missing_field": {
+      "none": {
+        "base": {
+          "sample_count": 50,
+          "counts": {
+            "strict_format": 0,
+            "strict_exact_match": 0,
+            "fence_only_exact_match": 0,
+            "normalized_exact_match": 50
+          },
+          "rates": {
+            "strict_format": 0.0,
+            "strict_exact_match": 0.0,
+            "fence_only_exact_match": 0.0,
+            "normalized_exact_match": 1.0
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 1.0,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 0,
+            "target_present_count": 150,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": null,
+            "recall": null,
+            "spurious_value_rate": null,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 0,
+            "target_present_count": 150,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": null,
+            "recall": null,
+            "spurious_value_rate": null,
+            "false_null_rate": 0.0
+          }
+        },
+        "lora": {
+          "sample_count": 50,
+          "counts": {
+            "strict_format": 50,
+            "strict_exact_match": 50,
+            "fence_only_exact_match": 50,
+            "normalized_exact_match": 50
+          },
+          "rates": {
+            "strict_format": 1.0,
+            "strict_exact_match": 1.0,
+            "fence_only_exact_match": 1.0,
+            "normalized_exact_match": 1.0
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 1.0,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 0,
+            "target_present_count": 150,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": null,
+            "recall": null,
+            "spurious_value_rate": null,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 0,
+            "target_present_count": 150,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": null,
+            "recall": null,
+            "spurious_value_rate": null,
+            "false_null_rate": 0.0
+          }
+        }
+      },
+      "功率": {
+        "base": {
+          "sample_count": 48,
+          "counts": {
+            "strict_format": 0,
+            "strict_exact_match": 0,
+            "fence_only_exact_match": 0,
+            "normalized_exact_match": 17
+          },
+          "rates": {
+            "strict_format": 0.0,
+            "strict_exact_match": 0.0,
+            "fence_only_exact_match": 0.0,
+            "normalized_exact_match": 0.3541666666666667
+          },
+          "normalized_field_accuracy": {
+            "型号": 0.9375,
+            "电压": 1.0,
+            "功率": 0.3958333333333333
+          },
+          "null_metrics_fence_only": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 44,
+            "target_null_count": 48,
+            "target_present_count": 96,
+            "spurious_value_count": 44,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.08333333333333333,
+            "spurious_value_rate": 0.9166666666666666,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 19,
+            "fp": 1,
+            "fn": 29,
+            "target_null_count": 48,
+            "target_present_count": 96,
+            "spurious_value_count": 29,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 0.95,
+            "recall": 0.3958333333333333,
+            "spurious_value_rate": 0.6041666666666666,
+            "false_null_rate": 0.010416666666666666
+          }
+        },
+        "lora": {
+          "sample_count": 48,
+          "counts": {
+            "strict_format": 48,
+            "strict_exact_match": 48,
+            "fence_only_exact_match": 48,
+            "normalized_exact_match": 48
+          },
+          "rates": {
+            "strict_format": 1.0,
+            "strict_exact_match": 1.0,
+            "fence_only_exact_match": 1.0,
+            "normalized_exact_match": 1.0
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 1.0,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 48,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 48,
+            "target_present_count": 96,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 48,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 48,
+            "target_present_count": 96,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          }
+        }
+      },
+      "型号": {
+        "base": {
+          "sample_count": 51,
+          "counts": {
+            "strict_format": 0,
+            "strict_exact_match": 0,
+            "fence_only_exact_match": 0,
+            "normalized_exact_match": 16
+          },
+          "rates": {
+            "strict_format": 0.0,
+            "strict_exact_match": 0.0,
+            "fence_only_exact_match": 0.0,
+            "normalized_exact_match": 0.3137254901960784
+          },
+          "normalized_field_accuracy": {
+            "型号": 0.3137254901960784,
+            "电压": 1.0,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 48,
+            "target_null_count": 51,
+            "target_present_count": 102,
+            "spurious_value_count": 48,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.058823529411764705,
+            "spurious_value_rate": 0.9411764705882353,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 16,
+            "fp": 0,
+            "fn": 35,
+            "target_null_count": 51,
+            "target_present_count": 102,
+            "spurious_value_count": 35,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.3137254901960784,
+            "spurious_value_rate": 0.6862745098039216,
+            "false_null_rate": 0.0
+          }
+        },
+        "lora": {
+          "sample_count": 51,
+          "counts": {
+            "strict_format": 51,
+            "strict_exact_match": 51,
+            "fence_only_exact_match": 51,
+            "normalized_exact_match": 51
+          },
+          "rates": {
+            "strict_format": 1.0,
+            "strict_exact_match": 1.0,
+            "fence_only_exact_match": 1.0,
+            "normalized_exact_match": 1.0
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 1.0,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 51,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 51,
+            "target_present_count": 102,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 51,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 51,
+            "target_present_count": 102,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          }
+        }
+      },
+      "电压": {
+        "base": {
+          "sample_count": 51,
+          "counts": {
+            "strict_format": 0,
+            "strict_exact_match": 0,
+            "fence_only_exact_match": 0,
+            "normalized_exact_match": 7
+          },
+          "rates": {
+            "strict_format": 0.0,
+            "strict_exact_match": 0.0,
+            "fence_only_exact_match": 0.0,
+            "normalized_exact_match": 0.13725490196078433
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 0.13725490196078433,
+            "功率": 0.9607843137254902
+          },
+          "null_metrics_fence_only": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 51,
+            "target_null_count": 51,
+            "target_present_count": 102,
+            "spurious_value_count": 51,
+            "unparseable_or_missing_key_count": 0,
+            "precision": null,
+            "recall": 0.0,
+            "spurious_value_rate": 1.0,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 7,
+            "fp": 0,
+            "fn": 44,
+            "target_null_count": 51,
+            "target_present_count": 102,
+            "spurious_value_count": 44,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.13725490196078433,
+            "spurious_value_rate": 0.8627450980392157,
+            "false_null_rate": 0.0
+          }
+        },
+        "lora": {
+          "sample_count": 51,
+          "counts": {
+            "strict_format": 50,
+            "strict_exact_match": 49,
+            "fence_only_exact_match": 49,
+            "normalized_exact_match": 50
+          },
+          "rates": {
+            "strict_format": 0.9803921568627451,
+            "strict_exact_match": 0.9607843137254902,
+            "fence_only_exact_match": 0.9607843137254902,
+            "normalized_exact_match": 0.9803921568627451
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 0.9803921568627451,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 49,
+            "fp": 0,
+            "fn": 2,
+            "target_null_count": 51,
+            "target_present_count": 102,
+            "spurious_value_count": 2,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.9607843137254902,
+            "spurious_value_rate": 0.0392156862745098,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 50,
+            "fp": 0,
+            "fn": 1,
+            "target_null_count": 51,
+            "target_present_count": 102,
+            "spurious_value_count": 1,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.9803921568627451,
+            "spurious_value_rate": 0.0196078431372549,
+            "false_null_rate": 0.0
+          }
+        }
+      }
+    },
+    "missing_mode": {
+      "blank": {
+        "base": {
+          "sample_count": 50,
+          "counts": {
+            "strict_format": 0,
+            "strict_exact_match": 0,
+            "fence_only_exact_match": 0,
+            "normalized_exact_match": 1
+          },
+          "rates": {
+            "strict_format": 0.0,
+            "strict_exact_match": 0.0,
+            "fence_only_exact_match": 0.0,
+            "normalized_exact_match": 0.02
+          },
+          "normalized_field_accuracy": {
+            "型号": 0.66,
+            "电压": 0.66,
+            "功率": 0.66
+          },
+          "null_metrics_fence_only": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 50,
+            "target_null_count": 50,
+            "target_present_count": 100,
+            "spurious_value_count": 50,
+            "unparseable_or_missing_key_count": 0,
+            "precision": null,
+            "recall": 0.0,
+            "spurious_value_rate": 1.0,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 49,
+            "target_null_count": 50,
+            "target_present_count": 100,
+            "spurious_value_count": 49,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.02,
+            "spurious_value_rate": 0.98,
+            "false_null_rate": 0.0
+          }
+        },
+        "lora": {
+          "sample_count": 50,
+          "counts": {
+            "strict_format": 49,
+            "strict_exact_match": 48,
+            "fence_only_exact_match": 48,
+            "normalized_exact_match": 49
+          },
+          "rates": {
+            "strict_format": 0.98,
+            "strict_exact_match": 0.96,
+            "fence_only_exact_match": 0.96,
+            "normalized_exact_match": 0.98
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 0.98,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 48,
+            "fp": 0,
+            "fn": 2,
+            "target_null_count": 50,
+            "target_present_count": 100,
+            "spurious_value_count": 2,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.96,
+            "spurious_value_rate": 0.04,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 49,
+            "fp": 0,
+            "fn": 1,
+            "target_null_count": 50,
+            "target_present_count": 100,
+            "spurious_value_count": 1,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.98,
+            "spurious_value_rate": 0.02,
+            "false_null_rate": 0.0
+          }
+        }
+      },
+      "marker": {
+        "base": {
+          "sample_count": 50,
+          "counts": {
+            "strict_format": 0,
+            "strict_exact_match": 0,
+            "fence_only_exact_match": 0,
+            "normalized_exact_match": 37
+          },
+          "rates": {
+            "strict_format": 0.0,
+            "strict_exact_match": 0.0,
+            "fence_only_exact_match": 0.0,
+            "normalized_exact_match": 0.74
+          },
+          "normalized_field_accuracy": {
+            "型号": 0.94,
+            "电压": 0.8,
+            "功率": 0.98
+          },
+          "null_metrics_fence_only": {
+            "tp": 7,
+            "fp": 0,
+            "fn": 43,
+            "target_null_count": 50,
+            "target_present_count": 100,
+            "spurious_value_count": 43,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.14,
+            "spurious_value_rate": 0.86,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 38,
+            "fp": 1,
+            "fn": 12,
+            "target_null_count": 50,
+            "target_present_count": 100,
+            "spurious_value_count": 12,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 0.9743589743589743,
+            "recall": 0.76,
+            "spurious_value_rate": 0.24,
+            "false_null_rate": 0.01
+          }
+        },
+        "lora": {
+          "sample_count": 50,
+          "counts": {
+            "strict_format": 50,
+            "strict_exact_match": 50,
+            "fence_only_exact_match": 50,
+            "normalized_exact_match": 50
+          },
+          "rates": {
+            "strict_format": 1.0,
+            "strict_exact_match": 1.0,
+            "fence_only_exact_match": 1.0,
+            "normalized_exact_match": 1.0
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 1.0,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 50,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 50,
+            "target_present_count": 100,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 50,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 50,
+            "target_present_count": 100,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          }
+        }
+      },
+      "none": {
+        "base": {
+          "sample_count": 50,
+          "counts": {
+            "strict_format": 0,
+            "strict_exact_match": 0,
+            "fence_only_exact_match": 0,
+            "normalized_exact_match": 50
+          },
+          "rates": {
+            "strict_format": 0.0,
+            "strict_exact_match": 0.0,
+            "fence_only_exact_match": 0.0,
+            "normalized_exact_match": 1.0
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 1.0,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 0,
+            "target_present_count": 150,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": null,
+            "recall": null,
+            "spurious_value_rate": null,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 0,
+            "target_present_count": 150,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": null,
+            "recall": null,
+            "spurious_value_rate": null,
+            "false_null_rate": 0.0
+          }
+        },
+        "lora": {
+          "sample_count": 50,
+          "counts": {
+            "strict_format": 50,
+            "strict_exact_match": 50,
+            "fence_only_exact_match": 50,
+            "normalized_exact_match": 50
+          },
+          "rates": {
+            "strict_format": 1.0,
+            "strict_exact_match": 1.0,
+            "fence_only_exact_match": 1.0,
+            "normalized_exact_match": 1.0
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 1.0,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 0,
+            "target_present_count": 150,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": null,
+            "recall": null,
+            "spurious_value_rate": null,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 0,
+            "target_present_count": 150,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": null,
+            "recall": null,
+            "spurious_value_rate": null,
+            "false_null_rate": 0.0
+          }
+        }
+      },
+      "omit": {
+        "base": {
+          "sample_count": 50,
+          "counts": {
+            "strict_format": 0,
+            "strict_exact_match": 0,
+            "fence_only_exact_match": 0,
+            "normalized_exact_match": 2
+          },
+          "rates": {
+            "strict_format": 0.0,
+            "strict_exact_match": 0.0,
+            "fence_only_exact_match": 0.0,
+            "normalized_exact_match": 0.04
+          },
+          "normalized_field_accuracy": {
+            "型号": 0.64,
+            "电压": 0.66,
+            "功率": 0.74
+          },
+          "null_metrics_fence_only": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 50,
+            "target_null_count": 50,
+            "target_present_count": 100,
+            "spurious_value_count": 50,
+            "unparseable_or_missing_key_count": 0,
+            "precision": null,
+            "recall": 0.0,
+            "spurious_value_rate": 1.0,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 47,
+            "target_null_count": 50,
+            "target_present_count": 100,
+            "spurious_value_count": 47,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.06,
+            "spurious_value_rate": 0.94,
+            "false_null_rate": 0.0
+          }
+        },
+        "lora": {
+          "sample_count": 50,
+          "counts": {
+            "strict_format": 50,
+            "strict_exact_match": 50,
+            "fence_only_exact_match": 50,
+            "normalized_exact_match": 50
+          },
+          "rates": {
+            "strict_format": 1.0,
+            "strict_exact_match": 1.0,
+            "fence_only_exact_match": 1.0,
+            "normalized_exact_match": 1.0
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 1.0,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 50,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 50,
+            "target_present_count": 100,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 50,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 50,
+            "target_present_count": 100,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          }
+        }
+      }
+    },
+    "missing_field_and_mode": {
+      "none:none": {
+        "base": {
+          "sample_count": 50,
+          "counts": {
+            "strict_format": 0,
+            "strict_exact_match": 0,
+            "fence_only_exact_match": 0,
+            "normalized_exact_match": 50
+          },
+          "rates": {
+            "strict_format": 0.0,
+            "strict_exact_match": 0.0,
+            "fence_only_exact_match": 0.0,
+            "normalized_exact_match": 1.0
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 1.0,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 0,
+            "target_present_count": 150,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": null,
+            "recall": null,
+            "spurious_value_rate": null,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 0,
+            "target_present_count": 150,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": null,
+            "recall": null,
+            "spurious_value_rate": null,
+            "false_null_rate": 0.0
+          }
+        },
+        "lora": {
+          "sample_count": 50,
+          "counts": {
+            "strict_format": 50,
+            "strict_exact_match": 50,
+            "fence_only_exact_match": 50,
+            "normalized_exact_match": 50
+          },
+          "rates": {
+            "strict_format": 1.0,
+            "strict_exact_match": 1.0,
+            "fence_only_exact_match": 1.0,
+            "normalized_exact_match": 1.0
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 1.0,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 0,
+            "target_present_count": 150,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": null,
+            "recall": null,
+            "spurious_value_rate": null,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 0,
+            "target_present_count": 150,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": null,
+            "recall": null,
+            "spurious_value_rate": null,
+            "false_null_rate": 0.0
+          }
+        }
+      },
+      "功率:blank": {
+        "base": {
+          "sample_count": 16,
+          "counts": {
+            "strict_format": 0,
+            "strict_exact_match": 0,
+            "fence_only_exact_match": 0,
+            "normalized_exact_match": 0
+          },
+          "rates": {
+            "strict_format": 0.0,
+            "strict_exact_match": 0.0,
+            "fence_only_exact_match": 0.0,
+            "normalized_exact_match": 0.0
+          },
+          "normalized_field_accuracy": {
+            "型号": 0.9375,
+            "电压": 1.0,
+            "功率": 0.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 16,
+            "target_null_count": 16,
+            "target_present_count": 32,
+            "spurious_value_count": 16,
+            "unparseable_or_missing_key_count": 0,
+            "precision": null,
+            "recall": 0.0,
+            "spurious_value_rate": 1.0,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 16,
+            "target_null_count": 16,
+            "target_present_count": 32,
+            "spurious_value_count": 16,
+            "unparseable_or_missing_key_count": 0,
+            "precision": null,
+            "recall": 0.0,
+            "spurious_value_rate": 1.0,
+            "false_null_rate": 0.0
+          }
+        },
+        "lora": {
+          "sample_count": 16,
+          "counts": {
+            "strict_format": 16,
+            "strict_exact_match": 16,
+            "fence_only_exact_match": 16,
+            "normalized_exact_match": 16
+          },
+          "rates": {
+            "strict_format": 1.0,
+            "strict_exact_match": 1.0,
+            "fence_only_exact_match": 1.0,
+            "normalized_exact_match": 1.0
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 1.0,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 16,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 16,
+            "target_present_count": 32,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 16,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 16,
+            "target_present_count": 32,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          }
+        }
+      },
+      "功率:marker": {
+        "base": {
+          "sample_count": 16,
+          "counts": {
+            "strict_format": 0,
+            "strict_exact_match": 0,
+            "fence_only_exact_match": 0,
+            "normalized_exact_match": 15
+          },
+          "rates": {
+            "strict_format": 0.0,
+            "strict_exact_match": 0.0,
+            "fence_only_exact_match": 0.0,
+            "normalized_exact_match": 0.9375
+          },
+          "normalized_field_accuracy": {
+            "型号": 0.9375,
+            "电压": 1.0,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 12,
+            "target_null_count": 16,
+            "target_present_count": 32,
+            "spurious_value_count": 12,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.25,
+            "spurious_value_rate": 0.75,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 16,
+            "fp": 1,
+            "fn": 0,
+            "target_null_count": 16,
+            "target_present_count": 32,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 0.9411764705882353,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.03125
+          }
+        },
+        "lora": {
+          "sample_count": 16,
+          "counts": {
+            "strict_format": 16,
+            "strict_exact_match": 16,
+            "fence_only_exact_match": 16,
+            "normalized_exact_match": 16
+          },
+          "rates": {
+            "strict_format": 1.0,
+            "strict_exact_match": 1.0,
+            "fence_only_exact_match": 1.0,
+            "normalized_exact_match": 1.0
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 1.0,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 16,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 16,
+            "target_present_count": 32,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 16,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 16,
+            "target_present_count": 32,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          }
+        }
+      },
+      "功率:omit": {
+        "base": {
+          "sample_count": 16,
+          "counts": {
+            "strict_format": 0,
+            "strict_exact_match": 0,
+            "fence_only_exact_match": 0,
+            "normalized_exact_match": 2
+          },
+          "rates": {
+            "strict_format": 0.0,
+            "strict_exact_match": 0.0,
+            "fence_only_exact_match": 0.0,
+            "normalized_exact_match": 0.125
+          },
+          "normalized_field_accuracy": {
+            "型号": 0.9375,
+            "电压": 1.0,
+            "功率": 0.1875
+          },
+          "null_metrics_fence_only": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 16,
+            "target_null_count": 16,
+            "target_present_count": 32,
+            "spurious_value_count": 16,
+            "unparseable_or_missing_key_count": 0,
+            "precision": null,
+            "recall": 0.0,
+            "spurious_value_rate": 1.0,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 13,
+            "target_null_count": 16,
+            "target_present_count": 32,
+            "spurious_value_count": 13,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.1875,
+            "spurious_value_rate": 0.8125,
+            "false_null_rate": 0.0
+          }
+        },
+        "lora": {
+          "sample_count": 16,
+          "counts": {
+            "strict_format": 16,
+            "strict_exact_match": 16,
+            "fence_only_exact_match": 16,
+            "normalized_exact_match": 16
+          },
+          "rates": {
+            "strict_format": 1.0,
+            "strict_exact_match": 1.0,
+            "fence_only_exact_match": 1.0,
+            "normalized_exact_match": 1.0
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 1.0,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 16,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 16,
+            "target_present_count": 32,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 16,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 16,
+            "target_present_count": 32,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          }
+        }
+      },
+      "型号:blank": {
+        "base": {
+          "sample_count": 17,
+          "counts": {
+            "strict_format": 0,
+            "strict_exact_match": 0,
+            "fence_only_exact_match": 0,
+            "normalized_exact_match": 1
+          },
+          "rates": {
+            "strict_format": 0.0,
+            "strict_exact_match": 0.0,
+            "fence_only_exact_match": 0.0,
+            "normalized_exact_match": 0.058823529411764705
+          },
+          "normalized_field_accuracy": {
+            "型号": 0.058823529411764705,
+            "电压": 1.0,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 17,
+            "target_null_count": 17,
+            "target_present_count": 34,
+            "spurious_value_count": 17,
+            "unparseable_or_missing_key_count": 0,
+            "precision": null,
+            "recall": 0.0,
+            "spurious_value_rate": 1.0,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 16,
+            "target_null_count": 17,
+            "target_present_count": 34,
+            "spurious_value_count": 16,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.058823529411764705,
+            "spurious_value_rate": 0.9411764705882353,
+            "false_null_rate": 0.0
+          }
+        },
+        "lora": {
+          "sample_count": 17,
+          "counts": {
+            "strict_format": 17,
+            "strict_exact_match": 17,
+            "fence_only_exact_match": 17,
+            "normalized_exact_match": 17
+          },
+          "rates": {
+            "strict_format": 1.0,
+            "strict_exact_match": 1.0,
+            "fence_only_exact_match": 1.0,
+            "normalized_exact_match": 1.0
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 1.0,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 17,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 17,
+            "target_present_count": 34,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 17,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 17,
+            "target_present_count": 34,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          }
+        }
+      },
+      "型号:marker": {
+        "base": {
+          "sample_count": 17,
+          "counts": {
+            "strict_format": 0,
+            "strict_exact_match": 0,
+            "fence_only_exact_match": 0,
+            "normalized_exact_match": 15
+          },
+          "rates": {
+            "strict_format": 0.0,
+            "strict_exact_match": 0.0,
+            "fence_only_exact_match": 0.0,
+            "normalized_exact_match": 0.8823529411764706
+          },
+          "normalized_field_accuracy": {
+            "型号": 0.8823529411764706,
+            "电压": 1.0,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 14,
+            "target_null_count": 17,
+            "target_present_count": 34,
+            "spurious_value_count": 14,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.17647058823529413,
+            "spurious_value_rate": 0.8235294117647058,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 15,
+            "fp": 0,
+            "fn": 2,
+            "target_null_count": 17,
+            "target_present_count": 34,
+            "spurious_value_count": 2,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.8823529411764706,
+            "spurious_value_rate": 0.11764705882352941,
+            "false_null_rate": 0.0
+          }
+        },
+        "lora": {
+          "sample_count": 17,
+          "counts": {
+            "strict_format": 17,
+            "strict_exact_match": 17,
+            "fence_only_exact_match": 17,
+            "normalized_exact_match": 17
+          },
+          "rates": {
+            "strict_format": 1.0,
+            "strict_exact_match": 1.0,
+            "fence_only_exact_match": 1.0,
+            "normalized_exact_match": 1.0
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 1.0,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 17,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 17,
+            "target_present_count": 34,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 17,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 17,
+            "target_present_count": 34,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          }
+        }
+      },
+      "型号:omit": {
+        "base": {
+          "sample_count": 17,
+          "counts": {
+            "strict_format": 0,
+            "strict_exact_match": 0,
+            "fence_only_exact_match": 0,
+            "normalized_exact_match": 0
+          },
+          "rates": {
+            "strict_format": 0.0,
+            "strict_exact_match": 0.0,
+            "fence_only_exact_match": 0.0,
+            "normalized_exact_match": 0.0
+          },
+          "normalized_field_accuracy": {
+            "型号": 0.0,
+            "电压": 1.0,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 17,
+            "target_null_count": 17,
+            "target_present_count": 34,
+            "spurious_value_count": 17,
+            "unparseable_or_missing_key_count": 0,
+            "precision": null,
+            "recall": 0.0,
+            "spurious_value_rate": 1.0,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 17,
+            "target_null_count": 17,
+            "target_present_count": 34,
+            "spurious_value_count": 17,
+            "unparseable_or_missing_key_count": 0,
+            "precision": null,
+            "recall": 0.0,
+            "spurious_value_rate": 1.0,
+            "false_null_rate": 0.0
+          }
+        },
+        "lora": {
+          "sample_count": 17,
+          "counts": {
+            "strict_format": 17,
+            "strict_exact_match": 17,
+            "fence_only_exact_match": 17,
+            "normalized_exact_match": 17
+          },
+          "rates": {
+            "strict_format": 1.0,
+            "strict_exact_match": 1.0,
+            "fence_only_exact_match": 1.0,
+            "normalized_exact_match": 1.0
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 1.0,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 17,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 17,
+            "target_present_count": 34,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 17,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 17,
+            "target_present_count": 34,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          }
+        }
+      },
+      "电压:blank": {
+        "base": {
+          "sample_count": 17,
+          "counts": {
+            "strict_format": 0,
+            "strict_exact_match": 0,
+            "fence_only_exact_match": 0,
+            "normalized_exact_match": 0
+          },
+          "rates": {
+            "strict_format": 0.0,
+            "strict_exact_match": 0.0,
+            "fence_only_exact_match": 0.0,
+            "normalized_exact_match": 0.0
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 0.0,
+            "功率": 0.9411764705882353
+          },
+          "null_metrics_fence_only": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 17,
+            "target_null_count": 17,
+            "target_present_count": 34,
+            "spurious_value_count": 17,
+            "unparseable_or_missing_key_count": 0,
+            "precision": null,
+            "recall": 0.0,
+            "spurious_value_rate": 1.0,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 17,
+            "target_null_count": 17,
+            "target_present_count": 34,
+            "spurious_value_count": 17,
+            "unparseable_or_missing_key_count": 0,
+            "precision": null,
+            "recall": 0.0,
+            "spurious_value_rate": 1.0,
+            "false_null_rate": 0.0
+          }
+        },
+        "lora": {
+          "sample_count": 17,
+          "counts": {
+            "strict_format": 16,
+            "strict_exact_match": 15,
+            "fence_only_exact_match": 15,
+            "normalized_exact_match": 16
+          },
+          "rates": {
+            "strict_format": 0.9411764705882353,
+            "strict_exact_match": 0.8823529411764706,
+            "fence_only_exact_match": 0.8823529411764706,
+            "normalized_exact_match": 0.9411764705882353
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 0.9411764705882353,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 15,
+            "fp": 0,
+            "fn": 2,
+            "target_null_count": 17,
+            "target_present_count": 34,
+            "spurious_value_count": 2,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.8823529411764706,
+            "spurious_value_rate": 0.11764705882352941,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 16,
+            "fp": 0,
+            "fn": 1,
+            "target_null_count": 17,
+            "target_present_count": 34,
+            "spurious_value_count": 1,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.9411764705882353,
+            "spurious_value_rate": 0.058823529411764705,
+            "false_null_rate": 0.0
+          }
+        }
+      },
+      "电压:marker": {
+        "base": {
+          "sample_count": 17,
+          "counts": {
+            "strict_format": 0,
+            "strict_exact_match": 0,
+            "fence_only_exact_match": 0,
+            "normalized_exact_match": 7
+          },
+          "rates": {
+            "strict_format": 0.0,
+            "strict_exact_match": 0.0,
+            "fence_only_exact_match": 0.0,
+            "normalized_exact_match": 0.4117647058823529
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 0.4117647058823529,
+            "功率": 0.9411764705882353
+          },
+          "null_metrics_fence_only": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 17,
+            "target_null_count": 17,
+            "target_present_count": 34,
+            "spurious_value_count": 17,
+            "unparseable_or_missing_key_count": 0,
+            "precision": null,
+            "recall": 0.0,
+            "spurious_value_rate": 1.0,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 7,
+            "fp": 0,
+            "fn": 10,
+            "target_null_count": 17,
+            "target_present_count": 34,
+            "spurious_value_count": 10,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 0.4117647058823529,
+            "spurious_value_rate": 0.5882352941176471,
+            "false_null_rate": 0.0
+          }
+        },
+        "lora": {
+          "sample_count": 17,
+          "counts": {
+            "strict_format": 17,
+            "strict_exact_match": 17,
+            "fence_only_exact_match": 17,
+            "normalized_exact_match": 17
+          },
+          "rates": {
+            "strict_format": 1.0,
+            "strict_exact_match": 1.0,
+            "fence_only_exact_match": 1.0,
+            "normalized_exact_match": 1.0
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 1.0,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 17,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 17,
+            "target_present_count": 34,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 17,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 17,
+            "target_present_count": 34,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          }
+        }
+      },
+      "电压:omit": {
+        "base": {
+          "sample_count": 17,
+          "counts": {
+            "strict_format": 0,
+            "strict_exact_match": 0,
+            "fence_only_exact_match": 0,
+            "normalized_exact_match": 0
+          },
+          "rates": {
+            "strict_format": 0.0,
+            "strict_exact_match": 0.0,
+            "fence_only_exact_match": 0.0,
+            "normalized_exact_match": 0.0
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 0.0,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 17,
+            "target_null_count": 17,
+            "target_present_count": 34,
+            "spurious_value_count": 17,
+            "unparseable_or_missing_key_count": 0,
+            "precision": null,
+            "recall": 0.0,
+            "spurious_value_rate": 1.0,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 17,
+            "target_null_count": 17,
+            "target_present_count": 34,
+            "spurious_value_count": 17,
+            "unparseable_or_missing_key_count": 0,
+            "precision": null,
+            "recall": 0.0,
+            "spurious_value_rate": 1.0,
+            "false_null_rate": 0.0
+          }
+        },
+        "lora": {
+          "sample_count": 17,
+          "counts": {
+            "strict_format": 17,
+            "strict_exact_match": 17,
+            "fence_only_exact_match": 17,
+            "normalized_exact_match": 17
+          },
+          "rates": {
+            "strict_format": 1.0,
+            "strict_exact_match": 1.0,
+            "fence_only_exact_match": 1.0,
+            "normalized_exact_match": 1.0
+          },
+          "normalized_field_accuracy": {
+            "型号": 1.0,
+            "电压": 1.0,
+            "功率": 1.0
+          },
+          "null_metrics_fence_only": {
+            "tp": 17,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 17,
+            "target_present_count": 34,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          },
+          "null_metrics_normalized": {
+            "tp": 17,
+            "fp": 0,
+            "fn": 0,
+            "target_null_count": 17,
+            "target_present_count": 34,
+            "spurious_value_count": 0,
+            "unparseable_or_missing_key_count": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "spurious_value_rate": 0.0,
+            "false_null_rate": 0.0
+          }
+        }
+      }
+    }
+  },
+  "paired_normalized_comparison": {
+    "improved_count": 109,
+    "regressed_count": 0,
+    "shared_error_count": 1,
+    "improved": [
+      {
+        "index": 1,
+        "image": "nameplates_v2/images/v2-test-010-evaluation-1.png",
+        "expected": {
+          "型号": "DK-3010",
+          "电压": null,
+          "功率": "750W"
+        },
+        "base_normalized": {
+          "型号": "DK-3010",
+          "电压": "750V",
+          "功率": "750W"
+        },
+        "lora_normalized": {
+          "型号": "DK-3010",
+          "电压": null,
+          "功率": "750W"
+        }
+      },
+      {
+        "index": 2,
+        "image": "nameplates_v2/images/v2-test-041-evaluation-1.png",
+        "expected": {
+          "型号": "QS-3041",
+          "电压": "208V",
+          "功率": null
+        },
+        "base_normalized": {
+          "型号": "QS-3041",
+          "电压": "208V",
+          "功率": "208W"
+        },
+        "lora_normalized": {
+          "型号": "QS-3041",
+          "电压": "208V",
+          "功率": null
+        }
+      },
+      {
+        "index": 4,
+        "image": "nameplates_v2/images/v2-test-013-evaluation-2.png",
+        "expected": {
+          "型号": "DK-3013",
+          "电压": null,
+          "功率": "45W"
+        },
+        "base_normalized": {
+          "型号": "DK-3013",
+          "电压": "45V",
+          "功率": "45W"
+        },
+        "lora_normalized": {
+          "型号": "DK-3013",
+          "电压": null,
+          "功率": "45W"
+        }
+      },
+      {
+        "index": 6,
+        "image": "nameplates_v2/images/v2-test-008-evaluation-2.png",
+        "expected": {
+          "型号": "KR-3008",
+          "电压": "380V",
+          "功率": null
+        },
+        "base_normalized": {
+          "型号": "KR-3008",
+          "电压": "380V",
+          "功率": "3008W"
+        },
+        "lora_normalized": {
+          "型号": "KR-3008",
+          "电压": "380V",
+          "功率": null
+        }
+      },
+      {
+        "index": 7,
+        "image": "nameplates_v2/images/v2-test-012-evaluation-2.png",
+        "expected": {
+          "型号": null,
+          "电压": "24V",
+          "功率": "1200W"
+        },
+        "base_normalized": {
+          "型号": "DC 24 V",
+          "电压": "24V",
+          "功率": "1200W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "24V",
+          "功率": "1200W"
+        }
+      },
+      {
+        "index": 11,
+        "image": "nameplates_v2/images/v2-test-043-evaluation-2.png",
+        "expected": {
+          "型号": "KR-3043",
+          "电压": null,
+          "功率": "850W"
+        },
+        "base_normalized": {
+          "型号": "KR-3043",
+          "电压": "850V",
+          "功率": "850W"
+        },
+        "lora_normalized": {
+          "型号": "KR-3043",
+          "电压": null,
+          "功率": "850W"
+        }
+      },
+      {
+        "index": 13,
+        "image": "nameplates_v2/images/v2-test-004-evaluation-2.png",
+        "expected": {
+          "型号": "KR-3004",
+          "电压": null,
+          "功率": "1200W"
+        },
+        "base_normalized": {
+          "型号": "KR-3004",
+          "电压": "220V",
+          "功率": "1200W"
+        },
+        "lora_normalized": {
+          "型号": "KR-3004",
+          "电压": null,
+          "功率": "1200W"
+        }
+      },
+      {
+        "index": 16,
+        "image": "nameplates_v2/images/v2-test-022-evaluation-2.png",
+        "expected": {
+          "型号": "QS-3022",
+          "电压": null,
+          "功率": "1200W"
+        },
+        "base_normalized": {
+          "型号": "QS-3022",
+          "电压": "1200V",
+          "功率": "1200W"
+        },
+        "lora_normalized": {
+          "型号": "QS-3022",
+          "电压": null,
+          "功率": "1200W"
+        }
+      },
+      {
+        "index": 17,
+        "image": "nameplates_v2/images/v2-test-007-evaluation-2.png",
+        "expected": {
+          "型号": "QS-3007",
+          "电压": null,
+          "功率": "420W"
+        },
+        "base_normalized": {
+          "型号": "QS-3007",
+          "电压": "420V",
+          "功率": "420W"
+        },
+        "lora_normalized": {
+          "型号": "QS-3007",
+          "电压": null,
+          "功率": "420W"
+        }
+      },
+      {
+        "index": 19,
+        "image": "nameplates_v2/images/v2-test-015-evaluation-2.png",
+        "expected": {
+          "型号": null,
+          "电压": "277V",
+          "功率": "850W"
+        },
+        "base_normalized": {
+          "型号": "无",
+          "电压": "277V",
+          "功率": "850W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "277V",
+          "功率": "850W"
+        }
+      },
+      {
+        "index": 21,
+        "image": "nameplates_v2/images/v2-test-018-evaluation-1.png",
+        "expected": {
+          "型号": null,
+          "电压": "220V",
+          "功率": "200W"
+        },
+        "base_normalized": {
+          "型号": "AC 220 V",
+          "电压": "220V",
+          "功率": "200W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "220V",
+          "功率": "200W"
+        }
+      },
+      {
+        "index": 25,
+        "image": "nameplates_v2/images/v2-test-029-evaluation-1.png",
+        "expected": {
+          "型号": "KR-3029",
+          "电压": "6V",
+          "功率": null
+        },
+        "base_normalized": {
+          "型号": "DC 6 V",
+          "电压": "6V",
+          "功率": "6W"
+        },
+        "lora_normalized": {
+          "型号": "KR-3029",
+          "电压": "6V",
+          "功率": null
+        }
+      },
+      {
+        "index": 26,
+        "image": "nameplates_v2/images/v2-test-013-evaluation-1.png",
+        "expected": {
+          "型号": "DK-3013",
+          "电压": null,
+          "功率": "45W"
+        },
+        "base_normalized": {
+          "型号": "DK-3013",
+          "电压": "45V",
+          "功率": "45W"
+        },
+        "lora_normalized": {
+          "型号": "DK-3013",
+          "电压": null,
+          "功率": "45W"
+        }
+      },
+      {
+        "index": 27,
+        "image": "nameplates_v2/images/v2-test-001-evaluation-2.png",
+        "expected": {
+          "型号": "QS-3001",
+          "电压": null,
+          "功率": "7W"
+        },
+        "base_normalized": {
+          "型号": "QS-3001",
+          "电压": "7V",
+          "功率": "7W"
+        },
+        "lora_normalized": {
+          "型号": "QS-3001",
+          "电压": null,
+          "功率": "7W"
+        }
+      },
+      {
+        "index": 28,
+        "image": "nameplates_v2/images/v2-test-025-evaluation-2.png",
+        "expected": {
+          "型号": "AB-3025",
+          "电压": null,
+          "功率": "2500W"
+        },
+        "base_normalized": {
+          "型号": "AB-3025",
+          "电压": "2500V",
+          "功率": "2500W"
+        },
+        "lora_normalized": {
+          "型号": "AB-3025",
+          "电压": null,
+          "功率": "2500W"
+        }
+      },
+      {
+        "index": 32,
+        "image": "nameplates_v2/images/v2-test-023-evaluation-2.png",
+        "expected": {
+          "型号": "QS-3023",
+          "电压": "15V",
+          "功率": null
+        },
+        "base_normalized": {
+          "型号": "QS-3023",
+          "电压": "15V",
+          "功率": "18W"
+        },
+        "lora_normalized": {
+          "型号": "QS-3023",
+          "电压": "15V",
+          "功率": null
+        }
+      },
+      {
+        "index": 37,
+        "image": "nameplates_v2/images/v2-test-037-evaluation-1.png",
+        "expected": {
+          "型号": "KR-3037",
+          "电压": null,
+          "功率": "45W"
+        },
+        "base_normalized": {
+          "型号": "KR-3037",
+          "电压": "45V",
+          "功率": "45W"
+        },
+        "lora_normalized": {
+          "型号": "KR-3037",
+          "电压": null,
+          "功率": "45W"
+        }
+      },
+      {
+        "index": 38,
+        "image": "nameplates_v2/images/v2-test-021-evaluation-1.png",
+        "expected": {
+          "型号": null,
+          "电压": "30V",
+          "功率": "85W"
+        },
+        "base_normalized": {
+          "型号": "Model",
+          "电压": "30V",
+          "功率": "85W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "30V",
+          "功率": "85W"
+        }
+      },
+      {
+        "index": 41,
+        "image": "nameplates_v2/images/v2-test-041-evaluation-3.png",
+        "expected": {
+          "型号": "QS-3041",
+          "电压": "208V",
+          "功率": null
+        },
+        "base_normalized": {
+          "型号": null,
+          "电压": "208V",
+          "功率": null
+        },
+        "lora_normalized": {
+          "型号": "QS-3041",
+          "电压": "208V",
+          "功率": null
+        }
+      },
+      {
+        "index": 43,
+        "image": "nameplates_v2/images/v2-test-006-evaluation-2.png",
+        "expected": {
+          "型号": null,
+          "电压": "48V",
+          "功率": "1000W"
+        },
+        "base_normalized": {
+          "型号": "DC 48 V",
+          "电压": "48V",
+          "功率": "1000W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "48V",
+          "功率": "1000W"
+        }
+      },
+      {
+        "index": 46,
+        "image": "nameplates_v2/images/v2-test-010-evaluation-3.png",
+        "expected": {
+          "型号": "DK-3010",
+          "电压": null,
+          "功率": "750W"
+        },
+        "base_normalized": {
+          "型号": "DK-3010",
+          "电压": "750V",
+          "功率": "750W"
+        },
+        "lora_normalized": {
+          "型号": "DK-3010",
+          "电压": null,
+          "功率": "750W"
+        }
+      },
+      {
+        "index": 47,
+        "image": "nameplates_v2/images/v2-test-000-evaluation-2.png",
+        "expected": {
+          "型号": null,
+          "电压": "36V",
+          "功率": "1200W"
+        },
+        "base_normalized": {
+          "型号": "无",
+          "电压": "36V",
+          "功率": "1200W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "36V",
+          "功率": "1200W"
+        }
+      },
+      {
+        "index": 48,
+        "image": "nameplates_v2/images/v2-test-048-evaluation-2.png",
+        "expected": {
+          "型号": null,
+          "电压": "24V",
+          "功率": "1500W"
+        },
+        "base_normalized": {
+          "型号": "DC 24 V",
+          "电压": "24V",
+          "功率": "1500W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "24V",
+          "功率": "1500W"
+        }
+      },
+      {
+        "index": 50,
+        "image": "nameplates_v2/images/v2-test-002-evaluation-2.png",
+        "expected": {
+          "型号": "AB-3002",
+          "电压": "380V",
+          "功率": null
+        },
+        "base_normalized": {
+          "型号": "AB-3002",
+          "电压": "380V",
+          "功率": "3002W"
+        },
+        "lora_normalized": {
+          "型号": "AB-3002",
+          "电压": "380V",
+          "功率": null
+        }
+      },
+      {
+        "index": 52,
+        "image": "nameplates_v2/images/v2-test-046-evaluation-1.png",
+        "expected": {
+          "型号": "DK-3046",
+          "电压": null,
+          "功率": "1200W"
+        },
+        "base_normalized": {
+          "型号": "DK-3046",
+          "电压": "1200V",
+          "功率": "1200W"
+        },
+        "lora_normalized": {
+          "型号": "DK-3046",
+          "电压": null,
+          "功率": "1200W"
+        }
+      },
+      {
+        "index": 53,
+        "image": "nameplates_v2/images/v2-test-020-evaluation-2.png",
+        "expected": {
+          "型号": "QS-3020",
+          "电压": "110V",
+          "功率": null
+        },
+        "base_normalized": {
+          "型号": "QS-3020",
+          "电压": "110V",
+          "功率": "3020W"
+        },
+        "lora_normalized": {
+          "型号": "QS-3020",
+          "电压": "110V",
+          "功率": null
+        }
+      },
+      {
+        "index": 54,
+        "image": "nameplates_v2/images/v2-test-009-evaluation-1.png",
+        "expected": {
+          "型号": null,
+          "电压": "30V",
+          "功率": "85W"
+        },
+        "base_normalized": {
+          "型号": "Model",
+          "电压": "30V",
+          "功率": "85W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "30V",
+          "功率": "85W"
+        }
+      },
+      {
+        "index": 55,
+        "image": "nameplates_v2/images/v2-test-031-evaluation-1.png",
+        "expected": {
+          "型号": "CX-3031",
+          "电压": null,
+          "功率": "85W"
+        },
+        "base_normalized": {
+          "型号": "CX-3031",
+          "电压": "85V",
+          "功率": "85W"
+        },
+        "lora_normalized": {
+          "型号": "CX-3031",
+          "电压": null,
+          "功率": "85W"
+        }
+      },
+      {
+        "index": 56,
+        "image": "nameplates_v2/images/v2-test-019-evaluation-3.png",
+        "expected": {
+          "型号": "CX-3019",
+          "电压": null,
+          "功率": "85W"
+        },
+        "base_normalized": {
+          "型号": "CX-3019",
+          "电压": "85W",
+          "功率": "85W"
+        },
+        "lora_normalized": {
+          "型号": "CX-3019",
+          "电压": null,
+          "功率": "85W"
+        }
+      },
+      {
+        "index": 57,
+        "image": "nameplates_v2/images/v2-test-004-evaluation-1.png",
+        "expected": {
+          "型号": "KR-3004",
+          "电压": null,
+          "功率": "1200W"
+        },
+        "base_normalized": {
+          "型号": "KR-3004",
+          "电压": "220V",
+          "功率": "1200W"
+        },
+        "lora_normalized": {
+          "型号": "KR-3004",
+          "电压": null,
+          "功率": "1200W"
+        }
+      },
+      {
+        "index": 59,
+        "image": "nameplates_v2/images/v2-test-008-evaluation-1.png",
+        "expected": {
+          "型号": "KR-3008",
+          "电压": "380V",
+          "功率": null
+        },
+        "base_normalized": {
+          "型号": "KR-3008",
+          "电压": "380V",
+          "功率": "3008W"
+        },
+        "lora_normalized": {
+          "型号": "KR-3008",
+          "电压": "380V",
+          "功率": null
+        }
+      },
+      {
+        "index": 61,
+        "image": "nameplates_v2/images/v2-test-000-evaluation-1.png",
+        "expected": {
+          "型号": null,
+          "电压": "36V",
+          "功率": "1200W"
+        },
+        "base_normalized": {
+          "型号": "DC 36 V",
+          "电压": "36V",
+          "功率": "1200W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "36V",
+          "功率": "1200W"
+        }
+      },
+      {
+        "index": 62,
+        "image": "nameplates_v2/images/v2-test-036-evaluation-2.png",
+        "expected": {
+          "型号": null,
+          "电压": "220V",
+          "功率": "40W"
+        },
+        "base_normalized": {
+          "型号": "无",
+          "电压": "220V",
+          "功率": "40W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "220V",
+          "功率": "40W"
+        }
+      },
+      {
+        "index": 63,
+        "image": "nameplates_v2/images/v2-test-014-evaluation-1.png",
+        "expected": {
+          "型号": "AB-3014",
+          "电压": "24V",
+          "功率": null
+        },
+        "base_normalized": {
+          "型号": "AB-3014",
+          "电压": "24V",
+          "功率": "3014W"
+        },
+        "lora_normalized": {
+          "型号": "AB-3014",
+          "电压": "24V",
+          "功率": null
+        }
+      },
+      {
+        "index": 66,
+        "image": "nameplates_v2/images/v2-test-040-evaluation-3.png",
+        "expected": {
+          "型号": "DK-3040",
+          "电压": null,
+          "功率": "18W"
+        },
+        "base_normalized": {
+          "型号": "DK-3040",
+          "电压": "18W",
+          "功率": "18W"
+        },
+        "lora_normalized": {
+          "型号": "DK-3040",
+          "电压": null,
+          "功率": "18W"
+        }
+      },
+      {
+        "index": 68,
+        "image": "nameplates_v2/images/v2-test-019-evaluation-1.png",
+        "expected": {
+          "型号": "CX-3019",
+          "电压": null,
+          "功率": "85W"
+        },
+        "base_normalized": {
+          "型号": "CX-3019",
+          "电压": "85V",
+          "功率": "85W"
+        },
+        "lora_normalized": {
+          "型号": "CX-3019",
+          "电压": null,
+          "功率": "85W"
+        }
+      },
+      {
+        "index": 70,
+        "image": "nameplates_v2/images/v2-test-049-evaluation-1.png",
+        "expected": {
+          "型号": "DK-3049",
+          "电压": null,
+          "功率": "85W"
+        },
+        "base_normalized": {
+          "型号": "DK-3049",
+          "电压": "5V",
+          "功率": "85W"
+        },
+        "lora_normalized": {
+          "型号": "DK-3049",
+          "电压": null,
+          "功率": "85W"
+        }
+      },
+      {
+        "index": 71,
+        "image": "nameplates_v2/images/v2-test-028-evaluation-2.png",
+        "expected": {
+          "型号": "AB-3028",
+          "电压": null,
+          "功率": "1200W"
+        },
+        "base_normalized": {
+          "型号": "AB-3028",
+          "电压": "1200V",
+          "功率": "1200W"
+        },
+        "lora_normalized": {
+          "型号": "AB-3028",
+          "电压": null,
+          "功率": "1200W"
+        }
+      },
+      {
+        "index": 72,
+        "image": "nameplates_v2/images/v2-test-029-evaluation-2.png",
+        "expected": {
+          "型号": "KR-3029",
+          "电压": "6V",
+          "功率": null
+        },
+        "base_normalized": {
+          "型号": "DC 6 V",
+          "电压": "6V",
+          "功率": null
+        },
+        "lora_normalized": {
+          "型号": "KR-3029",
+          "电压": "6V",
+          "功率": null
+        }
+      },
+      {
+        "index": 73,
+        "image": "nameplates_v2/images/v2-test-007-evaluation-1.png",
+        "expected": {
+          "型号": "QS-3007",
+          "电压": null,
+          "功率": "420W"
+        },
+        "base_normalized": {
+          "型号": "QS-3007",
+          "电压": "420V",
+          "功率": "420W"
+        },
+        "lora_normalized": {
+          "型号": "QS-3007",
+          "电压": null,
+          "功率": "420W"
+        }
+      },
+      {
+        "index": 77,
+        "image": "nameplates_v2/images/v2-test-038-evaluation-2.png",
+        "expected": {
+          "型号": "QS-3038",
+          "电压": "220V",
+          "功率": null
+        },
+        "base_normalized": {
+          "型号": "QS-3038",
+          "电压": "220V",
+          "功率": "2W"
+        },
+        "lora_normalized": {
+          "型号": "QS-3038",
+          "电压": "220V",
+          "功率": null
+        }
+      },
+      {
+        "index": 78,
+        "image": "nameplates_v2/images/v2-test-001-evaluation-1.png",
+        "expected": {
+          "型号": "QS-3001",
+          "电压": null,
+          "功率": "7W"
+        },
+        "base_normalized": {
+          "型号": "QS-3001",
+          "电压": "220V",
+          "功率": "7W"
+        },
+        "lora_normalized": {
+          "型号": "QS-3001",
+          "电压": null,
+          "功率": "7W"
+        }
+      },
+      {
+        "index": 80,
+        "image": "nameplates_v2/images/v2-test-049-evaluation-2.png",
+        "expected": {
+          "型号": "DK-3049",
+          "电压": null,
+          "功率": "85W"
+        },
+        "base_normalized": {
+          "型号": "DK-3049",
+          "电压": "85V",
+          "功率": "85W"
+        },
+        "lora_normalized": {
+          "型号": "DK-3049",
+          "电压": null,
+          "功率": "85W"
+        }
+      },
+      {
+        "index": 85,
+        "image": "nameplates_v2/images/v2-test-045-evaluation-1.png",
+        "expected": {
+          "型号": null,
+          "电压": "60V",
+          "功率": "7W"
+        },
+        "base_normalized": {
+          "型号": "无",
+          "电压": "60V",
+          "功率": "7W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "60V",
+          "功率": "7W"
+        }
+      },
+      {
+        "index": 87,
+        "image": "nameplates_v2/images/v2-test-018-evaluation-2.png",
+        "expected": {
+          "型号": null,
+          "电压": "220V",
+          "功率": "200W"
+        },
+        "base_normalized": {
+          "型号": "无",
+          "电压": "220V",
+          "功率": "200W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "220V",
+          "功率": "200W"
+        }
+      },
+      {
+        "index": 89,
+        "image": "nameplates_v2/images/v2-test-005-evaluation-2.png",
+        "expected": {
+          "型号": "SV-3005",
+          "电压": "277V",
+          "功率": null
+        },
+        "base_normalized": {
+          "型号": "SV-3005",
+          "电压": "277V",
+          "功率": "18W"
+        },
+        "lora_normalized": {
+          "型号": "SV-3005",
+          "电压": "277V",
+          "功率": null
+        }
+      },
+      {
+        "index": 90,
+        "image": "nameplates_v2/images/v2-test-040-evaluation-1.png",
+        "expected": {
+          "型号": "DK-3040",
+          "电压": null,
+          "功率": "18W"
+        },
+        "base_normalized": {
+          "型号": "DK-3040",
+          "电压": "18W",
+          "功率": "18W"
+        },
+        "lora_normalized": {
+          "型号": "DK-3040",
+          "电压": null,
+          "功率": "18W"
+        }
+      },
+      {
+        "index": 91,
+        "image": "nameplates_v2/images/v2-test-009-evaluation-2.png",
+        "expected": {
+          "型号": null,
+          "电压": "30V",
+          "功率": "85W"
+        },
+        "base_normalized": {
+          "型号": "DC 30 V",
+          "电压": "30V",
+          "功率": "85W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "30V",
+          "功率": "85W"
+        }
+      },
+      {
+        "index": 93,
+        "image": "nameplates_v2/images/v2-test-047-evaluation-2.png",
+        "expected": {
+          "型号": "SV-3047",
+          "电压": "450V",
+          "功率": null
+        },
+        "base_normalized": {
+          "型号": "SV-3047",
+          "电压": "450V",
+          "功率": "3047W"
+        },
+        "lora_normalized": {
+          "型号": "SV-3047",
+          "电压": "450V",
+          "功率": null
+        }
+      },
+      {
+        "index": 98,
+        "image": "nameplates_v2/images/v2-test-038-evaluation-1.png",
+        "expected": {
+          "型号": "QS-3038",
+          "电压": "220V",
+          "功率": null
+        },
+        "base_normalized": {
+          "型号": "QS-3038",
+          "电压": "220V",
+          "功率": "3038W"
+        },
+        "lora_normalized": {
+          "型号": "QS-3038",
+          "电压": "220V",
+          "功率": null
+        }
+      },
+      {
+        "index": 99,
+        "image": "nameplates_v2/images/v2-test-040-evaluation-2.png",
+        "expected": {
+          "型号": "DK-3040",
+          "电压": null,
+          "功率": "18W"
+        },
+        "base_normalized": {
+          "型号": "DK-3040",
+          "电压": "18V",
+          "功率": "18W"
+        },
+        "lora_normalized": {
+          "型号": "DK-3040",
+          "电压": null,
+          "功率": "18W"
+        }
+      },
+      {
+        "index": 100,
+        "image": "nameplates_v2/images/v2-test-035-evaluation-1.png",
+        "expected": {
+          "型号": "SV-3035",
+          "电压": "450V",
+          "功率": null
+        },
+        "base_normalized": {
+          "型号": "SV-3035",
+          "电压": "450V",
+          "功率": "3035W"
+        },
+        "lora_normalized": {
+          "型号": "SV-3035",
+          "电压": "450V",
+          "功率": null
+        }
+      },
+      {
+        "index": 101,
+        "image": "nameplates_v2/images/v2-test-039-evaluation-2.png",
+        "expected": {
+          "型号": null,
+          "电压": "450V",
+          "功率": "125W"
+        },
+        "base_normalized": {
+          "型号": "AC 450 V",
+          "电压": "450V",
+          "功率": "125W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "450V",
+          "功率": "125W"
+        }
+      },
+      {
+        "index": 105,
+        "image": "nameplates_v2/images/v2-test-034-evaluation-2.png",
+        "expected": {
+          "型号": "DK-3034",
+          "电压": null,
+          "功率": "750W"
+        },
+        "base_normalized": {
+          "型号": "DK-3034",
+          "电压": "750V",
+          "功率": "750W"
+        },
+        "lora_normalized": {
+          "型号": "DK-3034",
+          "电压": null,
+          "功率": "750W"
+        }
+      },
+      {
+        "index": 107,
+        "image": "nameplates_v2/images/v2-test-016-evaluation-3.png",
+        "expected": {
+          "型号": "SV-3016",
+          "电压": null,
+          "功率": "750W"
+        },
+        "base_normalized": {
+          "型号": "SV-3016",
+          "电压": "750",
+          "功率": "750"
+        },
+        "lora_normalized": {
+          "型号": "SV-3016",
+          "电压": null,
+          "功率": "750W"
+        }
+      },
+      {
+        "index": 110,
+        "image": "nameplates_v2/images/v2-test-015-evaluation-1.png",
+        "expected": {
+          "型号": null,
+          "电压": "277V",
+          "功率": "850W"
+        },
+        "base_normalized": {
+          "型号": "850 W",
+          "电压": "277V",
+          "功率": "850W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "277V",
+          "功率": "850W"
+        }
+      },
+      {
+        "index": 112,
+        "image": "nameplates_v2/images/v2-test-032-evaluation-2.png",
+        "expected": {
+          "型号": "CX-3032",
+          "电压": "12V",
+          "功率": null
+        },
+        "base_normalized": {
+          "型号": "CX-3032",
+          "电压": "12V",
+          "功率": "15W"
+        },
+        "lora_normalized": {
+          "型号": "CX-3032",
+          "电压": "12V",
+          "功率": null
+        }
+      },
+      {
+        "index": 114,
+        "image": "nameplates_v2/images/v2-test-042-evaluation-2.png",
+        "expected": {
+          "型号": null,
+          "电压": "110V",
+          "功率": "1200W"
+        },
+        "base_normalized": {
+          "型号": "无",
+          "电压": "110V",
+          "功率": "1200W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "110V",
+          "功率": "1200W"
+        }
+      },
+      {
+        "index": 116,
+        "image": "nameplates_v2/images/v2-test-030-evaluation-1.png",
+        "expected": {
+          "型号": null,
+          "电压": "48V",
+          "功率": "5W"
+        },
+        "base_normalized": {
+          "型号": "Model",
+          "电压": "48V",
+          "功率": "5W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "48V",
+          "功率": "5W"
+        }
+      },
+      {
+        "index": 117,
+        "image": "nameplates_v2/images/v2-test-028-evaluation-1.png",
+        "expected": {
+          "型号": "AB-3028",
+          "电压": null,
+          "功率": "1200W"
+        },
+        "base_normalized": {
+          "型号": "AB-3028",
+          "电压": "3028",
+          "功率": "1200"
+        },
+        "lora_normalized": {
+          "型号": "AB-3028",
+          "电压": null,
+          "功率": "1200W"
+        }
+      },
+      {
+        "index": 119,
+        "image": "nameplates_v2/images/v2-test-021-evaluation-2.png",
+        "expected": {
+          "型号": null,
+          "电压": "30V",
+          "功率": "85W"
+        },
+        "base_normalized": {
+          "型号": "DC 30 V",
+          "电压": "30V",
+          "功率": "85W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "30V",
+          "功率": "85W"
+        }
+      },
+      {
+        "index": 120,
+        "image": "nameplates_v2/images/v2-test-002-evaluation-1.png",
+        "expected": {
+          "型号": "AB-3002",
+          "电压": "380V",
+          "功率": null
+        },
+        "base_normalized": {
+          "型号": "AB-3002",
+          "电压": "380V",
+          "功率": "22W"
+        },
+        "lora_normalized": {
+          "型号": "AB-3002",
+          "电压": "380V",
+          "功率": null
+        }
+      },
+      {
+        "index": 122,
+        "image": "nameplates_v2/images/v2-test-034-evaluation-1.png",
+        "expected": {
+          "型号": "DK-3034",
+          "电压": null,
+          "功率": "750W"
+        },
+        "base_normalized": {
+          "型号": "DK-3034",
+          "电压": "750V",
+          "功率": "750W"
+        },
+        "lora_normalized": {
+          "型号": "DK-3034",
+          "电压": null,
+          "功率": "750W"
+        }
+      },
+      {
+        "index": 123,
+        "image": "nameplates_v2/images/v2-test-003-evaluation-2.png",
+        "expected": {
+          "型号": null,
+          "电压": "208V",
+          "功率": "850W"
+        },
+        "base_normalized": {
+          "型号": "AC 208 V",
+          "电压": "208V",
+          "功率": "850W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "208V",
+          "功率": "850W"
+        }
+      },
+      {
+        "index": 124,
+        "image": "nameplates_v2/images/v2-test-047-evaluation-1.png",
+        "expected": {
+          "型号": "SV-3047",
+          "电压": "450V",
+          "功率": null
+        },
+        "base_normalized": {
+          "型号": "SV-3047",
+          "电压": "450V",
+          "功率": "3047W"
+        },
+        "lora_normalized": {
+          "型号": "SV-3047",
+          "电压": "450V",
+          "功率": null
+        }
+      },
+      {
+        "index": 125,
+        "image": "nameplates_v2/images/v2-test-019-evaluation-2.png",
+        "expected": {
+          "型号": "CX-3019",
+          "电压": null,
+          "功率": "85W"
+        },
+        "base_normalized": {
+          "型号": "CX-3019",
+          "电压": "85V",
+          "功率": "85W"
+        },
+        "lora_normalized": {
+          "型号": "CX-3019",
+          "电压": null,
+          "功率": "85W"
+        }
+      },
+      {
+        "index": 126,
+        "image": "nameplates_v2/images/v2-test-011-evaluation-1.png",
+        "expected": {
+          "型号": "CX-3011",
+          "电压": "60V",
+          "功率": null
+        },
+        "base_normalized": {
+          "型号": "CX-3011",
+          "电压": "60V",
+          "功率": "3011W"
+        },
+        "lora_normalized": {
+          "型号": "CX-3011",
+          "电压": "60V",
+          "功率": null
+        }
+      },
+      {
+        "index": 127,
+        "image": "nameplates_v2/images/v2-test-014-evaluation-2.png",
+        "expected": {
+          "型号": "AB-3014",
+          "电压": "24V",
+          "功率": null
+        },
+        "base_normalized": {
+          "型号": "AB-3014",
+          "电压": "24V",
+          "功率": "3014W"
+        },
+        "lora_normalized": {
+          "型号": "AB-3014",
+          "电压": "24V",
+          "功率": null
+        }
+      },
+      {
+        "index": 128,
+        "image": "nameplates_v2/images/v2-test-045-evaluation-2.png",
+        "expected": {
+          "型号": null,
+          "电压": "60V",
+          "功率": "7W"
+        },
+        "base_normalized": {
+          "型号": "无",
+          "电压": "60V",
+          "功率": "7W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "60V",
+          "功率": "7W"
+        }
+      },
+      {
+        "index": 132,
+        "image": "nameplates_v2/images/v2-test-030-evaluation-2.png",
+        "expected": {
+          "型号": null,
+          "电压": "48V",
+          "功率": "5W"
+        },
+        "base_normalized": {
+          "型号": "DC 48 V",
+          "电压": "48V",
+          "功率": "5W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "48V",
+          "功率": "5W"
+        }
+      },
+      {
+        "index": 136,
+        "image": "nameplates_v2/images/v2-test-043-evaluation-3.png",
+        "expected": {
+          "型号": "KR-3043",
+          "电压": null,
+          "功率": "850W"
+        },
+        "base_normalized": {
+          "型号": "KR-3043",
+          "电压": "850V",
+          "功率": "850W"
+        },
+        "lora_normalized": {
+          "型号": "KR-3043",
+          "电压": null,
+          "功率": "850W"
+        }
+      },
+      {
+        "index": 137,
+        "image": "nameplates_v2/images/v2-test-026-evaluation-1.png",
+        "expected": {
+          "型号": "SV-3026",
+          "电压": "12V",
+          "功率": null
+        },
+        "base_normalized": {
+          "型号": "SV-3026",
+          "电压": "12V",
+          "功率": "3026W"
+        },
+        "lora_normalized": {
+          "型号": "SV-3026",
+          "电压": "12V",
+          "功率": null
+        }
+      },
+      {
+        "index": 138,
+        "image": "nameplates_v2/images/v2-test-048-evaluation-1.png",
+        "expected": {
+          "型号": null,
+          "电压": "24V",
+          "功率": "1500W"
+        },
+        "base_normalized": {
+          "型号": "DC 24 V",
+          "电压": "24V",
+          "功率": "1500W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "24V",
+          "功率": "1500W"
+        }
+      },
+      {
+        "index": 139,
+        "image": "nameplates_v2/images/v2-test-022-evaluation-1.png",
+        "expected": {
+          "型号": "QS-3022",
+          "电压": null,
+          "功率": "1200W"
+        },
+        "base_normalized": {
+          "型号": "QS-3022",
+          "电压": "5V",
+          "功率": "1200W"
+        },
+        "lora_normalized": {
+          "型号": "QS-3022",
+          "电压": null,
+          "功率": "1200W"
+        }
+      },
+      {
+        "index": 140,
+        "image": "nameplates_v2/images/v2-test-027-evaluation-2.png",
+        "expected": {
+          "型号": null,
+          "电压": "208V",
+          "功率": "4200W"
+        },
+        "base_normalized": {
+          "型号": "无",
+          "电压": "208V",
+          "功率": "4200W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "208V",
+          "功率": "4200W"
+        }
+      },
+      {
+        "index": 141,
+        "image": "nameplates_v2/images/v2-test-039-evaluation-1.png",
+        "expected": {
+          "型号": null,
+          "电压": "450V",
+          "功率": "125W"
+        },
+        "base_normalized": {
+          "型号": "AC 450 V",
+          "电压": "450V",
+          "功率": "125W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "450V",
+          "功率": "125W"
+        }
+      },
+      {
+        "index": 142,
+        "image": "nameplates_v2/images/v2-test-027-evaluation-1.png",
+        "expected": {
+          "型号": null,
+          "电压": "208V",
+          "功率": "4200W"
+        },
+        "base_normalized": {
+          "型号": "4200 W",
+          "电压": "208V",
+          "功率": "4200W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "208V",
+          "功率": "4200W"
+        }
+      },
+      {
+        "index": 143,
+        "image": "nameplates_v2/images/v2-test-033-evaluation-2.png",
+        "expected": {
+          "型号": null,
+          "电压": "60V",
+          "功率": "850W"
+        },
+        "base_normalized": {
+          "型号": "DC 60 V",
+          "电压": "60V",
+          "功率": "850W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "60V",
+          "功率": "850W"
+        }
+      },
+      {
+        "index": 144,
+        "image": "nameplates_v2/images/v2-test-046-evaluation-2.png",
+        "expected": {
+          "型号": "DK-3046",
+          "电压": null,
+          "功率": "1200W"
+        },
+        "base_normalized": {
+          "型号": "DK-3046",
+          "电压": "1200V",
+          "功率": "1200W"
+        },
+        "lora_normalized": {
+          "型号": "DK-3046",
+          "电压": null,
+          "功率": "1200W"
+        }
+      },
+      {
+        "index": 149,
+        "image": "nameplates_v2/images/v2-test-024-evaluation-2.png",
+        "expected": {
+          "型号": null,
+          "电压": "110V",
+          "功率": "75W"
+        },
+        "base_normalized": {
+          "型号": "无",
+          "电压": "110V",
+          "功率": "75W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "110V",
+          "功率": "75W"
+        }
+      },
+      {
+        "index": 151,
+        "image": "nameplates_v2/images/v2-test-012-evaluation-1.png",
+        "expected": {
+          "型号": null,
+          "电压": "24V",
+          "功率": "1200W"
+        },
+        "base_normalized": {
+          "型号": "DC 24 V",
+          "电压": "24V",
+          "功率": "1200W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "24V",
+          "功率": "1200W"
+        }
+      },
+      {
+        "index": 152,
+        "image": "nameplates_v2/images/v2-test-044-evaluation-2.png",
+        "expected": {
+          "型号": "CX-3044",
+          "电压": "36V",
+          "功率": null
+        },
+        "base_normalized": {
+          "型号": "CX-3044",
+          "电压": "36V",
+          "功率": "3044W"
+        },
+        "lora_normalized": {
+          "型号": "CX-3044",
+          "电压": "36V",
+          "功率": null
+        }
+      },
+      {
+        "index": 153,
+        "image": "nameplates_v2/images/v2-test-023-evaluation-1.png",
+        "expected": {
+          "型号": "QS-3023",
+          "电压": "15V",
+          "功率": null
+        },
+        "base_normalized": {
+          "型号": "QS-3023",
+          "电压": "15V",
+          "功率": "15W"
+        },
+        "lora_normalized": {
+          "型号": "QS-3023",
+          "电压": "15V",
+          "功率": null
+        }
+      },
+      {
+        "index": 156,
+        "image": "nameplates_v2/images/v2-test-046-evaluation-3.png",
+        "expected": {
+          "型号": "DK-3046",
+          "电压": null,
+          "功率": "1200W"
+        },
+        "base_normalized": {
+          "型号": "DK-3046",
+          "电压": "1200V",
+          "功率": "1200W"
+        },
+        "lora_normalized": {
+          "型号": "DK-3046",
+          "电压": null,
+          "功率": "1200W"
+        }
+      },
+      {
+        "index": 157,
+        "image": "nameplates_v2/images/v2-test-005-evaluation-1.png",
+        "expected": {
+          "型号": "SV-3005",
+          "电压": "277V",
+          "功率": null
+        },
+        "base_normalized": {
+          "型号": "SV-3005",
+          "电压": "277V",
+          "功率": "3005W"
+        },
+        "lora_normalized": {
+          "型号": "SV-3005",
+          "电压": "277V",
+          "功率": null
+        }
+      },
+      {
+        "index": 158,
+        "image": "nameplates_v2/images/v2-test-011-evaluation-2.png",
+        "expected": {
+          "型号": "CX-3011",
+          "电压": "60V",
+          "功率": null
+        },
+        "base_normalized": {
+          "型号": "CX-3011",
+          "电压": "60V",
+          "功率": "60W"
+        },
+        "lora_normalized": {
+          "型号": "CX-3011",
+          "电压": "60V",
+          "功率": null
+        }
+      },
+      {
+        "index": 160,
+        "image": "nameplates_v2/images/v2-test-004-evaluation-3.png",
+        "expected": {
+          "型号": "KR-3004",
+          "电压": null,
+          "功率": "1200W"
+        },
+        "base_normalized": {
+          "型号": "KR-3004",
+          "电压": "1200V",
+          "功率": "1200W"
+        },
+        "lora_normalized": {
+          "型号": "KR-3004",
+          "电压": null,
+          "功率": "1200W"
+        }
+      },
+      {
+        "index": 161,
+        "image": "nameplates_v2/images/v2-test-036-evaluation-3.png",
+        "expected": {
+          "型号": null,
+          "电压": "220V",
+          "功率": "40W"
+        },
+        "base_normalized": {
+          "型号": "Model",
+          "电压": "220V",
+          "功率": "40W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "220V",
+          "功率": "40W"
+        }
+      },
+      {
+        "index": 165,
+        "image": "nameplates_v2/images/v2-test-017-evaluation-1.png",
+        "expected": {
+          "型号": "DK-3017",
+          "电压": "127V",
+          "功率": null
+        },
+        "base_normalized": {
+          "型号": "DK-3017",
+          "电压": "127V",
+          "功率": "3017W"
+        },
+        "lora_normalized": {
+          "型号": "DK-3017",
+          "电压": "127V",
+          "功率": null
+        }
+      },
+      {
+        "index": 167,
+        "image": "nameplates_v2/images/v2-test-033-evaluation-1.png",
+        "expected": {
+          "型号": null,
+          "电压": "60V",
+          "功率": "850W"
+        },
+        "base_normalized": {
+          "型号": "Model",
+          "电压": "60V",
+          "功率": "850W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "60V",
+          "功率": "850W"
+        }
+      },
+      {
+        "index": 169,
+        "image": "nameplates_v2/images/v2-test-003-evaluation-1.png",
+        "expected": {
+          "型号": null,
+          "电压": "208V",
+          "功率": "850W"
+        },
+        "base_normalized": {
+          "型号": "Model",
+          "电压": "208V",
+          "功率": "850W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "208V",
+          "功率": "850W"
+        }
+      },
+      {
+        "index": 170,
+        "image": "nameplates_v2/images/v2-test-032-evaluation-1.png",
+        "expected": {
+          "型号": "CX-3032",
+          "电压": "12V",
+          "功率": null
+        },
+        "base_normalized": {
+          "型号": "CX-3032",
+          "电压": "12V",
+          "功率": "15W"
+        },
+        "lora_normalized": {
+          "型号": "CX-3032",
+          "电压": "12V",
+          "功率": null
+        }
+      },
+      {
+        "index": 172,
+        "image": "nameplates_v2/images/v2-test-044-evaluation-1.png",
+        "expected": {
+          "型号": "CX-3044",
+          "电压": "36V",
+          "功率": null
+        },
+        "base_normalized": {
+          "型号": "CX-3044",
+          "电压": "36V",
+          "功率": "3044W"
+        },
+        "lora_normalized": {
+          "型号": "CX-3044",
+          "电压": "36V",
+          "功率": null
+        }
+      },
+      {
+        "index": 174,
+        "image": "nameplates_v2/images/v2-test-030-evaluation-3.png",
+        "expected": {
+          "型号": null,
+          "电压": "48V",
+          "功率": "5W"
+        },
+        "base_normalized": {
+          "型号": "Model",
+          "电压": "48V",
+          "功率": "5W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "48V",
+          "功率": "5W"
+        }
+      },
+      {
+        "index": 175,
+        "image": "nameplates_v2/images/v2-test-041-evaluation-2.png",
+        "expected": {
+          "型号": "QS-3041",
+          "电压": "208V",
+          "功率": null
+        },
+        "base_normalized": {
+          "型号": "QS-3041",
+          "电压": "208V",
+          "功率": "208W"
+        },
+        "lora_normalized": {
+          "型号": "QS-3041",
+          "电压": "208V",
+          "功率": null
+        }
+      },
+      {
+        "index": 176,
+        "image": "nameplates_v2/images/v2-test-010-evaluation-2.png",
+        "expected": {
+          "型号": "DK-3010",
+          "电压": null,
+          "功率": "750W"
+        },
+        "base_normalized": {
+          "型号": "DK-3010",
+          "电压": "750V",
+          "功率": "750W"
+        },
+        "lora_normalized": {
+          "型号": "DK-3010",
+          "电压": null,
+          "功率": "750W"
+        }
+      },
+      {
+        "index": 177,
+        "image": "nameplates_v2/images/v2-test-020-evaluation-1.png",
+        "expected": {
+          "型号": "QS-3020",
+          "电压": "110V",
+          "功率": null
+        },
+        "base_normalized": {
+          "型号": "QS-3020",
+          "电压": "110V",
+          "功率": "3020W"
+        },
+        "lora_normalized": {
+          "型号": "QS-3020",
+          "电压": "110V",
+          "功率": null
+        }
+      },
+      {
+        "index": 185,
+        "image": "nameplates_v2/images/v2-test-025-evaluation-1.png",
+        "expected": {
+          "型号": "AB-3025",
+          "电压": null,
+          "功率": "2500W"
+        },
+        "base_normalized": {
+          "型号": "AB-3025",
+          "电压": "2500V",
+          "功率": "2500W"
+        },
+        "lora_normalized": {
+          "型号": "AB-3025",
+          "电压": null,
+          "功率": "2500W"
+        }
+      },
+      {
+        "index": 187,
+        "image": "nameplates_v2/images/v2-test-031-evaluation-2.png",
+        "expected": {
+          "型号": "CX-3031",
+          "电压": null,
+          "功率": "85W"
+        },
+        "base_normalized": {
+          "型号": "CX-3031",
+          "电压": "220V",
+          "功率": "85W"
+        },
+        "lora_normalized": {
+          "型号": "CX-3031",
+          "电压": null,
+          "功率": "85W"
+        }
+      },
+      {
+        "index": 188,
+        "image": "nameplates_v2/images/v2-test-034-evaluation-3.png",
+        "expected": {
+          "型号": "DK-3034",
+          "电压": null,
+          "功率": "750W"
+        },
+        "base_normalized": {
+          "型号": "DK-3034",
+          "电压": "750V",
+          "功率": "750W"
+        },
+        "lora_normalized": {
+          "型号": "DK-3034",
+          "电压": null,
+          "功率": "750W"
+        }
+      },
+      {
+        "index": 189,
+        "image": "nameplates_v2/images/v2-test-016-evaluation-1.png",
+        "expected": {
+          "型号": "SV-3016",
+          "电压": null,
+          "功率": "750W"
+        },
+        "base_normalized": {
+          "型号": "SV-3016",
+          "电压": "750V",
+          "功率": "750W"
+        },
+        "lora_normalized": {
+          "型号": "SV-3016",
+          "电压": null,
+          "功率": "750W"
+        }
+      },
+      {
+        "index": 191,
+        "image": "nameplates_v2/images/v2-test-035-evaluation-2.png",
+        "expected": {
+          "型号": "SV-3035",
+          "电压": "450V",
+          "功率": null
+        },
+        "base_normalized": {
+          "型号": "SV-3035",
+          "电压": "450V",
+          "功率": "3035W"
+        },
+        "lora_normalized": {
+          "型号": "SV-3035",
+          "电压": "450V",
+          "功率": null
+        }
+      },
+      {
+        "index": 192,
+        "image": "nameplates_v2/images/v2-test-036-evaluation-1.png",
+        "expected": {
+          "型号": null,
+          "电压": "220V",
+          "功率": "40W"
+        },
+        "base_normalized": {
+          "型号": "Model",
+          "电压": "220V",
+          "功率": "40W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "220V",
+          "功率": "40W"
+        }
+      },
+      {
+        "index": 195,
+        "image": "nameplates_v2/images/v2-test-037-evaluation-2.png",
+        "expected": {
+          "型号": "KR-3037",
+          "电压": null,
+          "功率": "45W"
+        },
+        "base_normalized": {
+          "型号": "KR-3037",
+          "电压": "45V",
+          "功率": "45W"
+        },
+        "lora_normalized": {
+          "型号": "KR-3037",
+          "电压": null,
+          "功率": "45W"
+        }
+      },
+      {
+        "index": 196,
+        "image": "nameplates_v2/images/v2-test-013-evaluation-3.png",
+        "expected": {
+          "型号": "DK-3013",
+          "电压": null,
+          "功率": "45W"
+        },
+        "base_normalized": {
+          "型号": "DK-3013",
+          "电压": "45V",
+          "功率": "45W"
+        },
+        "lora_normalized": {
+          "型号": "DK-3013",
+          "电压": null,
+          "功率": "45W"
+        }
+      },
+      {
+        "index": 197,
+        "image": "nameplates_v2/images/v2-test-016-evaluation-2.png",
+        "expected": {
+          "型号": "SV-3016",
+          "电压": null,
+          "功率": "750W"
+        },
+        "base_normalized": {
+          "型号": "SV-3016",
+          "电压": "750V",
+          "功率": "750W"
+        },
+        "lora_normalized": {
+          "型号": "SV-3016",
+          "电压": null,
+          "功率": "750W"
+        }
+      },
+      {
+        "index": 198,
+        "image": "nameplates_v2/images/v2-test-006-evaluation-1.png",
+        "expected": {
+          "型号": null,
+          "电压": "48V",
+          "功率": "1000W"
+        },
+        "base_normalized": {
+          "型号": "无",
+          "电压": "48V",
+          "功率": "1000W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "48V",
+          "功率": "1000W"
+        }
+      },
+      {
+        "index": 199,
+        "image": "nameplates_v2/images/v2-test-028-evaluation-3.png",
+        "expected": {
+          "型号": "AB-3028",
+          "电压": null,
+          "功率": "1200W"
+        },
+        "base_normalized": {
+          "型号": "AB-3028",
+          "电压": "1200V",
+          "功率": "1200W"
+        },
+        "lora_normalized": {
+          "型号": "AB-3028",
+          "电压": null,
+          "功率": "1200W"
+        }
+      },
+      {
+        "index": 200,
+        "image": "nameplates_v2/images/v2-test-042-evaluation-1.png",
+        "expected": {
+          "型号": null,
+          "电压": "110V",
+          "功率": "1200W"
+        },
+        "base_normalized": {
+          "型号": "无",
+          "电压": "110V",
+          "功率": "1200W"
+        },
+        "lora_normalized": {
+          "型号": null,
+          "电压": "110V",
+          "功率": "1200W"
+        }
+      }
+    ],
+    "regressed": [],
+    "shared_errors": [
+      {
+        "index": 95,
+        "image": "nameplates_v2/images/v2-test-043-evaluation-1.png",
+        "expected": {
+          "型号": "KR-3043",
+          "电压": null,
+          "功率": "850W"
+        },
+        "base_normalized": {
+          "型号": "KR-3043",
+          "电压": "850V",
+          "功率": "850W"
+        },
+        "lora_normalized": {
+          "型号": "KR-3043",
+          "电压": "850V",
+          "功率": "850W"
+        }
+      }
+    ]
+  }
+}

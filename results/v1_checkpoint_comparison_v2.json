@@ -1,0 +1,181 @@
+{
+  "validation_only": true,
+  "metrics": {
+    "50": {
+      "sample_count": 100,
+      "counts": {
+        "strict_format": 100,
+        "strict_exact_match": 85,
+        "fence_only_exact_match": 85,
+        "normalized_exact_match": 85
+      },
+      "rates": {
+        "strict_format": 1.0,
+        "strict_exact_match": 0.85,
+        "fence_only_exact_match": 0.85,
+        "normalized_exact_match": 0.85
+      },
+      "normalized_field_accuracy": {
+        "型号": 0.93,
+        "电压": 0.93,
+        "功率": 0.99
+      },
+      "null_metrics_fence_only": {
+        "tp": 15,
+        "fp": 0,
+        "fn": 15,
+        "target_null_count": 30,
+        "target_present_count": 270,
+        "spurious_value_count": 15,
+        "unparseable_or_missing_key_count": 0,
+        "precision": 1.0,
+        "recall": 0.5,
+        "spurious_value_rate": 0.5,
+        "false_null_rate": 0.0
+      },
+      "null_metrics_normalized": {
+        "tp": 15,
+        "fp": 0,
+        "fn": 15,
+        "target_null_count": 30,
+        "target_present_count": 270,
+        "spurious_value_count": 15,
+        "unparseable_or_missing_key_count": 0,
+        "precision": 1.0,
+        "recall": 0.5,
+        "spurious_value_rate": 0.5,
+        "false_null_rate": 0.0
+      }
+    },
+    "100": {
+      "sample_count": 100,
+      "counts": {
+        "strict_format": 100,
+        "strict_exact_match": 97,
+        "fence_only_exact_match": 97,
+        "normalized_exact_match": 97
+      },
+      "rates": {
+        "strict_format": 1.0,
+        "strict_exact_match": 0.97,
+        "fence_only_exact_match": 0.97,
+        "normalized_exact_match": 0.97
+      },
+      "normalized_field_accuracy": {
+        "型号": 0.98,
+        "电压": 0.99,
+        "功率": 1.0
+      },
+      "null_metrics_fence_only": {
+        "tp": 27,
+        "fp": 0,
+        "fn": 3,
+        "target_null_count": 30,
+        "target_present_count": 270,
+        "spurious_value_count": 3,
+        "unparseable_or_missing_key_count": 0,
+        "precision": 1.0,
+        "recall": 0.9,
+        "spurious_value_rate": 0.1,
+        "false_null_rate": 0.0
+      },
+      "null_metrics_normalized": {
+        "tp": 27,
+        "fp": 0,
+        "fn": 3,
+        "target_null_count": 30,
+        "target_present_count": 270,
+        "spurious_value_count": 3,
+        "unparseable_or_missing_key_count": 0,
+        "precision": 1.0,
+        "recall": 0.9,
+        "spurious_value_rate": 0.1,
+        "false_null_rate": 0.0
+      }
+    },
+    "150": {
+      "sample_count": 100,
+      "counts": {
+        "strict_format": 100,
+        "strict_exact_match": 99,
+        "fence_only_exact_match": 99,
+        "normalized_exact_match": 99
+      },
+      "rates": {
+        "strict_format": 1.0,
+        "strict_exact_match": 0.99,
+        "fence_only_exact_match": 0.99,
+        "normalized_exact_match": 0.99
+      },
+      "normalized_field_accuracy": {
+        "型号": 1.0,
+        "电压": 0.99,
+        "功率": 1.0
+      },
+      "null_metrics_fence_only": {
+        "tp": 29,
+        "fp": 0,
+        "fn": 1,
+        "target_null_count": 30,
+        "target_present_count": 270,
+        "spurious_value_count": 1,
+        "unparseable_or_missing_key_count": 0,
+        "precision": 1.0,
+        "recall": 0.9666666666666667,
+        "spurious_value_rate": 0.03333333333333333,
+        "false_null_rate": 0.0
+      },
+      "null_metrics_normalized": {
+        "tp": 29,
+        "fp": 0,
+        "fn": 1,
+        "target_null_count": 30,
+        "target_present_count": 270,
+        "spurious_value_count": 1,
+        "unparseable_or_missing_key_count": 0,
+        "precision": 1.0,
+        "recall": 0.9666666666666667,
+        "spurious_value_rate": 0.03333333333333333,
+        "false_null_rate": 0.0
+      }
+    }
+  },
+  "publication_files": [
+    {
+      "source": "outputs/v2_checkpoint50_val_01/run.json",
+      "published": "results/v2_checkpoint50_val_01/run.json",
+      "source_sha256": "56cddae0bcb862f5b459aa8f99e73a6d69435e5c46f6a73a15bc02206ff3b288",
+      "published_sha256": "ca9a406427a6bf9ee5e41451f739c46ac81b87d2daab555876d70836c766ca09"
+    },
+    {
+      "source": "outputs/v2_checkpoint50_val_01/summary.json",
+      "published": "results/v2_checkpoint50_val_01/summary.json",
+      "source_sha256": "3acf5240fedfb676bc68075a276569f86fc6c8e921f8fa237f3a3075ba9f706b",
+      "published_sha256": "3acf5240fedfb676bc68075a276569f86fc6c8e921f8fa237f3a3075ba9f706b"
+    },
+    {
+      "source": "outputs/v2_checkpoint50_val_01/predictions.jsonl",
+      "published": "results/v2_checkpoint50_val_01/predictions.jsonl",
+      "source_sha256": "d8c982c024351cc7143bff0bab810edbb3bb7c532f8a9fe3215dd90071edc828",
+      "published_sha256": "d8c982c024351cc7143bff0bab810edbb3bb7c532f8a9fe3215dd90071edc828"
+    },
+    {
+      "source": "outputs/v2_checkpoint100_val_01/run.json",
+      "published": "results/v2_checkpoint100_val_01/run.json",
+      "source_sha256": "949e110392b214b781973506dd8fc88d4a28611c030ab5b4dd5a86d1a16e6b9a",
+      "published_sha256": "15633f20afa00cdfbe28cebc683ae4c0a1c14604b3b0dc93b2ab4aa4b18e2212"
+    },
+    {
+      "source": "outputs/v2_checkpoint100_val_01/summary.json",
+      "published": "results/v2_checkpoint100_val_01/summary.json",
+      "source_sha256": "f6a1290b9176718bc3b3eb92efc72af50433588aa29f4be60f168542b4084301",
+      "published_sha256": "f6a1290b9176718bc3b3eb92efc72af50433588aa29f4be60f168542b4084301"
+    },
+    {
+      "source": "outputs/v2_checkpoint100_val_01/predictions.jsonl",
+      "published": "results/v2_checkpoint100_val_01/predictions.jsonl",
+      "source_sha256": "070b28bb014a7a28fb8ccb949c2944e394818da6e419eb832260e7cb784171aa",
+      "published_sha256": "070b28bb014a7a28fb8ccb949c2944e394818da6e419eb832260e7cb784171aa"
+    }
+  ]
+}

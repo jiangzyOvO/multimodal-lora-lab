@@ -1,0 +1,312 @@
+{
+  "control": [
+    {
+      "step": 50,
+      "adapter": "outputs/v2_experiment_01/train_control/checkpoint-50",
+      "adapter_sha256": "5ec4e9f849a1f04ffa5268f073b192f8cac7a1884d7805cfaf87c206f7004a47",
+      "metrics": {
+        "sample_count": 200,
+        "counts": {
+          "strict_format": 197,
+          "strict_exact_match": 123,
+          "fence_only_exact_match": 123,
+          "normalized_exact_match": 125
+        },
+        "rates": {
+          "strict_format": 0.985,
+          "strict_exact_match": 0.615,
+          "fence_only_exact_match": 0.615,
+          "normalized_exact_match": 0.625
+        },
+        "normalized_field_accuracy": {
+          "型号": 0.895,
+          "电压": 0.815,
+          "功率": 0.91
+        },
+        "null_metrics_fence_only": {
+          "tp": 77,
+          "fp": 1,
+          "fn": 73,
+          "target_null_count": 150,
+          "target_present_count": 450,
+          "spurious_value_count": 73,
+          "unparseable_or_missing_key_count": 0,
+          "precision": 0.9871794871794872,
+          "recall": 0.5133333333333333,
+          "spurious_value_rate": 0.4866666666666667,
+          "false_null_rate": 0.0022222222222222222
+        },
+        "null_metrics_normalized": {
+          "tp": 80,
+          "fp": 1,
+          "fn": 70,
+          "target_null_count": 150,
+          "target_present_count": 450,
+          "spurious_value_count": 70,
+          "unparseable_or_missing_key_count": 0,
+          "precision": 0.9876543209876543,
+          "recall": 0.5333333333333333,
+          "spurious_value_rate": 0.4666666666666667,
+          "false_null_rate": 0.0022222222222222222
+        }
+      }
+    },
+    {
+      "step": 100,
+      "adapter": "outputs/v2_experiment_01/train_control/checkpoint-100",
+      "adapter_sha256": "681f46b39a924225d8f4b3226333f5609c6e46a592215a6e4c838474b1ed550d",
+      "metrics": {
+        "sample_count": 200,
+        "counts": {
+          "strict_format": 199,
+          "strict_exact_match": 190,
+          "fence_only_exact_match": 190,
+          "normalized_exact_match": 191
+        },
+        "rates": {
+          "strict_format": 0.995,
+          "strict_exact_match": 0.95,
+          "fence_only_exact_match": 0.95,
+          "normalized_exact_match": 0.955
+        },
+        "normalized_field_accuracy": {
+          "型号": 0.995,
+          "电压": 0.96,
+          "功率": 1.0
+        },
+        "null_metrics_fence_only": {
+          "tp": 141,
+          "fp": 1,
+          "fn": 9,
+          "target_null_count": 150,
+          "target_present_count": 450,
+          "spurious_value_count": 9,
+          "unparseable_or_missing_key_count": 0,
+          "precision": 0.9929577464788732,
+          "recall": 0.94,
+          "spurious_value_rate": 0.06,
+          "false_null_rate": 0.0022222222222222222
+        },
+        "null_metrics_normalized": {
+          "tp": 142,
+          "fp": 1,
+          "fn": 8,
+          "target_null_count": 150,
+          "target_present_count": 450,
+          "spurious_value_count": 8,
+          "unparseable_or_missing_key_count": 0,
+          "precision": 0.993006993006993,
+          "recall": 0.9466666666666667,
+          "spurious_value_rate": 0.05333333333333334,
+          "false_null_rate": 0.0022222222222222222
+        }
+      }
+    },
+    {
+      "step": 150,
+      "adapter": "outputs/v2_experiment_01/train_control/checkpoint-150",
+      "adapter_sha256": "7ff8eb76c65c30dc666c89fdfda3ae1140aa2d1c2d4a7f7e570f6485c2f86b9a",
+      "metrics": {
+        "sample_count": 200,
+        "counts": {
+          "strict_format": 198,
+          "strict_exact_match": 192,
+          "fence_only_exact_match": 192,
+          "normalized_exact_match": 194
+        },
+        "rates": {
+          "strict_format": 0.99,
+          "strict_exact_match": 0.96,
+          "fence_only_exact_match": 0.96,
+          "normalized_exact_match": 0.97
+        },
+        "normalized_field_accuracy": {
+          "型号": 1.0,
+          "电压": 0.97,
+          "功率": 1.0
+        },
+        "null_metrics_fence_only": {
+          "tp": 143,
+          "fp": 1,
+          "fn": 7,
+          "target_null_count": 150,
+          "target_present_count": 450,
+          "spurious_value_count": 7,
+          "unparseable_or_missing_key_count": 0,
+          "precision": 0.9930555555555556,
+          "recall": 0.9533333333333334,
+          "spurious_value_rate": 0.04666666666666667,
+          "false_null_rate": 0.0022222222222222222
+        },
+        "null_metrics_normalized": {
+          "tp": 145,
+          "fp": 1,
+          "fn": 5,
+          "target_null_count": 150,
+          "target_present_count": 450,
+          "spurious_value_count": 5,
+          "unparseable_or_missing_key_count": 0,
+          "precision": 0.9931506849315068,
+          "recall": 0.9666666666666667,
+          "spurious_value_rate": 0.03333333333333333,
+          "false_null_rate": 0.0022222222222222222
+        }
+      }
+    }
+  ],
+  "hard": [
+    {
+      "step": 50,
+      "adapter": "outputs/v2_experiment_01/train_hard/checkpoint-50",
+      "adapter_sha256": "0e3134eac51f24d1ef4f2df45fd1ea6335da499942b8e401855c638e622f0037",
+      "metrics": {
+        "sample_count": 200,
+        "counts": {
+          "strict_format": 196,
+          "strict_exact_match": 166,
+          "fence_only_exact_match": 166,
+          "normalized_exact_match": 169
+        },
+        "rates": {
+          "strict_format": 0.98,
+          "strict_exact_match": 0.83,
+          "fence_only_exact_match": 0.83,
+          "normalized_exact_match": 0.845
+        },
+        "normalized_field_accuracy": {
+          "型号": 0.97,
+          "电压": 0.9,
+          "功率": 0.975
+        },
+        "null_metrics_fence_only": {
+          "tp": 120,
+          "fp": 1,
+          "fn": 30,
+          "target_null_count": 150,
+          "target_present_count": 450,
+          "spurious_value_count": 30,
+          "unparseable_or_missing_key_count": 0,
+          "precision": 0.9917355371900827,
+          "recall": 0.8,
+          "spurious_value_rate": 0.2,
+          "false_null_rate": 0.0022222222222222222
+        },
+        "null_metrics_normalized": {
+          "tp": 123,
+          "fp": 1,
+          "fn": 27,
+          "target_null_count": 150,
+          "target_present_count": 450,
+          "spurious_value_count": 27,
+          "unparseable_or_missing_key_count": 0,
+          "precision": 0.9919354838709677,
+          "recall": 0.82,
+          "spurious_value_rate": 0.18,
+          "false_null_rate": 0.0022222222222222222
+        }
+      }
+    },
+    {
+      "step": 100,
+      "adapter": "outputs/v2_experiment_01/train_hard/checkpoint-100",
+      "adapter_sha256": "a113c0739ad21b140fa2dee6aa6bb99a5cd8e0025efd1958b32be167c66cff5d",
+      "metrics": {
+        "sample_count": 200,
+        "counts": {
+          "strict_format": 200,
+          "strict_exact_match": 197,
+          "fence_only_exact_match": 197,
+          "normalized_exact_match": 197
+        },
+        "rates": {
+          "strict_format": 1.0,
+          "strict_exact_match": 0.985,
+          "fence_only_exact_match": 0.985,
+          "normalized_exact_match": 0.985
+        },
+        "normalized_field_accuracy": {
+          "型号": 1.0,
+          "电压": 0.985,
+          "功率": 0.995
+        },
+        "null_metrics_fence_only": {
+          "tp": 147,
+          "fp": 1,
+          "fn": 3,
+          "target_null_count": 150,
+          "target_present_count": 450,
+          "spurious_value_count": 3,
+          "unparseable_or_missing_key_count": 0,
+          "precision": 0.9932432432432432,
+          "recall": 0.98,
+          "spurious_value_rate": 0.02,
+          "false_null_rate": 0.0022222222222222222
+        },
+        "null_metrics_normalized": {
+          "tp": 147,
+          "fp": 1,
+          "fn": 3,
+          "target_null_count": 150,
+          "target_present_count": 450,
+          "spurious_value_count": 3,
+          "unparseable_or_missing_key_count": 0,
+          "precision": 0.9932432432432432,
+          "recall": 0.98,
+          "spurious_value_rate": 0.02,
+          "false_null_rate": 0.0022222222222222222
+        }
+      }
+    },
+    {
+      "step": 150,
+      "adapter": "outputs/v2_experiment_01/train_hard/checkpoint-150",
+      "adapter_sha256": "fdb4dd16e0ab5248aec365eaf895e18ae59be37cc61e9d51ebe0febfcb3bcf32",
+      "metrics": {
+        "sample_count": 200,
+        "counts": {
+          "strict_format": 200,
+          "strict_exact_match": 198,
+          "fence_only_exact_match": 198,
+          "normalized_exact_match": 198
+        },
+        "rates": {
+          "strict_format": 1.0,
+          "strict_exact_match": 0.99,
+          "fence_only_exact_match": 0.99,
+          "normalized_exact_match": 0.99
+        },
+        "normalized_field_accuracy": {
+          "型号": 1.0,
+          "电压": 0.99,
+          "功率": 0.995
+        },
+        "null_metrics_fence_only": {
+          "tp": 148,
+          "fp": 1,
+          "fn": 2,
+          "target_null_count": 150,
+          "target_present_count": 450,
+          "spurious_value_count": 2,
+          "unparseable_or_missing_key_count": 0,
+          "precision": 0.9932885906040269,
+          "recall": 0.9866666666666667,
+          "spurious_value_rate": 0.013333333333333334,
+          "false_null_rate": 0.0022222222222222222
+        },
+        "null_metrics_normalized": {
+          "tp": 148,
+          "fp": 1,
+          "fn": 2,
+          "target_null_count": 150,
+          "target_present_count": 450,
+          "spurious_value_count": 2,
+          "unparseable_or_missing_key_count": 0,
+          "precision": 0.9932885906040269,
+          "recall": 0.9866666666666667,
+          "spurious_value_rate": 0.013333333333333334,
+          "false_null_rate": 0.0022222222222222222
+        }
+      }
+    }
+  ]
+}

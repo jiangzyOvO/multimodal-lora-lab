@@ -1,0 +1,90 @@
+{
+  "version": 2,
+  "seed": 20261010,
+  "kind": "synthetic_counterfactual_stress_test",
+  "image_size": [
+    672,
+    448
+  ],
+  "prompt": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。",
+  "pillow": "11.3.0",
+  "sizes": {
+    "train_control_extra": 400,
+    "train_hard_extra": 400,
+    "val": 200,
+    "test": 200,
+    "train_control": 800,
+    "train_hard": 800
+  },
+  "group_counts": {
+    "train": 100,
+    "val": 50,
+    "test": 50
+  },
+  "recipe": "100 train parent groups per arm; hard groups have complete/blank/omit/marker variants. Control retains 70% complete images and varies order within groups. Compare the whole recipe, not an isolated augmentation effect.",
+  "limitations": [
+    "All images are synthetic and share the v1 drawing engine.",
+    "200 evaluation images represent 50 correlated groups, not 200 independent devices.",
+    "Only integer V/W labels are supported; values are fictional.",
+    "Final test predictions must wait until checkpoint selection is frozen."
+  ],
+  "generator_sha256": "d00f42ab598538e8f44da6762ef0be2389b80b996c904c1876a605ccd5aaafc2",
+  "renderer_sha256": "c55e4c50b4c591ac9b3cdf6be0439e5e3855ee70d800a4bc75d4a5dcc36ada60",
+  "original_train_sha256": "4e2428feeb2d98f4d22ef217e2bb8ccc22aa48b63e0dda6c51507695b212e2f0",
+  "font_sha256": {
+    "/System/Library/Fonts/PingFang.ttc": "8320b6e1abb8e82da13109ae91d74854fd800a320f62f8b5c038a4a3635dacdc",
+    "/System/Library/Fonts/Hiragino Sans GB.ttc": "4b450afb2c61d7529fe05647316e9fc3137ea703a664bded5bca895a5c30748c",
+    "/System/Library/Fonts/STHeiti Light.ttc": "a57b0316cc0544f682b8fb9855e14ade79ae77340ef6a01ba9210e25b4c5a5b7",
+    "/System/Library/Fonts/Supplemental/Songti.ttc": "6873ac2ccab5c2e74d87d6b690f3773098dd6a6238805363a3b3567f2caf6f47",
+    "/System/Library/Fonts/STHeiti Medium.ttc": "f8fa4a63e2cf500e98e64d4c73260daaba049306cf85dec9e3729bc285b7d645",
+    "/System/Library/Fonts/Supplemental/Arial Unicode.ttf": "876af2cd4854644e7f3e7feb2f688997fdb3343c6df6693611209c9dfb47ccec"
+  },
+  "files_sha256": {
+    "dataset_info.json": "3fd1c217a58922bddb67e4f59187e2a0a5f4407a991cf38e85a2638a77247f09",
+    "metadata.jsonl": "c698cdd16c3bf9cbb6d4d9c830b084f3b41319e2c8be585c105d203c6dbe1a7a",
+    "test.json": "65981723f429ed1d91b7b5b5db976ceb89eae48379afa12504b43ba0a8dccea8",
+    "train_control.json": "ca0987b5d81b1464561694a94be630dca9733d1256d6ceb3b243f78d0406227e",
+    "train_control_extra.json": "5a1bcd7c5cdb5a5b9b3efba43cde765556d4001194b86fcc266580fb3d765af1",
+    "train_hard.json": "b98f7a69c661dae6b4ec36ac8dbadf225e2b234ee8235b61e2f3bd466a1271f7",
+    "train_hard_extra.json": "f151cbb0db6e159f89cc55323c65de14364f22705b78832f3f1f209ce0678de0",
+    "val.json": "bf368703cb21cf5f0dddcfb2f12449794db6f86eab019840a96029c23fd1934f"
+  },
+  "missing_distribution": {
+    "control": {
+      "none:none": 280,
+      "功率:omit": 14,
+      "型号:marker": 21,
+      "型号:blank": 5,
+      "电压:blank": 12,
+      "功率:blank": 14,
+      "功率:marker": 12,
+      "电压:marker": 11,
+      "电压:omit": 17,
+      "型号:omit": 14
+    },
+    "hard": {
+      "none:none": 100,
+      "型号:blank": 34,
+      "型号:omit": 34,
+      "型号:marker": 34,
+      "电压:blank": 33,
+      "电压:omit": 33,
+      "电压:marker": 33,
+      "功率:blank": 33,
+      "功率:omit": 33,
+      "功率:marker": 33
+    },
+    "evaluation": {
+      "none:none": 100,
+      "型号:blank": 34,
+      "型号:omit": 34,
+      "型号:marker": 34,
+      "电压:blank": 34,
+      "电压:omit": 34,
+      "电压:marker": 34,
+      "功率:blank": 32,
+      "功率:omit": 32,
+      "功率:marker": 32
+    }
+  }
+}

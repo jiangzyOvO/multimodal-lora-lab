@@ -1,0 +1,107 @@
+{
+  "kind": "synthetic_equipment_nameplates",
+  "version": 1,
+  "seed": 20261009,
+  "image_size": [
+    672,
+    448
+  ],
+  "pillow": "11.3.0",
+  "prompt": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。",
+  "splits": {
+    "train": {
+      "count": 400,
+      "templates": {
+        "T04": 50,
+        "T08": 50,
+        "T05": 50,
+        "T03": 50,
+        "T07": 50,
+        "T02": 50,
+        "T01": 50,
+        "T06": 50
+      },
+      "missing_fields": {
+        "功率": 40,
+        "none": 280,
+        "电压": 40,
+        "型号": 40
+      },
+      "missing_modes": {
+        "marker": 45,
+        "none": 280,
+        "omit": 38,
+        "blank": 37
+      },
+      "fonts": {
+        "Hiragino Sans GB": 100,
+        "Songti": 100,
+        "PingFang": 100,
+        "STHeiti Light": 100
+      }
+    },
+    "val": {
+      "count": 100,
+      "templates": {
+        "V02": 50,
+        "V01": 50
+      },
+      "missing_fields": {
+        "none": 70,
+        "功率": 10,
+        "型号": 10,
+        "电压": 10
+      },
+      "missing_modes": {
+        "none": 70,
+        "blank": 9,
+        "omit": 16,
+        "marker": 5
+      },
+      "fonts": {
+        "STHeiti Light": 25,
+        "Hiragino Sans GB": 25,
+        "Songti": 25,
+        "PingFang": 25
+      }
+    },
+    "test": {
+      "count": 100,
+      "templates": {
+        "E01": 50,
+        "E02": 50
+      },
+      "missing_fields": {
+        "none": 70,
+        "功率": 10,
+        "型号": 10,
+        "电压": 10
+      },
+      "missing_modes": {
+        "none": 70,
+        "marker": 14,
+        "omit": 6,
+        "blank": 10
+      },
+      "fonts": {
+        "Hiragino Sans GB": 25,
+        "PingFang": 25,
+        "Songti": 25,
+        "STHeiti Light": 25
+      }
+    }
+  },
+  "generator_sha256": "c55e4c50b4c591ac9b3cdf6be0439e5e3855ee70d800a4bc75d4a5dcc36ada60",
+  "font_sha256": {
+    "/System/Library/Fonts/PingFang.ttc": "8320b6e1abb8e82da13109ae91d74854fd800a320f62f8b5c038a4a3635dacdc",
+    "/System/Library/Fonts/Hiragino Sans GB.ttc": "4b450afb2c61d7529fe05647316e9fc3137ea703a664bded5bca895a5c30748c",
+    "/System/Library/Fonts/STHeiti Light.ttc": "a57b0316cc0544f682b8fb9855e14ade79ae77340ef6a01ba9210e25b4c5a5b7",
+    "/System/Library/Fonts/Supplemental/Songti.ttc": "6873ac2ccab5c2e74d87d6b690f3773098dd6a6238805363a3b3567f2caf6f47"
+  },
+  "files_sha256": {
+    "metadata.jsonl": "b09aae182daf56593e99549c6a2ce489031235c7736eecd7c2e76fff56c59e77",
+    "test.json": "7a71c4fc13e9fee47ab68773c6a4ecf2721accad079621e6eceddb52243b4b51",
+    "train.json": "4e2428feeb2d98f4d22ef217e2bb8ccc22aa48b63e0dda6c51507695b212e2f0",
+    "val.json": "1e69e81b3e09023972ea0dab835f61f11537c2cebb3417fcaf15ffb8aa7b2d2e"
+  }
+}

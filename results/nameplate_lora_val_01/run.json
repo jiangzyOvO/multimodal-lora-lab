@@ -1,0 +1,28 @@
+{
+  "started_at": "2026-10-09T15:31:53.192372+00:00",
+  "split": "val",
+  "sample_count": 100,
+  "dataset_sha256": "1e69e81b3e09023972ea0dab835f61f11537c2cebb3417fcaf15ffb8aa7b2d2e",
+  "evaluator_sha256": "94118f258c867188f5082a3bae451bdcd0d72939c5faddcd50f54a61a56f2a4a",
+  "seed": 42,
+  "config": {
+    "model_name_or_path": "models/Qwen2-VL-2B-Instruct",
+    "template": "qwen2_vl",
+    "infer_dtype": "bfloat16",
+    "infer_backend": "huggingface",
+    "flash_attn": "disabled",
+    "trust_remote_code": false,
+    "image_max_pixels": 301056,
+    "image_min_pixels": 3136,
+    "do_sample": false,
+    "max_new_tokens": 128,
+    "adapter_name_or_path": "outputs/nameplate_lora_01"
+  },
+  "diagnostic_rule": "仅移除包住整段回答的代码围栏；不修改字段或数值",
+  "devices": [
+    "mps:0"
+  ],
+  "dtypes": [
+    "torch.bfloat16"
+  ]
+}

@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "scripts/generate_nameplates.py", line 216, in <module>
+    main()
+  File "scripts/generate_nameplates.py", line 180, in main
+    spec["rendered_text"] = render(spec, image_path)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "scripts/generate_nameplates.py", line 121, in render
+    put_text(draw, spec["display_values"][field], value_box, spec["font"], 33, ink, annotations, "value", field, not horizontal)
+  File "scripts/generate_nameplates.py", line 82, in put_text
+    assert x1 <= actual_box[0] and y1 <= actual_box[1] and actual_box[2] <= x2 and actual_box[3] <= y2
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

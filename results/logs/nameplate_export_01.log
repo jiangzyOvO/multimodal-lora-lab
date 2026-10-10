@@ -1,0 +1,392 @@
+[INFO|hub.py:421] 2026-10-10 00:27:37,551 >> Offline mode: forcing local_files_only=True
+[INFO|tokenization_utils_base.py:1950] 2026-10-10 00:27:37,553 >> Offline mode: forcing local_files_only=True
+[INFO|tokenization_utils_base.py:2109] 2026-10-10 00:27:37,554 >> loading file vocab.json
+[INFO|tokenization_utils_base.py:2109] 2026-10-10 00:27:37,554 >> loading file merges.txt
+[INFO|tokenization_utils_base.py:2109] 2026-10-10 00:27:37,554 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2109] 2026-10-10 00:27:37,554 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2109] 2026-10-10 00:27:37,554 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2109] 2026-10-10 00:27:37,554 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2109] 2026-10-10 00:27:37,554 >> loading file chat_template.jinja
+[INFO|tokenization_utils_base.py:2380] 2026-10-10 00:27:37,672 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|hub.py:421] 2026-10-10 00:27:37,672 >> Offline mode: forcing local_files_only=True
+[INFO|hub.py:421] 2026-10-10 00:27:37,672 >> Offline mode: forcing local_files_only=True
+[INFO|image_processing_base.py:316] 2026-10-10 00:27:37,672 >> Offline mode: forcing local_files_only=True
+[INFO|image_processing_base.py:381] 2026-10-10 00:27:37,672 >> loading configuration file models/Qwen2-VL-2B-Instruct/preprocessor_config.json
+[INFO|image_processing_base.py:316] 2026-10-10 00:27:37,674 >> Offline mode: forcing local_files_only=True
+[INFO|image_processing_base.py:381] 2026-10-10 00:27:37,674 >> loading configuration file models/Qwen2-VL-2B-Instruct/preprocessor_config.json
+[INFO|image_processing_base.py:428] 2026-10-10 00:27:37,677 >> Image processor Qwen2VLImageProcessorFast {
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "disable_grouping": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_pad": null,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessorFast",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "pad_size": null,
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_tensors": null,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "temporal_patch_size": 2
+}
+
+[INFO|tokenization_utils_base.py:1950] 2026-10-10 00:27:37,677 >> Offline mode: forcing local_files_only=True
+[INFO|tokenization_utils_base.py:2109] 2026-10-10 00:27:37,677 >> loading file vocab.json
+[INFO|tokenization_utils_base.py:2109] 2026-10-10 00:27:37,677 >> loading file merges.txt
+[INFO|tokenization_utils_base.py:2109] 2026-10-10 00:27:37,677 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2109] 2026-10-10 00:27:37,677 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2109] 2026-10-10 00:27:37,677 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2109] 2026-10-10 00:27:37,677 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2109] 2026-10-10 00:27:37,677 >> loading file chat_template.jinja
+[INFO|tokenization_utils_base.py:2380] 2026-10-10 00:27:37,779 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|video_processing_utils.py:660] 2026-10-10 00:27:37,779 >> Offline mode: forcing local_files_only=True
+[INFO|video_processing_utils.py:724] 2026-10-10 00:27:37,779 >> loading configuration file models/Qwen2-VL-2B-Instruct/preprocessor_config.json
+[INFO|video_processing_utils.py:770] 2026-10-10 00:27:37,782 >> Video processor Qwen2VLVideoProcessor {
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "do_sample_frames": false,
+  "fps": null,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_frames": 768,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_frames": 4,
+  "min_pixels": 3136,
+  "num_frames": null,
+  "pad_size": null,
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_metadata": false,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "temporal_patch_size": 2,
+  "video_metadata": null,
+  "video_processor_type": "Qwen2VLVideoProcessor"
+}
+
+[INFO|processing_utils.py:928] 2026-10-10 00:27:37,782 >> Offline mode: forcing local_files_only=True
+[INFO|processing_utils.py:1114] 2026-10-10 00:27:37,782 >> loading configuration file None
+[INFO|processing_utils.py:1199] 2026-10-10 00:27:37,945 >> Processor Qwen2VLProcessor:
+- image_processor: Qwen2VLImageProcessorFast {
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "disable_grouping": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_pad": null,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessorFast",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "pad_size": null,
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_tensors": null,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "temporal_patch_size": 2
+}
+
+- tokenizer: Qwen2TokenizerFast(name_or_path='models/Qwen2-VL-2B-Instruct', vocab_size=151643, model_max_length=32768, is_fast=True, padding_side='left', truncation_side='right', special_tokens={'eos_token': '<|im_end|>', 'pad_token': '<|endoftext|>', 'additional_special_tokens': ['<|im_start|>', '<|im_end|>', '<|object_ref_start|>', '<|object_ref_end|>', '<|box_start|>', '<|box_end|>', '<|quad_start|>', '<|quad_end|>', '<|vision_start|>', '<|vision_end|>', '<|vision_pad|>', '<|image_pad|>', '<|video_pad|>']}, clean_up_tokenization_spaces=False, added_tokens_decoder={
+	151643: AddedToken("<|endoftext|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151644: AddedToken("<|im_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151645: AddedToken("<|im_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151646: AddedToken("<|object_ref_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151647: AddedToken("<|object_ref_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151648: AddedToken("<|box_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151649: AddedToken("<|box_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151650: AddedToken("<|quad_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151651: AddedToken("<|quad_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151652: AddedToken("<|vision_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151653: AddedToken("<|vision_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151654: AddedToken("<|vision_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151655: AddedToken("<|image_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151656: AddedToken("<|video_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+}
+)
+- video_processor: Qwen2VLVideoProcessor {
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "do_sample_frames": false,
+  "fps": null,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_frames": 768,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_frames": 4,
+  "min_pixels": 3136,
+  "num_frames": null,
+  "pad_size": null,
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_metadata": false,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "temporal_patch_size": 2,
+  "video_metadata": null,
+  "video_processor_type": "Qwen2VLVideoProcessor"
+}
+
+
+{
+  "processor_class": "Qwen2VLProcessor"
+}
+
+[INFO|hub.py:421] 2026-10-10 00:27:37,949 >> Offline mode: forcing local_files_only=True
+[INFO|configuration_utils.py:763] 2026-10-10 00:27:37,949 >> loading configuration file models/Qwen2-VL-2B-Instruct/config.json
+[INFO|configuration_utils.py:839] 2026-10-10 00:27:37,951 >> Model config Qwen2VLConfig {
+  "architectures": [
+    "Qwen2VLForConditionalGeneration"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "bfloat16",
+  "eos_token_id": 151645,
+  "hidden_act": "silu",
+  "hidden_size": 1536,
+  "image_token_id": 151655,
+  "initializer_range": 0.02,
+  "intermediate_size": 8960,
+  "max_position_embeddings": 32768,
+  "max_window_layers": 28,
+  "model_type": "qwen2_vl",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 2,
+  "rms_norm_eps": 1e-06,
+  "rope_scaling": {
+    "mrope_section": [
+      16,
+      24,
+      24
+    ],
+    "rope_type": "default",
+    "type": "default"
+  },
+  "rope_theta": 1000000.0,
+  "sliding_window": 32768,
+  "text_config": {
+    "architectures": [
+      "Qwen2VLForConditionalGeneration"
+    ],
+    "attention_dropout": 0.0,
+    "bos_token_id": 151643,
+    "dtype": "bfloat16",
+    "eos_token_id": 151645,
+    "hidden_act": "silu",
+    "hidden_size": 1536,
+    "initializer_range": 0.02,
+    "intermediate_size": 8960,
+    "layer_types": [
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention"
+    ],
+    "max_position_embeddings": 32768,
+    "max_window_layers": 28,
+    "model_type": "qwen2_vl_text",
+    "num_attention_heads": 12,
+    "num_hidden_layers": 28,
+    "num_key_value_heads": 2,
+    "rms_norm_eps": 1e-06,
+    "rope_scaling": {
+      "mrope_section": [
+        16,
+        24,
+        24
+      ],
+      "rope_type": "default",
+      "type": "default"
+    },
+    "rope_theta": 1000000.0,
+    "sliding_window": null,
+    "tie_word_embeddings": true,
+    "use_cache": true,
+    "use_sliding_window": false,
+    "vision_token_id": 151654,
+    "vocab_size": 151936
+  },
+  "transformers_version": "4.57.6",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "video_token_id": 151656,
+  "vision_config": {
+    "depth": 32,
+    "embed_dim": 1280,
+    "hidden_act": "quick_gelu",
+    "hidden_size": 1536,
+    "in_channels": 3,
+    "in_chans": 3,
+    "initializer_range": 0.02,
+    "mlp_ratio": 4,
+    "model_type": "qwen2_vl",
+    "num_heads": 16,
+    "patch_size": 14,
+    "spatial_merge_size": 2,
+    "spatial_patch_size": 14,
+    "temporal_patch_size": 2
+  },
+  "vision_end_token_id": 151653,
+  "vision_start_token_id": 151652,
+  "vision_token_id": 151654,
+  "vocab_size": 151936
+}
+
+[INFO|2026-10-10 00:27:37] llamafactory.model.model_utils.kv_cache:144 >> KV cache is enabled for faster generation.
+[WARNING|logging.py:328] 2026-10-10 00:27:37,998 >> `torch_dtype` is deprecated! Use `dtype` instead!
+[INFO|modeling_utils.py:4837] 2026-10-10 00:27:37,998 >> Offline mode: forcing local_files_only=True
+[INFO|modeling_utils.py:1169] 2026-10-10 00:27:37,998 >> loading weights file models/Qwen2-VL-2B-Instruct/model.safetensors.index.json
+[INFO|modeling_utils.py:1243] 2026-10-10 00:27:37,999 >> Will use dtype=torch.bfloat16 as defined in model's config object
+[INFO|modeling_utils.py:2341] 2026-10-10 00:27:37,999 >> Instantiating Qwen2VLForConditionalGeneration model under default dtype torch.bfloat16.
+[INFO|configuration_utils.py:986] 2026-10-10 00:27:38,000 >> Generate config GenerationConfig {
+  "bos_token_id": 151643,
+  "eos_token_id": 151645
+}
+
+[INFO|modeling_utils.py:2341] 2026-10-10 00:27:38,009 >> Instantiating Qwen2VLTextModel model under default dtype torch.bfloat16.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:11<00:11, 11.58s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  5.24s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  6.19s/it]
+[INFO|configuration_utils.py:939] 2026-10-10 00:27:50,439 >> loading configuration file models/Qwen2-VL-2B-Instruct/generation_config.json
+[INFO|configuration_utils.py:986] 2026-10-10 00:27:50,440 >> Generate config GenerationConfig {
+  "bos_token_id": 151643,
+  "do_sample": true,
+  "eos_token_id": [
+    151645,
+    151643
+  ],
+  "pad_token_id": 151643,
+  "temperature": 0.01,
+  "top_k": 1,
+  "top_p": 0.001
+}
+
+[INFO|dynamic_module_utils.py:423] 2026-10-10 00:27:50,441 >> Could not locate the custom_generate/generate.py inside models/Qwen2-VL-2B-Instruct.
+[INFO|2026-10-10 00:27:50] llamafactory.model.model_utils.attention:144 >> Using vanilla attention implementation.
+[INFO|2026-10-10 00:27:50] llamafactory.model.adapter:144 >> Merged 1 adapter(s).
+[INFO|2026-10-10 00:27:50] llamafactory.model.adapter:144 >> Loaded adapter(s): outputs/nameplate_lora_01
+[INFO|2026-10-10 00:27:50] llamafactory.model.loader:144 >> all params: 2,208,985,600
+[WARNING|logging.py:328] 2026-10-10 00:27:50,891 >> `torch_dtype` is deprecated! Use `dtype` instead!
+[INFO|2026-10-10 00:27:50] llamafactory.train.tuner:144 >> Convert model dtype to: torch.bfloat16.
+[INFO|configuration_utils.py:491] 2026-10-10 00:27:50,903 >> Configuration saved in outputs/nameplate_merged_01/config.json
+[INFO|configuration_utils.py:757] 2026-10-10 00:27:50,903 >> Configuration saved in outputs/nameplate_merged_01/generation_config.json
+[INFO|modeling_utils.py:4189] 2026-10-10 00:27:57,802 >> The model is bigger than the maximum size per checkpoint (2GB) and is going to be split in 3 checkpoint shards. You can find where each parameters has been saved in the index located at outputs/nameplate_merged_01/model.safetensors.index.json.
+[INFO|tokenization_utils_base.py:2561] 2026-10-10 00:27:57,808 >> chat template saved in outputs/nameplate_merged_01/chat_template.jinja
+[INFO|tokenization_utils_base.py:2730] 2026-10-10 00:27:57,809 >> tokenizer config file saved in outputs/nameplate_merged_01/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2739] 2026-10-10 00:27:57,809 >> Special tokens file saved in outputs/nameplate_merged_01/special_tokens_map.json
+[INFO|image_processing_base.py:253] 2026-10-10 00:27:57,924 >> Image processor saved in outputs/nameplate_merged_01/preprocessor_config.json
+[INFO|tokenization_utils_base.py:2561] 2026-10-10 00:27:57,924 >> chat template saved in outputs/nameplate_merged_01/chat_template.jinja
+[INFO|tokenization_utils_base.py:2730] 2026-10-10 00:27:57,924 >> tokenizer config file saved in outputs/nameplate_merged_01/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2739] 2026-10-10 00:27:57,924 >> Special tokens file saved in outputs/nameplate_merged_01/special_tokens_map.json
+[INFO|video_processing_utils.py:600] 2026-10-10 00:27:57,992 >> Video processor saved in outputs/nameplate_merged_01/video_preprocessor_config.json
+[INFO|processing_utils.py:814] 2026-10-10 00:27:57,992 >> chat template saved in outputs/nameplate_merged_01/chat_template.jinja
+[INFO|2026-10-10 00:27:58] llamafactory.train.tuner:144 >> Ollama modelfile saved in outputs/nameplate_merged_01/Modelfile

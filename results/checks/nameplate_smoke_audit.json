@@ -1,0 +1,24 @@
+{
+  "trainable_parameters": 544768,
+  "trainable_tensors": 112,
+  "all_trainable_are_language_lora": true,
+  "parameter_dtypes": [
+    "torch.bfloat16",
+    "torch.float32"
+  ],
+  "parameter_devices": [
+    "mps:0"
+  ],
+  "precision": "bf16",
+  "steps": [
+    {
+      "step": 1,
+      "mps_allocated_gib": 4.158,
+      "mps_driver_gib": 8.297
+    }
+  ],
+  "completed_steps": 1,
+  "changed_tensors": 56,
+  "max_parameter_change": 9.99999901978299e-05,
+  "all_adapter_values_finite": true
+}

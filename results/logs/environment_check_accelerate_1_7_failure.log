@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "scripts/check_environment.py", line 21, in <module>
+    accelerator = Accelerator(mixed_precision="fp16")
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/accelerate/accelerator.py", line 547, in __init__
+    raise ValueError(f"fp16 mixed precision requires a GPU (not {self.device.type!r}).")
+ValueError: fp16 mixed precision requires a GPU (not 'mps').

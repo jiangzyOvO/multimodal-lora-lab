@@ -1,0 +1,510 @@
+[INFO|2026-10-09 19:23:34] llamafactory.hparams.parser:523 >> Process rank: 0, world size: 1, device: mps, distributed training: False, compute dtype: torch.float16
+[INFO|hub.py:421] 2026-10-09 19:23:34,363 >> Offline mode: forcing local_files_only=True
+[INFO|tokenization_utils_base.py:1950] 2026-10-09 19:23:34,366 >> Offline mode: forcing local_files_only=True
+[INFO|tokenization_utils_base.py:2109] 2026-10-09 19:23:34,366 >> loading file vocab.json
+[INFO|tokenization_utils_base.py:2109] 2026-10-09 19:23:34,366 >> loading file merges.txt
+[INFO|tokenization_utils_base.py:2109] 2026-10-09 19:23:34,366 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2109] 2026-10-09 19:23:34,366 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2109] 2026-10-09 19:23:34,366 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2109] 2026-10-09 19:23:34,366 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2109] 2026-10-09 19:23:34,366 >> loading file chat_template.jinja
+[INFO|tokenization_utils_base.py:2380] 2026-10-09 19:23:34,510 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|hub.py:421] 2026-10-09 19:23:34,510 >> Offline mode: forcing local_files_only=True
+[INFO|hub.py:421] 2026-10-09 19:23:34,510 >> Offline mode: forcing local_files_only=True
+[INFO|image_processing_base.py:316] 2026-10-09 19:23:34,510 >> Offline mode: forcing local_files_only=True
+[INFO|image_processing_base.py:381] 2026-10-09 19:23:34,510 >> loading configuration file models/Qwen2-VL-2B-Instruct/preprocessor_config.json
+[INFO|image_processing_base.py:316] 2026-10-09 19:23:34,512 >> Offline mode: forcing local_files_only=True
+[INFO|image_processing_base.py:381] 2026-10-09 19:23:34,512 >> loading configuration file models/Qwen2-VL-2B-Instruct/preprocessor_config.json
+[INFO|image_processing_base.py:428] 2026-10-09 19:23:34,515 >> Image processor Qwen2VLImageProcessorFast {
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "disable_grouping": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_pad": null,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessorFast",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "pad_size": null,
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_tensors": null,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "temporal_patch_size": 2
+}
+
+[INFO|tokenization_utils_base.py:1950] 2026-10-09 19:23:34,515 >> Offline mode: forcing local_files_only=True
+[INFO|tokenization_utils_base.py:2109] 2026-10-09 19:23:34,515 >> loading file vocab.json
+[INFO|tokenization_utils_base.py:2109] 2026-10-09 19:23:34,515 >> loading file merges.txt
+[INFO|tokenization_utils_base.py:2109] 2026-10-09 19:23:34,515 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2109] 2026-10-09 19:23:34,515 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2109] 2026-10-09 19:23:34,515 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2109] 2026-10-09 19:23:34,515 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2109] 2026-10-09 19:23:34,515 >> loading file chat_template.jinja
+[INFO|tokenization_utils_base.py:2380] 2026-10-09 19:23:34,661 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|video_processing_utils.py:660] 2026-10-09 19:23:34,661 >> Offline mode: forcing local_files_only=True
+[INFO|video_processing_utils.py:724] 2026-10-09 19:23:34,661 >> loading configuration file models/Qwen2-VL-2B-Instruct/preprocessor_config.json
+[INFO|video_processing_utils.py:770] 2026-10-09 19:23:34,665 >> Video processor Qwen2VLVideoProcessor {
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "do_sample_frames": false,
+  "fps": null,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_frames": 768,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_frames": 4,
+  "min_pixels": 3136,
+  "num_frames": null,
+  "pad_size": null,
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_metadata": false,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "temporal_patch_size": 2,
+  "video_metadata": null,
+  "video_processor_type": "Qwen2VLVideoProcessor"
+}
+
+[INFO|processing_utils.py:928] 2026-10-09 19:23:34,665 >> Offline mode: forcing local_files_only=True
+[INFO|processing_utils.py:1114] 2026-10-09 19:23:34,665 >> loading configuration file None
+[INFO|processing_utils.py:1199] 2026-10-09 19:23:34,906 >> Processor Qwen2VLProcessor:
+- image_processor: Qwen2VLImageProcessorFast {
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "disable_grouping": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_pad": null,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessorFast",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "pad_size": null,
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_tensors": null,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "temporal_patch_size": 2
+}
+
+- tokenizer: Qwen2TokenizerFast(name_or_path='models/Qwen2-VL-2B-Instruct', vocab_size=151643, model_max_length=32768, is_fast=True, padding_side='left', truncation_side='right', special_tokens={'eos_token': '<|im_end|>', 'pad_token': '<|endoftext|>', 'additional_special_tokens': ['<|im_start|>', '<|im_end|>', '<|object_ref_start|>', '<|object_ref_end|>', '<|box_start|>', '<|box_end|>', '<|quad_start|>', '<|quad_end|>', '<|vision_start|>', '<|vision_end|>', '<|vision_pad|>', '<|image_pad|>', '<|video_pad|>']}, clean_up_tokenization_spaces=False, added_tokens_decoder={
+	151643: AddedToken("<|endoftext|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151644: AddedToken("<|im_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151645: AddedToken("<|im_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151646: AddedToken("<|object_ref_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151647: AddedToken("<|object_ref_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151648: AddedToken("<|box_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151649: AddedToken("<|box_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151650: AddedToken("<|quad_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151651: AddedToken("<|quad_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151652: AddedToken("<|vision_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151653: AddedToken("<|vision_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151654: AddedToken("<|vision_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151655: AddedToken("<|image_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151656: AddedToken("<|video_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+}
+)
+- video_processor: Qwen2VLVideoProcessor {
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "do_sample_frames": false,
+  "fps": null,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_frames": 768,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_frames": 4,
+  "min_pixels": 3136,
+  "num_frames": null,
+  "pad_size": null,
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_metadata": false,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "temporal_patch_size": 2,
+  "video_metadata": null,
+  "video_processor_type": "Qwen2VLVideoProcessor"
+}
+
+
+{
+  "processor_class": "Qwen2VLProcessor"
+}
+
+[INFO|2026-10-09 19:23:34] llamafactory.data.loader:144 >> Loading dataset demo_train.json...
+Converting format of dataset:   0%|          | 0/4 [00:00<?, ? examples/s]Converting format of dataset: 100%|██████████| 4/4 [00:00<00:00, 752.04 examples/s]
+[INFO|2026-10-09 19:23:34] llamafactory.data.loader:144 >> Loading dataset demo_holdout.json...
+Converting format of dataset:   0%|          | 0/2 [00:00<?, ? examples/s]Converting format of dataset: 100%|██████████| 2/2 [00:00<00:00, 1203.36 examples/s]
+Running tokenizer on dataset:   0%|          | 0/4 [00:00<?, ? examples/s]Running tokenizer on dataset: 100%|██████████| 4/4 [00:00<00:00, 201.76 examples/s]
+training example:
+input_ids:
+[151644, 8948, 198, 2610, 525, 264, 10950, 17847, 13, 151645, 198, 151644, 872, 198, 151652, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151653, 15191, 525, 807, 30, 151645, 198, 151644, 77091, 198, 6865, 2299, 45556, 323, 87552, 89, 4554, 504, 55591, 46204, 13, 151645, 198, 151644, 872, 198, 3838, 525, 807, 3730, 30, 151652, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151653, 151645, 198, 151644, 77091, 198, 6865, 525, 31589, 389, 279, 22174, 2070, 13, 151645, 198]
+inputs:
+<|im_start|>system
+You are a helpful assistant.<|im_end|>
+<|im_start|>user
+<|vision_start|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|vision_end|>Who are they?<|im_end|>
+<|im_start|>assistant
+They're Kane and Gretzka from Bayern Munich.<|im_end|>
+<|im_start|>user
+What are they doing?<|vision_start|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|vision_end|><|im_end|>
+<|im_start|>assistant
+They are celebrating on the soccer field.<|im_end|>
+
+label_ids:
+[-100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, 6865, 2299, 45556, 323, 87552, 89, 4554, 504, 55591, 46204, 13, 151645, 198, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, 6865, 525, 31589, 389, 279, 22174, 2070, 13, 151645, 198]
+labels:
+They're Kane and Gretzka from Bayern Munich.<|im_end|>
+They are celebrating on the soccer field.<|im_end|>
+
+Running tokenizer on dataset:   0%|          | 0/2 [00:00<?, ? examples/s]Running tokenizer on dataset: 100%|██████████| 2/2 [00:00<00:00, 275.03 examples/s]
+eval example:
+input_ids:
+[151644, 8948, 198, 2610, 525, 264, 10950, 17847, 13, 151645, 198, 151644, 872, 198, 151652, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151653, 5501, 7512, 419, 2168, 151645, 198, 151644, 77091, 198, 44923, 46633, 49998, 14101, 713, 3441, 374, 7086, 264, 8806, 13, 151645, 198, 151644, 872, 198, 3838, 702, 566, 26237, 30, 151645, 198, 151644, 77091, 198, 1519, 572, 20822, 311, 387, 264, 7729, 23753, 389, 1417, 16597, 18166, 220, 16, 21, 8954, 304, 5534, 220, 17, 15, 17, 17, 11, 8450, 10454, 279, 1156, 8453, 28928, 315, 5737, 220, 18, 304, 3550, 389, 220, 18, 15, 3217, 220, 17, 15, 17, 18, 13, 1260, 374, 8480, 369, 279, 389, 26511, 4489, 5666, 315, 3550, 8038, 22000, 89523, 13, 151645, 198]
+inputs:
+<|im_start|>system
+You are a helpful assistant.<|im_end|>
+<|im_start|>user
+<|vision_start|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|vision_end|>Please describe this image<|im_end|>
+<|im_start|>assistant
+Chinese astronaut Gui Haichao is giving a speech.<|im_end|>
+<|im_start|>user
+What has he accomplished?<|im_end|>
+<|im_start|>assistant
+He was appointed to be a payload specialist on Shenzhou 16 mission in June 2022, thus becoming the first Chinese civilian of Group 3 in space on 30 May 2023. He is responsible for the on-orbit operation of space science experimental payloads.<|im_end|>
+
+label_ids:
+[-100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, 44923, 46633, 49998, 14101, 713, 3441, 374, 7086, 264, 8806, 13, 151645, 198, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, 1519, 572, 20822, 311, 387, 264, 7729, 23753, 389, 1417, 16597, 18166, 220, 16, 21, 8954, 304, 5534, 220, 17, 15, 17, 17, 11, 8450, 10454, 279, 1156, 8453, 28928, 315, 5737, 220, 18, 304, 3550, 389, 220, 18, 15, 3217, 220, 17, 15, 17, 18, 13, 1260, 374, 8480, 369, 279, 389, 26511, 4489, 5666, 315, 3550, 8038, 22000, 89523, 13, 151645, 198]
+labels:
+Chinese astronaut Gui Haichao is giving a speech.<|im_end|>
+He was appointed to be a payload specialist on Shenzhou 16 mission in June 2022, thus becoming the first Chinese civilian of Group 3 in space on 30 May 2023. He is responsible for the on-orbit operation of space science experimental payloads.<|im_end|>
+
+[INFO|hub.py:421] 2026-10-09 19:23:35,080 >> Offline mode: forcing local_files_only=True
+[INFO|configuration_utils.py:763] 2026-10-09 19:23:35,080 >> loading configuration file models/Qwen2-VL-2B-Instruct/config.json
+[INFO|configuration_utils.py:839] 2026-10-09 19:23:35,081 >> Model config Qwen2VLConfig {
+  "architectures": [
+    "Qwen2VLForConditionalGeneration"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "bfloat16",
+  "eos_token_id": 151645,
+  "hidden_act": "silu",
+  "hidden_size": 1536,
+  "image_token_id": 151655,
+  "initializer_range": 0.02,
+  "intermediate_size": 8960,
+  "max_position_embeddings": 32768,
+  "max_window_layers": 28,
+  "model_type": "qwen2_vl",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 2,
+  "rms_norm_eps": 1e-06,
+  "rope_scaling": {
+    "mrope_section": [
+      16,
+      24,
+      24
+    ],
+    "rope_type": "default",
+    "type": "default"
+  },
+  "rope_theta": 1000000.0,
+  "sliding_window": 32768,
+  "text_config": {
+    "architectures": [
+      "Qwen2VLForConditionalGeneration"
+    ],
+    "attention_dropout": 0.0,
+    "bos_token_id": 151643,
+    "dtype": "bfloat16",
+    "eos_token_id": 151645,
+    "hidden_act": "silu",
+    "hidden_size": 1536,
+    "initializer_range": 0.02,
+    "intermediate_size": 8960,
+    "layer_types": [
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention"
+    ],
+    "max_position_embeddings": 32768,
+    "max_window_layers": 28,
+    "model_type": "qwen2_vl_text",
+    "num_attention_heads": 12,
+    "num_hidden_layers": 28,
+    "num_key_value_heads": 2,
+    "rms_norm_eps": 1e-06,
+    "rope_scaling": {
+      "mrope_section": [
+        16,
+        24,
+        24
+      ],
+      "rope_type": "default",
+      "type": "default"
+    },
+    "rope_theta": 1000000.0,
+    "sliding_window": null,
+    "tie_word_embeddings": true,
+    "use_cache": true,
+    "use_sliding_window": false,
+    "vision_token_id": 151654,
+    "vocab_size": 151936
+  },
+  "transformers_version": "4.57.6",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "video_token_id": 151656,
+  "vision_config": {
+    "depth": 32,
+    "embed_dim": 1280,
+    "hidden_act": "quick_gelu",
+    "hidden_size": 1536,
+    "in_channels": 3,
+    "in_chans": 3,
+    "initializer_range": 0.02,
+    "mlp_ratio": 4,
+    "model_type": "qwen2_vl",
+    "num_heads": 16,
+    "patch_size": 14,
+    "spatial_merge_size": 2,
+    "spatial_patch_size": 14,
+    "temporal_patch_size": 2
+  },
+  "vision_end_token_id": 151653,
+  "vision_start_token_id": 151652,
+  "vision_token_id": 151654,
+  "vocab_size": 151936
+}
+
+[INFO|2026-10-09 19:23:35] llamafactory.model.model_utils.kv_cache:144 >> KV cache is disabled during training.
+[WARNING|logging.py:328] 2026-10-09 19:23:35,130 >> `torch_dtype` is deprecated! Use `dtype` instead!
+[INFO|modeling_utils.py:4837] 2026-10-09 19:23:35,130 >> Offline mode: forcing local_files_only=True
+[INFO|modeling_utils.py:1169] 2026-10-09 19:23:35,130 >> loading weights file models/Qwen2-VL-2B-Instruct/model.safetensors.index.json
+[INFO|modeling_utils.py:1243] 2026-10-09 19:23:35,131 >> Will use dtype=torch.bfloat16 as defined in model's config object
+[INFO|modeling_utils.py:2341] 2026-10-09 19:23:35,131 >> Instantiating Qwen2VLForConditionalGeneration model under default dtype torch.bfloat16.
+[INFO|configuration_utils.py:986] 2026-10-09 19:23:35,132 >> Generate config GenerationConfig {
+  "bos_token_id": 151643,
+  "eos_token_id": 151645
+}
+
+[INFO|modeling_utils.py:2341] 2026-10-09 19:23:35,138 >> Instantiating Qwen2VLTextModel model under default dtype torch.bfloat16.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:05<00:05,  5.99s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  2.81s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.29s/it]
+[INFO|configuration_utils.py:939] 2026-10-09 19:23:41,838 >> loading configuration file models/Qwen2-VL-2B-Instruct/generation_config.json
+[INFO|configuration_utils.py:986] 2026-10-09 19:23:41,839 >> Generate config GenerationConfig {
+  "bos_token_id": 151643,
+  "do_sample": true,
+  "eos_token_id": [
+    151645,
+    151643
+  ],
+  "pad_token_id": 151643,
+  "temperature": 0.01,
+  "top_k": 1,
+  "top_p": 0.001
+}
+
+[INFO|dynamic_module_utils.py:423] 2026-10-09 19:23:41,839 >> Could not locate the custom_generate/generate.py inside models/Qwen2-VL-2B-Instruct.
+[INFO|2026-10-09 19:23:41] llamafactory.model.model_utils.checkpointing:144 >> Gradient checkpointing enabled.
+[INFO|2026-10-09 19:23:41] llamafactory.model.model_utils.attention:144 >> Using vanilla attention implementation.
+[INFO|2026-10-09 19:23:41] llamafactory.model.adapter:144 >> Upcasting trainable params to float32.
+[INFO|2026-10-09 19:23:41] llamafactory.model.adapter:144 >> Fine-tuning method: LoRA
+[INFO|2026-10-09 19:23:41] llamafactory.model.model_utils.visual:144 >> Set vision model not trainable: ['visual.patch_embed', 'visual.blocks'].
+[INFO|2026-10-09 19:23:41] llamafactory.model.model_utils.visual:144 >> Set multi model projector not trainable: ['visual.merger'].
+[INFO|2026-10-09 19:23:42] llamafactory.model.loader:144 >> trainable params: 544,768 || all params: 2,209,530,368 || trainable%: 0.0247
+[INFO|trainer.py:511] 2026-10-09 19:23:42,295 >> You have loaded a model on multiple GPUs. `is_model_parallel` attribute will be force-set to `True` to avoid any unexpected behavior such as device placement mismatching.
+[INFO|trainer.py:699] 2026-10-09 19:23:42,296 >> max_steps is given, it will override any value given in num_train_epochs
+[INFO|trainer.py:749] 2026-10-09 19:23:42,297 >> Using auto half precision backend
+[WARNING|trainer.py:982] 2026-10-09 19:23:42,297 >> The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+[INFO|trainer.py:2519] 2026-10-09 19:23:42,439 >> ***** Running training *****
+[INFO|trainer.py:2520] 2026-10-09 19:23:42,439 >>   Num examples = 4
+[INFO|trainer.py:2521] 2026-10-09 19:23:42,439 >>   Num Epochs = 1
+[INFO|trainer.py:2522] 2026-10-09 19:23:42,439 >>   Instantaneous batch size per device = 1
+[INFO|trainer.py:2525] 2026-10-09 19:23:42,439 >>   Total train batch size (w. parallel, distributed & accumulation) = 1
+[INFO|trainer.py:2526] 2026-10-09 19:23:42,439 >>   Gradient Accumulation steps = 1
+[INFO|trainer.py:2527] 2026-10-09 19:23:42,439 >>   Total optimization steps = 1
+[INFO|trainer.py:2528] 2026-10-09 19:23:42,440 >>   Number of trainable parameters = 544,768
+  0%|          | 0/1 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "scripts/train.py", line 71, in <module>
+    run_exp(config, callbacks=[AuditCallback()])
+  File "LLaMA-Factory/src/llamafactory/train/tuner.py", line 149, in run_exp
+    _training_function(config={"args": args, "callbacks": callbacks})
+  File "LLaMA-Factory/src/llamafactory/train/tuner.py", line 117, in _training_function
+    run_sft(model_args, data_args, training_args, finetuning_args, generating_args, callbacks)
+  File "LLaMA-Factory/src/llamafactory/train/sft/workflow.py", line 121, in run_sft
+    train_result = trainer.train(resume_from_checkpoint=training_args.resume_from_checkpoint)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/transformers/trainer.py", line 2325, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/transformers/trainer.py", line 4020, in training_step
+    loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "LLaMA-Factory/src/llamafactory/train/sft/trainer.py", line 162, in compute_loss
+    return super().compute_loss(model, inputs, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/transformers/trainer.py", line 4110, in compute_loss
+    outputs = model(**inputs)
+              ^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/accelerate/utils/operations.py", line 819, in forward
+    return model_forward(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/accelerate/utils/operations.py", line 807, in __call__
+    return convert_to_fp32(self.model_forward(*args, **kwargs))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/torch/amp/autocast_mode.py", line 44, in decorate_autocast
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/peft/peft_model.py", line 1923, in forward
+    return self.base_model(
+           ^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/peft/tuners/tuners_utils.py", line 311, in forward
+    return self.model.forward(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/transformers/utils/generic.py", line 918, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/transformers/models/qwen2_vl/modeling_qwen2_vl.py", line 1356, in forward
+    outputs = self.model(
+              ^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/transformers/models/qwen2_vl/modeling_qwen2_vl.py", line 1192, in forward
+    inputs_embeds = inputs_embeds.masked_scatter(image_mask, image_embeds)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Unexpected floating ScalarType in at::autocast::prioritize
+  0%|          | 0/1 [00:01<?, ?it/s]

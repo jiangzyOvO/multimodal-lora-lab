@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "scripts/check_environment.py", line 21, in <module>
+    accelerator = Accelerator(mixed_precision="fp16")
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/accelerate/accelerator.py", line 583, in __init__
+    self.scaler = get_grad_scaler(self.distributed_type, **kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.11/site-packages/accelerate/utils/modeling.py", line 2125, in get_grad_scaler
+    raise ValueError("Grad Scaler with MPS device requires a Pytorch >= 2.8.0")
+ValueError: Grad Scaler with MPS device requires a Pytorch >= 2.8.0

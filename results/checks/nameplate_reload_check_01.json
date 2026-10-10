@@ -1,0 +1,114 @@
+{
+  "checked_at": "2026-10-09T23:03:46.123255+00:00",
+  "model_path": "outputs/nameplate_merged_01",
+  "reference_dir": "outputs/nameplate_lora_test_01",
+  "reference_predictions_sha256": "79429f84ee2f2e53a058d2c932ca81c201c22691a5371f517306949e3935cc85",
+  "verifier_sha256": "696aeb60c804b016729be30b8e45a32b2d1f303885638bb027b6dede1b49e731",
+  "config": {
+    "model_name_or_path": "outputs/nameplate_merged_01",
+    "template": "qwen2_vl",
+    "infer_dtype": "bfloat16",
+    "infer_backend": "huggingface",
+    "flash_attn": "disabled",
+    "trust_remote_code": false,
+    "image_max_pixels": 301056,
+    "image_min_pixels": 3136,
+    "do_sample": false,
+    "max_new_tokens": 128
+  },
+  "seed": 42,
+  "devices": [
+    "mps:0"
+  ],
+  "dtypes": [
+    "torch.bfloat16"
+  ],
+  "summary": {
+    "cases_checked": 4,
+    "raw_output_matches": 4,
+    "finish_reason_matches": 4,
+    "all_checks_passed": true
+  },
+  "cases": [
+    {
+      "category": "字段完整且回答正确",
+      "index": 1,
+      "images": [
+        "nameplates_v1/images/53632c400f15da26.png"
+      ],
+      "prompt": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。",
+      "expected": {
+        "型号": "SV-310",
+        "电压": "230V",
+        "功率": "1500W"
+      },
+      "reference_raw_response": "{\"型号\":\"SV-310\",\"电压\":\"230V\",\"功率\":\"1500W\"}",
+      "reloaded_raw_response": "{\"型号\":\"SV-310\",\"电压\":\"230V\",\"功率\":\"1500W\"}",
+      "reference_finish_reason": "stop",
+      "reloaded_finish_reason": "stop",
+      "raw_output_matches": true,
+      "finish_reason_matches": true,
+      "seconds": 5.152
+    },
+    {
+      "category": "含缺失字段且回答正确",
+      "index": 3,
+      "images": [
+        "nameplates_v1/images/6ba28c0dd45a8b52.png"
+      ],
+      "prompt": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。",
+      "expected": {
+        "型号": "QS-146",
+        "电压": "110V",
+        "功率": null
+      },
+      "reference_raw_response": "{\"型号\":\"QS-146\",\"电压\":\"110V\",\"功率\":null}",
+      "reloaded_raw_response": "{\"型号\":\"QS-146\",\"电压\":\"110V\",\"功率\":null}",
+      "reference_finish_reason": "stop",
+      "reloaded_finish_reason": "stop",
+      "raw_output_matches": true,
+      "finish_reason_matches": true,
+      "seconds": 4.169
+    },
+    {
+      "category": "已知缺失字段错误",
+      "index": 12,
+      "images": [
+        "nameplates_v1/images/159636b8d0974227.png"
+      ],
+      "prompt": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。",
+      "expected": {
+        "型号": "CX-236",
+        "电压": null,
+        "功率": "200W"
+      },
+      "reference_raw_response": "{\"型号\":\"CX-236\",\"电压\":\"220V\",\"功率\":\"200W\"}",
+      "reloaded_raw_response": "{\"型号\":\"CX-236\",\"电压\":\"220V\",\"功率\":\"200W\"}",
+      "reference_finish_reason": "stop",
+      "reloaded_finish_reason": "stop",
+      "raw_output_matches": true,
+      "finish_reason_matches": true,
+      "seconds": 4.33
+    },
+    {
+      "category": "已知非缺失字段错误",
+      "index": 19,
+      "images": [
+        "nameplates_v1/images/6b5c69babf72f730.png"
+      ],
+      "prompt": "<image>读取设备铭牌，只输出一个JSON对象，键必须为“型号”“电压”“功率”，不要解释或代码块。型号按图片原样抄录；电压只保留数字和V，去掉AC/DC及空格；功率只保留数字和W，去掉空格。字段未出现、值为空或标为--、N/A时填写null。不要根据其他字段推测缺失值。",
+      "expected": {
+        "型号": "QS-566",
+        "电压": "380V",
+        "功率": "1800W"
+      },
+      "reference_raw_response": "{\"型号\":\"QS-566\",\"电压\":\"1800V\",\"功率\":null}",
+      "reloaded_raw_response": "{\"型号\":\"QS-566\",\"电压\":\"1800V\",\"功率\":null}",
+      "reference_finish_reason": "stop",
+      "reloaded_finish_reason": "stop",
+      "raw_output_matches": true,
+      "finish_reason_matches": true,
+      "seconds": 4.229
+    }
+  ]
+}

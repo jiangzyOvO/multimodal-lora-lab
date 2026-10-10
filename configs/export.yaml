@@ -1,0 +1,10 @@
+model_name_or_path: models/Qwen2-VL-2B-Instruct
+adapter_name_or_path: outputs/qwen2vl_lora_mps
+template: qwen2_vl
+finetuning_type: lora
+trust_remote_code: false
+infer_dtype: bfloat16
+export_dir: outputs/qwen2vl_merged
+export_device: auto
+export_size: 2
+export_legacy_format: false

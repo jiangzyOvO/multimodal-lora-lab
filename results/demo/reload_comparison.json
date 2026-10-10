@@ -1,0 +1,6 @@
+{
+  "cases": 3,
+  "exact_text_matches": 3,
+  "all_match": true,
+  "note": "Fixed three-prompt functional comparison, not a proof of equivalence on all inputs."
+}

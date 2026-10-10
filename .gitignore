@@ -1,0 +1,20 @@
+/.venv/
+/models/
+/outputs/
+__pycache__/
+/LLaMA-Factory/
+/logs/
+/.local-backups/
+.DS_Store
+*.py[cod]
+.env
+.env.*
+*.pem
+*.key
+.cache/
+.pytest_cache/
+
+# The official demo is fetched by scripts/prepare_data.py when needed.
+/data/*
+!/data/dataset_info.json
+!/data/nameplates_v1/

@@ -1,0 +1,13 @@
+model_name_or_path: models/Qwen2-VL-2B-Instruct
+adapter_name_or_path: outputs/nameplate_lora_01
+template: qwen2_vl
+finetuning_type: lora
+trust_remote_code: false
+infer_dtype: bfloat16
+export_dir: outputs/nameplate_merged_01
+export_device: auto
+export_size: 2
+export_legacy_format: false
+image_max_pixels: 301056
+image_min_pixels: 3136
+flash_attn: disabled

@@ -1,0 +1,2 @@
+# Preserve terminal progress output in historical logs.
+results/logs/*.log -whitespace

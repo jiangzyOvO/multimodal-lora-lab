@@ -1,0 +1,119 @@
+{
+  "trainable_parameters": 544768,
+  "trainable_tensors": 112,
+  "all_trainable_are_language_lora": true,
+  "parameter_dtypes": [
+    "torch.bfloat16",
+    "torch.float32"
+  ],
+  "parameter_devices": [
+    "mps:0"
+  ],
+  "precision": "bf16",
+  "steps": [
+    {
+      "step": 1,
+      "mps_allocated_gib": 4.15,
+      "mps_driver_gib": 7.142
+    },
+    {
+      "step": 2,
+      "mps_allocated_gib": 4.15,
+      "mps_driver_gib": 7.166
+    },
+    {
+      "step": 3,
+      "mps_allocated_gib": 4.15,
+      "mps_driver_gib": 7.174
+    },
+    {
+      "step": 4,
+      "mps_allocated_gib": 4.15,
+      "mps_driver_gib": 7.174
+    },
+    {
+      "step": 5,
+      "mps_allocated_gib": 4.15,
+      "mps_driver_gib": 7.174
+    },
+    {
+      "step": 6,
+      "mps_allocated_gib": 4.15,
+      "mps_driver_gib": 7.174
+    },
+    {
+      "step": 7,
+      "mps_allocated_gib": 4.15,
+      "mps_driver_gib": 7.174
+    },
+    {
+      "step": 8,
+      "mps_allocated_gib": 4.15,
+      "mps_driver_gib": 7.174
+    },
+    {
+      "step": 9,
+      "mps_allocated_gib": 4.15,
+      "mps_driver_gib": 7.174
+    },
+    {
+      "step": 10,
+      "mps_allocated_gib": 4.15,
+      "mps_driver_gib": 7.174
+    },
+    {
+      "step": 11,
+      "mps_allocated_gib": 4.15,
+      "mps_driver_gib": 7.174
+    },
+    {
+      "step": 12,
+      "mps_allocated_gib": 4.15,
+      "mps_driver_gib": 7.174
+    },
+    {
+      "step": 13,
+      "mps_allocated_gib": 4.15,
+      "mps_driver_gib": 7.174
+    },
+    {
+      "step": 14,
+      "mps_allocated_gib": 4.15,
+      "mps_driver_gib": 7.174
+    },
+    {
+      "step": 15,
+      "mps_allocated_gib": 4.15,
+      "mps_driver_gib": 7.174
+    },
+    {
+      "step": 16,
+      "mps_allocated_gib": 4.15,
+      "mps_driver_gib": 7.174
+    },
+    {
+      "step": 17,
+      "mps_allocated_gib": 4.15,
+      "mps_driver_gib": 7.174
+    },
+    {
+      "step": 18,
+      "mps_allocated_gib": 4.15,
+      "mps_driver_gib": 7.174
+    },
+    {
+      "step": 19,
+      "mps_allocated_gib": 4.15,
+      "mps_driver_gib": 7.174
+    },
+    {
+      "step": 20,
+      "mps_allocated_gib": 4.15,
+      "mps_driver_gib": 7.174
+    }
+  ],
+  "completed_steps": 20,
+  "changed_tensors": 112,
+  "max_parameter_change": 0.0010161426616832614,
+  "all_adapter_values_finite": true
+}

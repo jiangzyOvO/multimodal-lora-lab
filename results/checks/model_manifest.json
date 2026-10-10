@@ -1,0 +1,20 @@
+{
+  "repo": "Qwen/Qwen2-VL-2B-Instruct",
+  "revision": "895c3a49bc3fa70a340399125c650a463535e71c",
+  "path": "models/Qwen2-VL-2B-Instruct",
+  "files": {
+    "LICENSE": 11343,
+    "tokenizer_config.json": 4190,
+    "chat_template.json": 1050,
+    "model-00001-of-00002.safetensors": 3988609112,
+    "config.json": 1196,
+    "tokenizer.json": 7029741,
+    "generation_config.json": 272,
+    "README.md": 17392,
+    "merges.txt": 1671839,
+    "model-00002-of-00002.safetensors": 429441656,
+    "vocab.json": 2776833,
+    "model.safetensors.index.json": 56411,
+    "preprocessor_config.json": 347
+  }
+}

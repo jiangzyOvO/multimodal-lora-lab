@@ -181,29 +181,109 @@ HF_HUB_OFFLINE=1 TOKENIZERS_PARALLELISM=false \
 
 ## 8. v2 数据与串行实验
 
-[v2 数据说明](../data/nameplates_v2/README.md)列出普通扩充、困难扩充和新评估集合。先运行：
+### 8.1 选择复现目标
+
+|目标|入口|能证明什么|
+|---|---|---|
+|检查已保存的记录|第 2、7 节的数据检查和指标重算|发布数据、指纹和保存评分一致；不是重新推理或训练|
+|复评固定 adapter|第 3 节及下方命令|已发布权重在当前环境的生成表现|
+|从基础模型重新训练 v2|本节独立复现入口|重新执行普通/困难组训练、验证选择和最终评估|
+
+复评两组已发布 adapter 时，完成第 1 节环境与模型准备后运行：
 
 ```bash
-.venv/bin/python -m unittest discover -s tests -v
 .venv/bin/python scripts/verify_nameplates_v2.py
+.venv/bin/python scripts/evaluate_nameplates_v2.py \
+  --dataset-dir data/nameplates_v2 --split test \
+  --adapter artifacts/nameplate_v2_01/control \
+  --output-dir outputs/repro_published_control_test_01
+.venv/bin/python scripts/evaluate_nameplates_v2.py \
+  --dataset-dir data/nameplates_v2 --split test \
+  --adapter artifacts/nameplate_v2_01/hard \
+  --output-dir outputs/repro_published_hard_test_01
 ```
 
-v1 第 50、100 步 checkpoint 使用原评估脚本运行验证集，分别输出到 `outputs/v2_checkpoint50_val_01`、`outputs/v2_checkpoint100_val_01`。第 150 步权重与发布 adapter 哈希一致，复用已保存的验证结果。随后执行：
+### 8.2 独立重训入口
+
+从全新克隆开始执行第 1 节安装与下载。直接使用仓库图片，不需要重新绘图或准备 macOS 字体。以下入口不依赖历史训练目录、v1 第 50/100 步 checkpoint 或合并模型：
 
 ```bash
-.venv/bin/python -u scripts/run_nameplate_v2_experiment.py \
-  --run-dir outputs/v2_experiment_01
+# 预览：只列出命令顺序；不安装依赖、不创建目录，也不代表环境检查通过
+python3 scripts/reproduce_nameplates_v2.py --dry-run
+
+# 检查：验证文件存在、依赖版本、可用 MPS、框架提交和固定模型文件哈希
+.venv/bin/python scripts/reproduce_nameplates_v2.py --check-only
+
+# smoke：数据和 token 检查，一次优化器更新，两条验证集生成
+.venv/bin/python -u scripts/reproduce_nameplates_v2.py \
+  --smoke --run-dir outputs/v2_repro_smoke_01
+
+# 完整运行：两组独立训练，每组 150 次更新
+.venv/bin/python -u scripts/reproduce_nameplates_v2.py \
+  --run-dir outputs/v2_repro_full_01
 ```
 
-队列依次执行：v1/v2 数据检查、合并模型完整 100 条对照、两组原生 token 检查、困难组单步试训、普通组训练与三个 checkpoint 的生成验证、困难组训练与三个 checkpoint 的生成验证、固定选择、四个模型的新测试集评估、两个新模型的旧验证集回归检查。MPS 模型任务逐个启动，前一个进程退出后才运行下一个。
+`--run-dir` 相对仓库根目录解析，必须是 `outputs/` 下尚不存在的子目录。已有目录会被拒绝，不自动续训或覆盖。可以同时指定 `--dry-run --smoke` 预览短流程。`--check-only` 不开始训练或推理；文件内容及图片解码检查由正式执行时的验证阶段完成。
 
-两组配置均从基础模型新建 rank 4 LoRA，seed=42，batch=1，梯度累积 8，最多 150 次优化器更新。800 条训练记录下这对应约 1.5 轮。训练期间每 50 步保存，不额外计算 teacher-forced 验证 loss；各 checkpoint 单独运行 200 条生成验证用于选择。
+预检查失败会列出缺少的环境、文件或版本。缺少环境执行 `bash scripts/setup.sh`；缺少模型执行 `.venv/bin/python scripts/download_model.py`。入口只支持已记录的 MPS 配置，不会静默回退到 CPU。
 
-选择顺序预先固定为：严格全对数最多、缺失字段补值数最少、有值字段置空数最少、步数最少。数据和代码指纹保存在 `protocol.json`，两个所选 adapter 的指纹保存在 `selection.json`；两者均在最终测试推理之前产生。最终测试包含基础模型、旧 adapter、普通扩充模型、困难扩充模型。单个训练种子的结果不包含训练随机性的不确定性。
+完整队列依次执行：v1/v2 数据检查、两组原生 token 检查、困难组单步试训、普通组训练与三个 checkpoint 的生成验证、困难组训练与三个 checkpoint 的生成验证、固定选择、四个模型的新测试集评估、两组的旧验证集回归检查，以及指标复算和父组 bootstrap。
 
-`status.json` 每 30 秒更新当前阶段、子进程和已完成阶段；各阶段原始日志在 `logs/`，逐图预测保存在相应评估目录。出现错误时队列停止并记录失败阶段，不覆盖目录，也不自动恢复部分训练。完整结束后生成 `final_summary.json`，包含分组统计和以 50 个父组为重采样单位的配对 bootstrap 区间。
+两组均从相同基础模型新建 rank 4 LoRA，seed=42，batch=1，梯度累积 8，最多 150 次优化器更新。800 条记录对应约 1.5 轮；每 50 步保存，分别在 200 条验证样本上生成。选择顺序固定为：严格全对数最多、缺失字段补值数最少、有值字段置空数最少、步数最少。两组权重和配置指纹写入 `selection.json` 后，才开始最终测试。
 
-长任务期间保持机器供电和唤醒。请先查看 `status.json`，不要重复启动同一个实验。脚本通过文件锁拒绝同时启动多个 v2 队列。
+测试模型为基础模型、仓库发布的 v1 adapter、本次普通组和困难组所选 adapter。最终测试集为 200 张、50 个父组；统计口径与原实验相同。重新训练得到的分数或浮点结果不要求逐字节等于原实验，应报告实际观察到的结果。
+
+### 8.3 输出和完成标准
+
+|产物|内容|
+|---|---|
+|`plan.json` / `preflight.json`|执行步骤、依赖版本和模型哈希|
+|`configs/`|本次运行配置；输出目录指向本次新训练目录|
+|`protocol.json`|开始前固定的数据、代码、配置指纹和选择规则|
+|`status.json` / `logs/`|模式、阶段、子进程、完成与失败状态；每 30 秒更新运行状态|
+|`train_control/` / `train_hard/`|新训练的 checkpoint、训练审计和曲线|
+|`validation_candidates.json` / `selection.json`|候选指标、选择时间及所选权重指纹|
+|各评估目录|原始预测、运行配置、严格评分与规则后处理指标|
+|`REPORT.md` / `final_summary.json`|完整模式的结果总表、分组统计与配对 bootstrap|
+|`smoke_summary.json`|仅短流程：1 次更新、2 条验证生成；明确不是完整实验|
+
+完整复现的完成条件是 `status.json` 中 `mode=full` 且 `status=completed`，并生成最终报告。smoke 的 `completed` 只表示短流程完成，不能当成准确率测量或两组完整重训通过。
+
+运行中保持供电和唤醒。查看 `status.json` 和当前阶段日志，不要重复启动；新旧 v2 队列共用文件锁。失败会保留现场和失败阶段；处理后使用新目录重跑。普通与困难模型、不同验证阶段都在独立子进程中串行运行。
+
+### 8.4 可选：v1 历史诊断与合并验证
+
+历史脚本 `run_nameplate_v2_experiment.py` 及已发布结果保留原样，以保持原实验指纹。该脚本依赖原机历史目录；新克隆应使用上面的 `reproduce_nameplates_v2.py`。
+
+v1 历史 checkpoint 的预测和对比已保存在 `results/v2_checkpoint50_val_01`、`results/v2_checkpoint100_val_01`、`results/nameplate_lora_val_01` 与 `results/v1_checkpoint_comparison_v2.json`。原第 50/100 步权重不随仓库发布；如需重新训练后比较，先完成第 4 节，再显式评估本次三个 checkpoint：
+
+```bash
+for step in 50 100 150; do
+  .venv/bin/python scripts/evaluate_nameplates.py \
+    --split val --adapter "outputs/repro_lora_01/checkpoint-$step" \
+    --output-dir "outputs/repro_v1_step${step}_val_01"
+done
+```
+
+以上比较属于新训练轨迹，不复用原第 150 步预测来代表新 checkpoint。
+
+若要检查已发布 v1 adapter 的完整合并输出，先完成第 5.1 节导出，再运行：
+
+```bash
+.venv/bin/python scripts/evaluate_nameplates_v2.py \
+  --dataset-dir data/nameplates_v1 --split test \
+  --model outputs/published_nameplate_merged_01 \
+  --reference-dir results/nameplate_lora_test_01 --require-match \
+  --output-dir outputs/repro_published_merged_test_01
+```
+
+该命令检查全部 100 条旧测试记录；它与 v2 两组重训相互独立。出现数值或生成差异时保留报告并调查，不修改历史参考答案或放宽原评分规则。
+
+### 8.5 入口验证范围（2026-10-11）
+
+新增入口已在独立克隆目录中运行 `--smoke`：开始时不存在 `outputs/` 和 `logs/`，仅复用已安装的固定版本环境、框架和模型缓存，没有复用历史训练或评估产物。v1/v2 数据检查、两组 token 检查、1 次优化器更新及 2 条验证集生成均完成；训练审计记录 544,768 个可训练参数、56 个张量发生变化，adapter 数值全部有限。
+
+仓库 28 项单元测试及原历史实验发布校验也通过。测试覆盖无环境预览、输出目录保护、失败停止、验证选择先于测试、所选权重变化检测，以及用已保存预测复算完整报告。此次未重新安装依赖，也未执行两组各 150 步的完整重训；单步试训的两条输出不用于判断模型效果。
 
 ## 9. 真实铭牌采集与标注
 
@@ -222,9 +302,11 @@ v1 第 50、100 步 checkpoint 使用原评估脚本运行验证集，分别输�
 
 首轮先冻结当前模型与提示，对独立真实测试集做迁移评估；如随后据此开发新模型，应另外保留新的最终测试组。报告同时列出纳入数量及 unreadable、ambiguous、out_of_scope 数量，避免仅展示筛选后准确率。
 
-## 10. 完成后的校验与本地归档
+## 10. 原历史队列的校验与本地归档
 
-实验队列状态为 `completed` 后执行：
+本节只适用于原 `run_nameplate_v2_experiment.py` 的完整目录，依赖其中的 v1 合并检查等附加产物。新独立入口在结束前自行复算评分、检查选择顺序及模型指纹，并输出第 8.3 节所列报告；不要将新目录传给历史归档工具。
+
+原历史队列状态为 `completed` 后执行：
 
 ```bash
 .venv/bin/python scripts/publish_nameplate_v2.py --check-only

@@ -83,6 +83,8 @@ LoRA 的 null precision 为 28/29，recall 为 28/30；两条电压空白样本�
 
 ## 使用已训练的 adapter
 
+请先区分三种复现目标：检查保存的记录不运行模型；复评 adapter 会重新生成回答；重新训练则从基础模型开始优化。前两种通过不等于完成重新训练。
+
 已验证环境为 macOS 14.3 / ARM64 / MPS。以下命令在仓库根目录执行，需要 Git、[uv](https://docs.astral.sh/uv/getting-started/installation/) 和可用的 MPS 设备。
 
 ```bash
@@ -112,6 +114,25 @@ bash scripts/setup.sh
 普通组 adapter 位于 `artifacts/nameplate_v2_01/control`，两组各约 2.2 MB。评估输出目录需尚不存在；复评不需要重新训练。
 
 从数据检查、基线到训练、评估、合并的逐步命令见 [复现说明](docs/REPRODUCING.md)。脚本的默认配置中也保留了早期官方 demo；铭牌训练须显式传入 `--config configs/train_nameplates_mps.yaml`。
+
+## 从干净仓库重新训练 v2
+
+完成上述安装和模型下载后，使用独立复现入口。它只依赖仓库发布的数据、v1 adapter 和固定基础模型，无需任何历史 `outputs/`、v1 训练 checkpoint 或合并模型。
+
+```bash
+# 只预览执行顺序；无需安装训练环境，不创建输出
+python3 scripts/reproduce_nameplates_v2.py --dry-run
+# 检查依赖、MPS、框架版本和模型指纹；不加载模型权重到设备
+.venv/bin/python scripts/reproduce_nameplates_v2.py --check-only
+# 单步训练＋两条验证集生成，只确认流程可运行
+.venv/bin/python scripts/reproduce_nameplates_v2.py \
+  --smoke --run-dir outputs/v2_repro_smoke_01
+# 完整重训：两组各 150 次更新、验证选择、最终测试和父组 bootstrap
+.venv/bin/python -u scripts/reproduce_nameplates_v2.py \
+  --run-dir outputs/v2_repro_full_01
+```
+
+所有模型任务串行运行；完整模式从基础模型新建两组 LoRA，不接着 smoke 产物训练。每次使用新的输出目录，结果保存在该目录的 `REPORT.md` 和 `final_summary.json`。详细步骤、校验范围及可选的 v1 历史检查见[复现说明第 8 节](docs/REPRODUCING.md#8-v2-数据与串行实验)。
 
 ## 实测配置
 
